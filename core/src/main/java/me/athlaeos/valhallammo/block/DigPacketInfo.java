@@ -9,7 +9,7 @@ import me.athlaeos.valhallammo.playerstats.AccumulativeStatManager;
 import me.athlaeos.valhallammo.playerstats.EntityCache;
 import me.athlaeos.valhallammo.playerstats.EntityProperties;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningProfile;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
 import me.athlaeos.valhallammo.playerstats.profiles.implementations.PowerProfile;
 import me.athlaeos.valhallammo.utility.BlockUtils;
 import me.athlaeos.valhallammo.utility.EntityUtils;
@@ -21,7 +21,6 @@ import org.bukkit.Material;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
@@ -84,7 +83,7 @@ public class DigPacketInfo {
         if (digger == null || b == null || b.getType().isAir()) return 0;
         ItemBuilder tool = EntityCache.getAndCacheProperties(digger).getMainHand();
         if (tool == null) {
-            MiningProfile profile = ProfileCache.getOrCache(digger, MiningProfile.class);
+            MiningDiggingProfile profile = ProfileCache.getOrCache(digger, MiningDiggingProfile.class);
             // replace empty hand tool only if tool power of that item would be > 1 (valid tool for block)
             if (profile.getEmptyHandTool() != null && ValhallaMMO.getNms().toolPower(profile.getEmptyHandTool().getItem(), b) > 1) tool = profile.getEmptyHandTool();
         }

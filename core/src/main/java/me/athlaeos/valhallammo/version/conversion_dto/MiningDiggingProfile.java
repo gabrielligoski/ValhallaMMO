@@ -8,11 +8,10 @@ import java.io.Serializable;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 
-public class MiningProfile extends Profile implements Serializable {
+public class MiningDiggingProfile extends Profile implements Serializable {
     private static final NamespacedKey miningProfileKey = new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_mining");
 
     private float miningraredropratemultiplier = 1F; // rare drop rate multiplier of mining
@@ -40,11 +39,11 @@ public class MiningProfile extends Profile implements Serializable {
 
     @Override
     public Profile fetchProfile(Player p, DatabaseConnection conn) throws SQLException {
-        PreparedStatement stmt = conn.getConnection().prepareStatement("SELECT * FROM profiles_mining WHERE owner = ?;");
+        PreparedStatement stmt = conn.getConnection().prepareStatement("SELECT * FROM profiles_mining_digging WHERE owner = ?;");
         stmt.setString(1, p.getUniqueId().toString());
         ResultSet result = stmt.executeQuery();
         if (result.next()){
-            MiningProfile profile = new MiningProfile(p);
+            MiningDiggingProfile profile = new MiningDiggingProfile(p);
             profile.setLevel(result.getInt("level"));
             profile.setExp(result.getDouble("exp"));
             profile.setLifetimeEXP(result.getDouble("exp_total"));
@@ -55,7 +54,7 @@ public class MiningProfile extends Profile implements Serializable {
         return null;
     }
 
-    public MiningProfile(Player owner){
+    public MiningDiggingProfile(Player owner){
         super(owner);
         if (owner == null) return;
         this.key = miningProfileKey;
@@ -67,7 +66,7 @@ public class MiningProfile extends Profile implements Serializable {
     }
 
     @Override
-    public MiningProfile clone() throws CloneNotSupportedException {
-        return (MiningProfile) super.clone();
+    public MiningDiggingProfile clone() throws CloneNotSupportedException {
+        return (MiningDiggingProfile) super.clone();
     }
 }

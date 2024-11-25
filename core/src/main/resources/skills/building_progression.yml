@@ -1,0 +1,211 @@
+starting_perks: 
+  mining_miningdrops_add: -0.3
+
+experience: 
+  max_level: 100 
+  exp_level_curve: '(%level% + 75 * 2^(%level%/7.6)) + 300'
+  exp_multiplier_mine: 1 
+  exp_multiplier_blast: 1.5 
+  exp_per_break: false
+  mining_digging_break: # Blocks mined or exploded will grant the player the amount of experience noted based on the amount of items it dropped,
+    # if the block was placed beforehand it will not reward any EXP or skill benefits.
+    # Only the items in this list will benefit from drop multiplication
+    # Items will only reward experience if both the mined block and the associated drop exist in this list (I.E. IRON_ORE and RAW_IRON)
+    # digging
+    SNOW: 0.2
+    FARMLAND: 4
+    DIRT: 4
+    SAND: 4
+    RED_SAND: 4
+    COARSE_DIRT: 8
+    SNOW_BLOCK: 4
+    SOUL_SAND: 8
+    SOUL_SOIL: 8
+    GRASS_BLOCK: 8
+    DIRT_PATH: 8
+    MYCELIUM: 8
+    GRAVEL: 8
+    PODZOL: 8
+    CLAY: 12
+    CLAY_BALL: 3
+    MUD: 12
+    archaeology_brush:
+      SUSPICIOUS_STEW: 50
+      EMERALD: 100
+      GUNPOWDER: 30
+      TNT: 50
+      DIAMOND: 150
+      SNIFFER_EGG: 100
+      WHEAT: 10
+      WOODEN_HOE: 10
+      COAL: 30
+      GOLD_NUGGET: 10
+      IRON_AXE: 50
+      SHEAF_POTTERY_SHERD: 50
+      SHELTER_POTTERY_SHERD: 50
+      ANGLER_POTTERY_SHERD: 50
+      ARCHER_POTTERY_SHERD: 50
+      ARMS_UP_POTTERY_SHERD: 50
+      BLADE_POTTERY_SHERD: 50
+      BREWER_POTTERY_SHERD: 50
+      BURN_POTTERY_SHERD: 50
+      DANGER_POTTERY_SHERD: 50
+      EXPLORER_POTTERY_SHERD: 50
+      FRIEND_POTTERY_SHERD: 50
+      HEART_POTTERY_SHERD: 50
+      SNORT_POTTERY_SHERD: 50
+      SKULL_POTTERY_SHERD: 50
+      PRIZE_POTTERY_SHERD: 50
+      PLENTY_POTTERY_SHERD: 50
+      MOURNER_POTTERY_SHERD: 50
+      MINER_POTTERY_SHERD: 50
+      HOWL_POTTERY_SHERD: 50
+      HEARTBREAK_POTTERY_SHERD: 50
+    # mining
+    NETHERRACK: 1
+    NETHER_QUARTZ_ORE: 20
+    QUARTZ: 10
+    NETHER_GOLD_ORE: 15
+    GOLD_NUGGET: 2
+    OBSIDIAN: 20
+    END_STONE: 6
+    COBBLESTONE: 4
+    COBBLED_DEEPSLATE: 6
+    STONE: 4
+    DEEPSLATE: 6
+    GRANITE: 4
+    ANDESITE: 4
+    DIORITE: 4
+    CALCITE: 4
+    TUFF: 4
+    DRIPSTONE_BLOCK: 6
+    AMETHYST_BLOCK: 8
+    BLACKSTONE: 6
+    BASALT: 6
+    SMOOTH_BASALT: 6
+    COAL_ORE: 20
+    COAL: 10
+    IRON_ORE: 40
+    RAW_IRON: 20
+    COPPER_ORE: 16
+    RAW_COPPER: 4
+    GOLD_ORE: 80
+    RAW_GOLD: 40
+    LAPIS_ORE: 160
+    LAPIS_LAZULI: 10
+    REDSTONE_ORE: 40
+    REDSTONE: 6
+    DIAMOND_ORE: 200
+    DIAMOND: 100
+    EMERALD_ORE: 200
+    EMERALD: 100
+    DEEPSLATE_COAL_ORE: 30
+    DEEPSLATE_IRON_ORE: 60
+    DEEPSLATE_COPPER_ORE: 42
+    DEEPSLATE_GOLD_ORE: 120
+    DEEPSLATE_LAPIS_ORE: 120
+    DEEPSLATE_REDSTONE_ORE: 60
+    DEEPSLATE_DIAMOND_ORE: 300
+    DEEPSLATE_EMERALD_ORE: 300
+    ANCIENT_DEBRIS: 800
+    NETHERITE_SCRAP: 400
+
+special_perks: []
+
+commands: []
+
+messages:
+  - '<lang.skill-level-up-mining>'
+
+leveling_perks:
+  mining_miningdrops_add: 0.01
+  mining_blastingdrops_add: 0.01
+  mining_miningspeedbonus_add: 0.005
+  digging_diggingdrops_add: 0.01
+  digging_diggingspeedbonus_add: 0.005
+
+starting_coordinates: '5,20' # The coordinates in the skill tree the player sees first when switching to the skill tree
+
+perks:
+  digging_perk_combo:
+    icon: IRON_PICKAXE
+    coords: "2,2"
+    name: "<lang.digging_perk_combo_name>"
+    description: "<lang.digging_perk_combo_description>"
+    cost: 1
+    hidden: false
+    required_lv: 50
+    perk_rewards:
+      block_conversions_unlock:
+        - mossify_cobble
+        - mossify_stone
+        - grow_grass
+        - mossify_bricks
+        - damage_bricks
+        - damage_cracked_bricks
+        - damage_stone
+        - damage_cobble
+        - damage_polished_andesite
+        - damage_polished_granite
+        - damage_polished_diorite
+        - damage_polished_blackstone
+        - damage_polished_basalt
+        - damage_end_stone_bricks
+        - damage_blackstone_bricks
+        - melt_netherrack
+        - melt_sand
+        - melt_raw_iron_from
+        - melt_raw_gold_from
+        - melt_raw_copper_from
+        - melt_quartz_from
+        - melt_clay
+    messages:
+      - "<lang.digging_perk_combo_messages>"
+    requireperk_one:
+      - digging_perk_2
+    other_levels_required:
+      - MINING:50
+  building_perk_3:
+    icon: GOLDEN_SHOVEL
+    coords: "7,16"
+    name: "<lang.digging_perk_3_name>"
+    description: "<lang.digging_perk_3_description>"
+    cost: 1
+    hidden: false
+    required_lv: 10
+    perk_rewards:
+      recipes_unlock:
+        - craft_podzol
+        - craft_mycelium
+        - craft_flint
+        - craft_clay
+        - craft_mud
+        - craft_grass
+        - craft_soul_sand
+        - craft_soul_soil
+        - craft_concrete_white
+        - craft_concrete_orange
+        - craft_concrete_magenta
+        - craft_concrete_light_blue
+        - craft_concrete_yellow
+        - craft_concrete_lime
+        - craft_concrete_pink
+        - craft_concrete_grey
+        - craft_concrete_light_grey
+        - craft_concrete_cyan
+        - craft_concrete_purple
+        - craft_concrete_blue
+        - craft_concrete_brown
+        - craft_concrete_green
+        - craft_concrete_red
+        - craft_concrete_black
+    messages:
+      - "<lang.digging_perk_3_messages>"
+    requireperk_all:
+      - digging_perk_2
+    connection_line:
+      '1':
+        position: '7,17'
+        locked: GRAY_DYE:1172700
+        unlockable: ORANGE_DYE:1172800
+        unlocked: LIME_DYE:1172900

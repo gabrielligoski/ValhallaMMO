@@ -23,7 +23,7 @@ public class AlphaDatabaseAdapter {
         alphaProfileMappings.put("LANDSCAPING", new LandscapingProfile(null));
         alphaProfileMappings.put("LIGHTARMOR", new LightArmorProfile(null));
         alphaProfileMappings.put("LIGHTWEAPONS", new LightWeaponsProfile(null));
-        alphaProfileMappings.put("MINING", new MiningProfile(null));
+        alphaProfileMappings.put("MINING_DIGGING", new MiningDiggingProfile(null));
         alphaProfileMappings.put("SMITHING", new SmithingProfile(null));
     }
 

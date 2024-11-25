@@ -2,7 +2,7 @@ package me.athlaeos.valhallammo.playerstats.statsources;
 
 import me.athlaeos.valhallammo.playerstats.AccumulativeStatSource;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningProfile;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -16,7 +16,7 @@ public class MiningUnbreakableBlocksSource implements AccumulativeStatSource {
         if (statPossessor instanceof Player p){
             Block b = p.getTargetBlockExact(8);
             if (b == null) return 0;
-            MiningProfile profile = ProfileCache.getOrCache(p, MiningProfile.class);
+            MiningDiggingProfile profile = ProfileCache.getOrCache(p, MiningDiggingProfile.class);
             if (profile.getUnbreakableBlocks().contains(b.getType().toString())) return -999999;
         }
         return 0;

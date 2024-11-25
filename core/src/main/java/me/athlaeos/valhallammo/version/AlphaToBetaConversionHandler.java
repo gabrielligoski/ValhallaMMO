@@ -43,7 +43,7 @@ public class AlphaToBetaConversionHandler implements Listener {
         alphaKeyMappings.put("LANDSCAPING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_landscaping"));
         alphaKeyMappings.put("LIGHTARMOR", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_light_armor"));
         alphaKeyMappings.put("LIGHTWEAPONS", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_light_weapons"));
-        alphaKeyMappings.put("MINING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_mining"));
+        alphaKeyMappings.put("MINING_DIGGING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_mining"));
         alphaKeyMappings.put("SMITHING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_smithing"));
 
         alphaToBetaSkillMappings.put("ALCHEMY", AlchemySkill.class);
@@ -55,7 +55,7 @@ public class AlphaToBetaConversionHandler implements Listener {
         alphaToBetaSkillMappings.put("LANDSCAPING", WoodcuttingSkill.class);
         alphaToBetaSkillMappings.put("LIGHTARMOR", LightArmorSkill.class);
         alphaToBetaSkillMappings.put("LIGHTWEAPONS", LightWeaponsSkill.class);
-        alphaToBetaSkillMappings.put("MINING", MiningSkill.class);
+        alphaToBetaSkillMappings.put("MINING_DIGGING", MiningDiggingSkill.class);
         alphaToBetaSkillMappings.put("SMITHING", SmithingSkill.class);
     }
 
@@ -84,7 +84,7 @@ public class AlphaToBetaConversionHandler implements Listener {
                 if (profile == null || key == null || skillClass == null) continue;
                 switch (profileType){
                     case "LANDSCAPING" -> {
-                        SkillRegistry.getSkill(DiggingSkill.class).addEXP(e.getPlayer(), expConversionDigging * profile.getLifetimeEXP(), false, PlayerSkillExperienceGainEvent.ExperienceGainReason.ALPHA_REFUND);
+                        SkillRegistry.getSkill(MiningDiggingSkill.class).addEXP(e.getPlayer(), expConversionDigging * profile.getLifetimeEXP(), false, PlayerSkillExperienceGainEvent.ExperienceGainReason.ALPHA_REFUND);
                         SkillRegistry.getSkill(WoodcuttingSkill.class).addEXP(e.getPlayer(), expConversionWoodcutting * profile.getLifetimeEXP(), false, PlayerSkillExperienceGainEvent.ExperienceGainReason.ALPHA_REFUND);
                     }
                     case "FARMING" -> {

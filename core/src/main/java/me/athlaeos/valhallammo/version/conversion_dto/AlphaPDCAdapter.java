@@ -24,7 +24,7 @@ public class AlphaPDCAdapter {
         alphaKeyMappings.put("LANDSCAPING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_landscaping"));
         alphaKeyMappings.put("LIGHTARMOR", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_light_armor"));
         alphaKeyMappings.put("LIGHTWEAPONS", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_light_weapons"));
-        alphaKeyMappings.put("MINING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_mining"));
+        alphaKeyMappings.put("MINING_DIGGING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_mining"));
         alphaKeyMappings.put("SMITHING", new NamespacedKey(ValhallaMMO.getInstance(), "valhalla_profile_smithing"));
 
         alphaProfileMappings.put("ALCHEMY", AlchemyProfile.class);
@@ -36,7 +36,7 @@ public class AlphaPDCAdapter {
         alphaProfileMappings.put("LANDSCAPING", LandscapingProfile.class);
         alphaProfileMappings.put("LIGHTARMOR", LightArmorProfile.class);
         alphaProfileMappings.put("LIGHTWEAPONS", LightWeaponsProfile.class);
-        alphaProfileMappings.put("MINING", MiningProfile.class);
+        alphaProfileMappings.put("MINING_DIGGING", MiningDiggingProfile.class);
         alphaProfileMappings.put("SMITHING", SmithingProfile.class);
     }
 

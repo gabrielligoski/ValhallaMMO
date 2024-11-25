@@ -116,8 +116,8 @@ public class ValhallaMMO extends JavaPlugin {
         saveConfig("skills/alchemy_transmutations.yml");
         saveConfig("skills/archery.yml");
         saveConfig("skills/archery_progression.yml");
-        saveConfig("skills/digging.yml");
-        saveConfig("skills/digging_progression.yml");
+//        saveConfig("skills/digging.yml");
+//        saveConfig("skills/digging_progression.yml");
         saveConfig("skills/enchanting.yml");
         saveConfig("skills/enchanting_progression.yml");
         saveConfig("skills/farming.yml");
@@ -132,8 +132,8 @@ public class ValhallaMMO extends JavaPlugin {
         saveConfig("skills/light_armor_progression.yml");
         saveConfig("skills/light_weapons.yml");
         saveConfig("skills/light_weapons_progression.yml");
-        saveConfig("skills/mining.yml");
-        saveConfig("skills/mining_progression.yml");
+        saveConfig("skills/mining_digging.yml");
+        saveConfig("skills/mining_digging_progression.yml");
         saveConfig("skills/power.yml");
         saveConfig("skills/power_progression.yml");
         saveConfig("skills/smithing.yml");
@@ -254,10 +254,10 @@ public class ValhallaMMO extends JavaPlugin {
         registerCommand(new ProfileCommand(ArcheryProfile.class), "archery");
         registerCommand(new ProfileCommand(LightArmorProfile.class), "lightarmor");
         registerCommand(new ProfileCommand(HeavyArmorProfile.class), "heavyarmor");
-        registerCommand(new ProfileCommand(MiningProfile.class), "mining");
+        registerCommand(new ProfileCommand(MiningDiggingProfile.class), "mining_digging");
         registerCommand(new ProfileCommand(FarmingProfile.class), "farming");
         registerCommand(new ProfileCommand(WoodcuttingProfile.class), "woodcutting");
-        registerCommand(new ProfileCommand(DiggingProfile.class), "digging");
+//        registerCommand(new ProfileCommand(DiggingProfile.class), "digging");
         registerCommand(new ProfileCommand(FishingProfile.class), "fishing");
 
         LeaderboardManager.loadFile();
@@ -315,7 +315,10 @@ public class ValhallaMMO extends JavaPlugin {
     private boolean setupNMS() {
         try {
             String nmsVersion = MinecraftVersion.getServerVersion().getNmsVersion();
-            if (nmsVersion == null) return false;
+            if (nmsVersion == null) {
+                System.out.println("sem versao");
+                return false;
+            }
             Class<?> clazz = Class.forName("me.athlaeos.valhallammo.nms.NMS_" + nmsVersion);
 
             if (NMS.class.isAssignableFrom(clazz)) {
@@ -324,6 +327,7 @@ public class ValhallaMMO extends JavaPlugin {
 
             return nms != null;
         } catch (Exception | Error ignored) {
+            System.out.println(ignored.toString());
             return false;
         }
     }

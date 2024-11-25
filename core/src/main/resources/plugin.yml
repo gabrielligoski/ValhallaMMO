@@ -28,7 +28,7 @@ commands:
     description: "Admin command to manage others' parties"
   partyspy:
     description: "Admin command allowing admins to spy on other people's party chats"
-  mining:
+  miningdigging:
     description: "Shorter command for /val profile mining, allowing players to view their mining stats"
   farming:
     description: "Shorter command for /val profile farming, allowing players to view their farming stats"
@@ -36,8 +36,6 @@ commands:
     description: "Shorter command for /val profile fishing, allowing players to view their fishing stats"
   woodcutting:
     description: "Shorter command for /val profile woodcutting, allowing players to view their woodcutting stats"
-  digging:
-    description: "Shorter command for /val profile digging, allowing players to view their digging stats"
   lightweapons:
     description: "Shorter command for /val profile light_weapons, allowing players to view their light weapon stats"
   heavyweapons:

@@ -5,20 +5,25 @@ import me.athlaeos.valhallammo.animations.Animation;
 import me.athlaeos.valhallammo.animations.AnimationRegistry;
 import me.athlaeos.valhallammo.configuration.ConfigManager;
 import me.athlaeos.valhallammo.dom.Catch;
-import me.athlaeos.valhallammo.hooks.WorldGuardHook;
-import me.athlaeos.valhallammo.localization.TranslationManager;
-import me.athlaeos.valhallammo.playerstats.EntityProperties;
+import me.athlaeos.valhallammo.dom.MinecraftVersion;
 import me.athlaeos.valhallammo.event.PlayerSkillExperienceGainEvent;
+import me.athlaeos.valhallammo.hooks.WorldGuardHook;
 import me.athlaeos.valhallammo.item.EquipmentClass;
-import me.athlaeos.valhallammo.listeners.*;
+import me.athlaeos.valhallammo.listeners.CustomBreakSpeedListener;
+import me.athlaeos.valhallammo.listeners.LootListener;
+import me.athlaeos.valhallammo.localization.TranslationManager;
 import me.athlaeos.valhallammo.playerstats.AccumulativeStatManager;
 import me.athlaeos.valhallammo.playerstats.EntityCache;
+import me.athlaeos.valhallammo.playerstats.EntityProperties;
 import me.athlaeos.valhallammo.playerstats.profiles.Profile;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningProfile;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
 import me.athlaeos.valhallammo.skills.skills.Skill;
+import me.athlaeos.valhallammo.utility.BlockUtils;
+import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallammo.utility.Timer;
-import me.athlaeos.valhallammo.utility.*;
+import me.athlaeos.valhallammo.utility.Utils;
+import me.athlaeos.valhallammo.version.DiggingArchaeologyExtension;
 import me.athlaeos.valhallammo.version.EnchantmentMappings;
 import org.bukkit.GameMode;
 import org.bukkit.Material;
@@ -28,7 +33,10 @@ import org.bukkit.block.Container;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.enchantments.Enchantment;
-import org.bukkit.entity.*;
+import org.bukkit.entity.AbstractArrow;
+import org.bukkit.entity.Item;
+import org.bukkit.entity.Player;
+import org.bukkit.entity.TNTPrimed;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -44,7 +52,7 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.*;
 
-public class MiningSkill extends Skill implements Listener {
+public class MiningDiggingSkill extends Skill implements Listener {
     private final Map<Material, Double> dropsExpValues = new HashMap<>();
     private double miningExpMultiplier = 1;
     private double blastingExpMultiplier = 1;
@@ -53,7 +61,7 @@ public class MiningSkill extends Skill implements Listener {
     private boolean veinMiningInstant = true;
 
     private boolean forgivingDropMultipliers = true; // if false, depending on drop multiplier, drops may be reduced to 0. If true, this will be at least 1
-    private boolean tntPreventChaining = true;
+    private boolean tntPreventChaining = false;
 
     private Animation drillingAnimation = AnimationRegistry.DRILLING_ACTIVE;
     private String drillingOn = null;
@@ -63,17 +71,17 @@ public class MiningSkill extends Skill implements Listener {
         this.drillingAnimation = drillingAnimation;
     }
 
-    public MiningSkill(String type) {
+    public MiningDiggingSkill(String type) {
         super(type);
     }
 
     @Override
     public void loadConfiguration() {
-        ValhallaMMO.getInstance().save("skills/mining_progression.yml");
-        ValhallaMMO.getInstance().save("skills/mining.yml");
+        ValhallaMMO.getInstance().save("skills/mining_digging_progression.yml");
+        ValhallaMMO.getInstance().save("skills/mining_digging.yml");
 
-        YamlConfiguration skillConfig = ConfigManager.getConfig("skills/mining.yml").get();
-        YamlConfiguration progressionConfig = ConfigManager.getConfig("skills/mining_progression.yml").get();
+        YamlConfiguration skillConfig = ConfigManager.getConfig("skills/mining_digging.yml").get();
+        YamlConfiguration progressionConfig = ConfigManager.getConfig("skills/mining_digging_progression.yml").get();
 
         loadCommonConfig(skillConfig, progressionConfig);
 
@@ -84,15 +92,15 @@ public class MiningSkill extends Skill implements Listener {
         forgivingDropMultipliers = skillConfig.getBoolean("forgiving_multipliers");
         tntPreventChaining = skillConfig.getBoolean("remove_tnt_chaining");
         drillingOn = TranslationManager.translatePlaceholders(skillConfig.getString("drilling_toggle_on"));
-        drillingActivationSound = Catch.catchOrElse(() -> Sound.valueOf(skillConfig.getString("drilling_enable_sound")), null, "Invalid drilling activation sound given in skills/mining.yml drilling_enable_sound");
+        drillingActivationSound = Catch.catchOrElse(() -> Sound.valueOf(skillConfig.getString("drilling_enable_sound")), null, "Invalid drilling activation sound given in skills/mining_digging.yml drilling_enable_sound");
 
         Collection<String> invalidMaterials = new HashSet<>();
-        ConfigurationSection blockBreakSection = progressionConfig.getConfigurationSection("experience.mining_break");
+        ConfigurationSection blockBreakSection = progressionConfig.getConfigurationSection("experience.mining_digging_break");
         if (blockBreakSection != null){
             for (String key : blockBreakSection.getKeys(false)){
                 try {
                     Material block = Material.valueOf(key);
-                    double reward = progressionConfig.getDouble("experience.mining_break." + key);
+                    double reward = progressionConfig.getDouble("experience.mining_digging_break." + key);
                     dropsExpValues.put(block, reward);
                 } catch (IllegalArgumentException ignored){
                     invalidMaterials.add(key);
@@ -105,6 +113,8 @@ public class MiningSkill extends Skill implements Listener {
         }
 
         ValhallaMMO.getInstance().getServer().getPluginManager().registerEvents(this, ValhallaMMO.getInstance());
+        if (MinecraftVersion.currentVersionNewerThan(MinecraftVersion.MINECRAFT_1_20))
+            ValhallaMMO.getInstance().getServer().getPluginManager().registerEvents(new DiggingArchaeologyExtension(this), ValhallaMMO.getInstance());
     }
 
     private final int[][] veinMiningScanArea = new int[][]{
@@ -126,7 +136,7 @@ public class MiningSkill extends Skill implements Listener {
         if (ValhallaMMO.isWorldBlacklisted(e.getBlock().getWorld().getName()) || e.isCancelled() ||
                 WorldGuardHook.inDisabledRegion(e.getBlock().getLocation(), e.getPlayer(), WorldGuardHook.VMMO_SKILL_MINING) ||
                 !dropsExpValues.containsKey(e.getBlock().getType()) || e.getPlayer().getGameMode() == GameMode.CREATIVE) return;
-        MiningProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningDiggingProfile.class);
         if (profile.getUnbreakableBlocks().contains(e.getBlock().getType().toString())) {
             e.setCancelled(true);
             return;
@@ -137,7 +147,7 @@ public class MiningSkill extends Skill implements Listener {
             experience = Utils.randomAverage(experience * (1D + profile.getBlockExperienceMultiplier()));
             e.setExpToDrop(experience);
         }
-        LootListener.addPreparedLuck(e.getBlock(), AccumulativeStatManager.getCachedStats("MINING_LUCK", e.getPlayer(), 10000, true));
+        LootListener.addPreparedLuck(e.getBlock(), AccumulativeStatManager.getCachedStats("MINING_DIGGING_LUCK", e.getPlayer(), 10000, true));
 
         if (e.getPlayer().isSneaking() && !veinMiningPlayers.contains(e.getPlayer().getUniqueId()) &&
                 profile.isVeinMiningUnlocked() && profile.getVeinMinerValidBlocks().contains(e.getBlock().getType().toString()) &&
@@ -174,7 +184,7 @@ public class MiningSkill extends Skill implements Listener {
         if (ValhallaMMO.isWorldBlacklisted(e.getBlock().getWorld().getName()) || e.isCancelled() || !BlockUtils.canReward(e.getBlock()) ||
                 WorldGuardHook.inDisabledRegion(e.getBlock().getLocation(), e.getPlayer(), WorldGuardHook.VMMO_SKILL_MINING) ||
                 e.getBlock().getState() instanceof Container) return;
-        double dropMultiplier = AccumulativeStatManager.getCachedStats("MINING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
+        double dropMultiplier = AccumulativeStatManager.getCachedStats("MINING_DIGGING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
         // multiply any applicable prepared drops and grant exp for them. After the extra drops from a BlockBreakEvent the drops are cleared
         ItemUtils.multiplyItems(LootListener.getPreparedExtraDrops(e.getBlock()), 1 + dropMultiplier, forgivingDropMultipliers, (i) -> dropsExpValues.containsKey(i.getType()));
 
@@ -191,7 +201,7 @@ public class MiningSkill extends Skill implements Listener {
         if (ValhallaMMO.isWorldBlacklisted(e.getBlockState().getWorld().getName()) || e.isCancelled() || !BlockUtils.canReward(e.getBlockState()) ||
                 WorldGuardHook.inDisabledRegion(e.getBlock().getLocation(), e.getPlayer(), WorldGuardHook.VMMO_SKILL_MINING) ||
                 e.getBlockState() instanceof Container) return;
-        double dropMultiplier = AccumulativeStatManager.getCachedStats("MINING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
+        double dropMultiplier = AccumulativeStatManager.getCachedStats("MINING_DIGGING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
         // multiply the item drops from the event itself and grant exp for the initial items and extra drops
         List<ItemStack> extraDrops = ItemUtils.multiplyDrops(e.getItems(), 1 + dropMultiplier, forgivingDropMultipliers, (i) -> dropsExpValues.containsKey(i.getItemStack().getType()));
         if (!extraDrops.isEmpty()) LootListener.prepareBlockDrops(e.getBlock(), extraDrops);
@@ -220,7 +230,7 @@ public class MiningSkill extends Skill implements Listener {
         if (!hasPermissionAccess(e.getPlayer())) return;
         ItemStack hand = e.getPlayer().getInventory().getItemInMainHand();
         if (ItemUtils.isEmpty(hand) || !hand.getType().toString().endsWith("_PICKAXE")) return;
-        MiningProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningDiggingProfile.class);
         if (!profile.isDrillingUnlocked() || profile.getDrillingDuration() < 0) return;
         Timer.setCooldownIgnoreIfPermission(e.getPlayer(), profile.getDrillingCooldown() * 50, "mining_drilling_cooldown");
         Timer.setCooldown(e.getPlayer().getUniqueId(), profile.getDrillingDuration() * 50, "mining_drilling_duration");
@@ -241,7 +251,7 @@ public class MiningSkill extends Skill implements Listener {
         if (responsible == null) return;
         if (WorldGuardHook.inDisabledRegion(responsible.getLocation(), responsible, WorldGuardHook.VMMO_SKILL_MINING)) return;
 
-        MiningProfile profile = ProfileCache.getOrCache(responsible, MiningProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(responsible, MiningDiggingProfile.class);
         ItemStack normalPickaxe = new ItemStack(Material.IRON_PICKAXE);
         if (profile.getBlastFortuneLevel() > 0) normalPickaxe.addUnsafeEnchantment(EnchantmentMappings.FORTUNE.getEnchantment(), profile.getBlastFortuneLevel());
         else if (profile.getBlastFortuneLevel() < 0) normalPickaxe.addUnsafeEnchantment(Enchantment.SILK_TOUCH, 1);
@@ -281,7 +291,7 @@ public class MiningSkill extends Skill implements Listener {
     public void onTNTDamage(EntityDamageByEntityEvent e){
         if (ValhallaMMO.isWorldBlacklisted(e.getEntity().getWorld().getName()) || e.isCancelled() || !(e.getEntity() instanceof Player p) || !(e.getDamager() instanceof TNTPrimed)) return;
         if (WorldGuardHook.inDisabledRegion(p.getLocation(), p, WorldGuardHook.VMMO_SKILL_MINING)) return;
-        MiningProfile profile = ProfileCache.getOrCache(p, MiningProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(p, MiningDiggingProfile.class);
         e.setDamage(e.getDamage() * (1 - profile.getTntDamageReduction()));
     }
 
@@ -292,7 +302,7 @@ public class MiningSkill extends Skill implements Listener {
 
     @Override
     public Class<? extends Profile> getProfileType() {
-        return MiningProfile.class;
+        return MiningDiggingProfile.class;
     }
 
     @Override
@@ -304,7 +314,7 @@ public class MiningSkill extends Skill implements Listener {
     public void addEXP(Player p, double amount, boolean silent, PlayerSkillExperienceGainEvent.ExperienceGainReason reason) {
         if (WorldGuardHook.inDisabledRegion(p.getLocation(), p, WorldGuardHook.VMMO_SKILL_MINING)) return;
         if (reason == PlayerSkillExperienceGainEvent.ExperienceGainReason.SKILL_ACTION) {
-            amount *= (1 + AccumulativeStatManager.getStats("MINING_EXP_GAIN", p, true));
+            amount *= (1 + AccumulativeStatManager.getStats("MINING_DIGGING_EXP_GAIN", p, true));
         }
         super.addEXP(p, amount, silent, reason);
     }

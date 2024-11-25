@@ -31,10 +31,9 @@ public class ProfileRegistry {
         registerProfileType(new ArcheryProfile(null));
         registerProfileType(new HeavyArmorProfile(null));
         registerProfileType(new LightArmorProfile(null));
-        registerProfileType(new MiningProfile(null));
+        registerProfileType(new MiningDiggingProfile(null));
         registerProfileType(new FarmingProfile(null));
         registerProfileType(new WoodcuttingProfile(null));
-        registerProfileType(new DiggingProfile(null));
         registerProfileType(new FishingProfile(null));
     }
 

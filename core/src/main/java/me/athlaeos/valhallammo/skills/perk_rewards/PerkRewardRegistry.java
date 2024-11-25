@@ -84,14 +84,14 @@ public class PerkRewardRegistry {
         register(new ProfileStringListAdd("heavyarmor_add_immune_effect", "setImmunePotionEffects", HeavyArmorProfile.class));
         register(new ProfileStringListRemove("heavyarmor_remove_immune_effect", "setImmunePotionEffects", HeavyArmorProfile.class));
         register(new ProfileStringListClear("heavyarmor_clear_immune_effects", "setImmunePotionEffects", HeavyArmorProfile.class));
-        register(new ProfileStringListAdd("mining_veinminerblocks_add", "veinMinerValidBlocks", MiningProfile.class));
-        register(new ProfileStringListRemove("mining_veinminerblocks_remove", "veinMinerValidBlocks", MiningProfile.class));
-        register(new ProfileStringListClear("mining_veinminerblocks_clear", "veinMinerValidBlocks", MiningProfile.class));
-        register(new ProfileStringListAdd("mining_unbreakableblocks_add", "unbreakableBlocks", MiningProfile.class));
-        register(new ProfileStringListRemove("mining_unbreakableblocks_remove", "unbreakableBlocks", MiningProfile.class));
-        register(new ProfileStringListClear("mining_unbreakableblocks_clear", "unbreakableBlocks", MiningProfile.class));
-        register(new ProfileStringSetSingle("mining_emptyhandtooltype_set", "emptyHandToolMaterial", MiningProfile.class));
-        register(new ProfileStringListClear("mining_emptyhandtooltype_remove", "emptyHandToolMaterial", MiningProfile.class));
+        register(new ProfileStringListAdd("miningdigging_veinminerblocks_add", "veinMinerValidBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringListRemove("miningdigging_veinminerblocks_remove", "veinMinerValidBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringListClear("miningdigging_veinminerblocks_clear", "veinMinerValidBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringListAdd("miningdigging_unbreakableblocks_add", "unbreakableBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringListRemove("miningdigging_unbreakableblocks_remove", "unbreakableBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringListClear("miningdigging_unbreakableblocks_clear", "unbreakableBlocks", MiningDiggingProfile.class));
+        register(new ProfileStringSetSingle("miningdigging_emptyhandtooltype_set", "emptyHandToolMaterial", MiningDiggingProfile.class));
+        register(new ProfileStringListClear("miningdigging_emptyhandtooltype_remove", "emptyHandToolMaterial", MiningDiggingProfile.class));
         register(new ProfileStringListAdd("woodcutting_treecapitatorblocks_add", "treeCapitatorValidBlocks", WoodcuttingProfile.class));
         register(new ProfileStringListFill("woodcutting_treecapitatorblocks_add_all", "treeCapitatorValidBlocks", WoodcuttingProfile.class, () -> Tag.LOGS.getValues().stream().map(Material::toString).collect(Collectors.toSet())));
         register(new ProfileStringListRemove("woodcutting_treecapitatorblocks_remove", "treeCapitatorValidBlocks", WoodcuttingProfile.class));
@@ -118,7 +118,10 @@ public class PerkRewardRegistry {
         try {
             boolean persist = name.startsWith("p:");
             if (persist) name = name.replaceFirst("p:", "");
-            if (registry.get(name) == null) throw new IllegalArgumentException("Perk with name " + name + " is used but does not exist");
+            if (registry.get(name) == null) {
+                registry.forEach((k,v) -> System.out.println(k.toString()+" / "+ v.toString()));
+                throw new IllegalArgumentException("Perk with name " + name + " is used but does not exist");
+            }
             PerkReward modifier = registry.get(name).clone();
             modifier.parseArgument(argument);
             modifier.setPersistent(persist);

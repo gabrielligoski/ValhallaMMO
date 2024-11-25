@@ -401,7 +401,7 @@
     "attribute_smithing_quality": "%icon%%value% Smithing Skill",
     "attribute_smithing_quality_fraction": "%icon%%value% Smithing Skill",
     "attribute_mining_rare_drops": "%icon%%value% Mining Luck",
-    "attribute_mining_drops": "%icon%%value% Mining Drops",
+    "attribute_mining_drops": "%icon%%value% Mining/Digging Drops",
     "attribute_woodcutting_rare_drops": "%icon%%value% Woodcutting Luck",
     "attribute_woodcutting_drops": "%icon%%value% Woodcutting Drops",
     "attribute_digging_rare_drops": "%icon%%value% Digging Luck",
@@ -785,7 +785,7 @@
     "effect_name_potion_consumption": "%icon% Potion Consumption %value% %duration%",
     "effect_name_throwing_velocity": "%icon% Throwing Range %value% %duration%",
     "effect_name_mining_rare_drops": "%icon% Mining Luck %value% %duration%",
-    "effect_name_mining_drops": "%icon% Mining Drops %value% %duration%",
+    "effect_name_mining_drops": "%icon% Mining/Digging Drops %value% %duration%",
     "effect_name_woodcutting_rare_drops": "%icon% Woodcutting Luck %value% %duration%",
     "effect_name_woodcutting_drops": "%icon% Woodcutting Drops %value% %duration%",
     "effect_name_digging_rare_drops": "%icon% Digging Luck %value% %duration%",
@@ -1585,11 +1585,11 @@
     "alchemy_perk_combo_name": "&dEtching Venom",
     "alchemy_perk_combo_description": "&7Adds &d{lightweapons_coatingcharges_add} &7charges to your Weapon Coating ability. You unlock recipes for a couple simple poisons that can be crafted without a brewing stand",
     "mining_perk_1_name": "&eBrittle Rock",
-    "mining_perk_1_description": "&7Speeds up your mining by &e{mining_miningspeedbonus_add}&7 and you gain a few experience orbs per block",
+    "mining_perk_1_description": "&7Speeds up your mining by &e{miningdigging_miningspeedbonus_add}&7 and you gain a few experience orbs per block",
     "mining_perk_2_name": "&eSpelunking",
-    "mining_perk_2_description": "&7Increases mining drops by &e{mining_miningdrops_add}&7 and luck by &e{mining_miningluck_add}&7. Increases cooking speed by &e{power_cookingspeedbonus_add}",
+    "mining_perk_2_description": "&7Increases Mining/Digging Drops by &e{miningdigging_miningdrops_add}&7 and luck by &e{miningdigging_miningluck_add}&7. Increases cooking speed by &e{power_cookingspeedbonus_add}",
     "mining_perk_a1_name": "&eDemolist",
-    "mining_perk_a1_description": "&7Increases TNT blast radius and damage resistance by &e{mining_tntblastradius_add}&7, and increases blasting drops by &e{mining_blastingdrops_add}",
+    "mining_perk_a1_description": "&7Increases TNT blast radius and damage resistance by &e{miningdigging_tntblastradius_add}&7, and increases blasting drops by &e{miningdigging_blastingdrops_add}",
     "mining_perk_a2_name": "&eEarthshaker",
     "mining_perk_a2_description": "&eDoubles &7the effects of Demolist, and you gain triple the TNT when crafting.",
     "mining_perk_a3_name": "&eEnchanted Explosives",
@@ -1599,11 +1599,11 @@
     "mining_perk_a3fortune_name": "&eEnchanted Explosives: Fortune",
     "mining_perk_a3fortune_description": "&7Your TNT breaks blocks as if broken with a Fortune II pickaxe",
     "mining_perk_b1_name": "&eDwarven Aptitude",
-    "mining_perk_b1_description": "&7Speeds up your mining by &e{mining_miningspeedbonus_add}&7, increases experience orbs per block, and unlocks the &eDrilling &7ability",
+    "mining_perk_b1_description": "&7Speeds up your mining by &e{miningdigging_miningspeedbonus_add}&7, increases experience orbs per block, and unlocks the &eDrilling &7ability",
     "mining_perk_b2_name": "&eVein Extraction",
-    "mining_perk_b2_description": "&7Increases mining drops by &e{mining_miningdrops_add}&7 and luck by &e{mining_miningluck_add}&7. Unlocks &eVein Mining &7and increases cooking speed by &e{power_cookingspeedbonus_add}",
+    "mining_perk_b2_description": "&7Increases Mining/Digging Drops by &e{miningdigging_miningdrops_add}&7 and luck by &e{miningdigging_miningluck_add}&7. Unlocks &eVein Mining &7and increases cooking speed by &e{power_cookingspeedbonus_add}",
     "mining_perk_3_name": "&eEarthsplitter",
-    "mining_perk_3_description": "&7Increases drilling speed by another &e{mining_drillingspeedbonus_add}&7, and &ehalves &7its cooldown. You gain &edouble &7experience orbs from blocks and increases cooking speed by &e{power_cookingspeedbonus_add}",
+    "mining_perk_3_description": "&7Increases drilling speed by another &e{miningdigging_drillingspeedbonus_add}&7, and &ehalves &7its cooldown. You gain &edouble &7experience orbs from blocks and increases cooking speed by &e{power_cookingspeedbonus_add}",
     "mining_perk_4_name": "&eAspect of Kali",
     "mining_perk_4_description": "&7Your Vein Mining ability may now vein-mine blocks like &eAndesite, Granite, Diorite, and other common non-stone blocks&7. Its drops are now also instantly transferred to your inventory. Increases cooking speed by &e{power_cookingspeedbonus_add}",
     "archery_perk_1_name": "&eRanger",
@@ -1625,17 +1625,17 @@
     "archery_perk_stealth_name": "&eAssassin",
     "archery_perk_stealth_description": "&7Hit shots are now guaranteed to critically hit if the enemy is looking away and out of combat. Critical hits deal &e{archery_critdamage_add}&7 more damage and cause bleeding.",
     "digging_perk_1_name": "&aDigger",
-    "digging_perk_1_description": "&7Speeds up your digging by &a{digging_diggingspeedbonus_add}&7, and you gain a few experience orbs per block.",
+    "digging_perk_1_description": "&7Speeds up your digging by &a{miningdigging_diggingspeedbonus_add}&7, and you gain a few experience orbs per block.",
     "digging_perk_2_name": "&aFilterer",
     "digging_perk_2_description": "&7You start finding simple resources from the ground, and you gain more experience orbs per block.",
     "digging_perk_3_name": "&aGround Replication",
     "digging_perk_3_description": "&7You learn the composition of the earth, and can now reproduce it (unlocks recipes for various ground-type blocks).",
     "digging_perk_a1_name": "&aArchaeologist",
-    "digging_perk_a1_description": "&7Suspicious blocks have a &a{digging_archaeologyrepeatchance_add} &7chance to return.",
+    "digging_perk_a1_description": "&7Suspicious blocks have a &a{miningdigging_archaeologyrepeatchance_add} &7chance to return.",
     "digging_perk_a2_name": "&aAncient History",
-    "digging_perk_a2_description": "&7Suspicious blocks have an additional &a{digging_archaeologyrepeatchance_add} &7chance to return, and you gain a small chance (which increases around structures) to find suspicious sand or gravel while digging.",
+    "digging_perk_a2_description": "&7Suspicious blocks have an additional &a{miningdigging_archaeologyrepeatchance_add} &7chance to return, and you gain a small chance (which increases around structures) to find suspicious sand or gravel while digging.",
     "digging_perk_b1_name": "&aExcavator",
-    "digging_perk_b1_description": "&7Speeds up your digging by another &a{digging_diggingspeedbonus_add}.",
+    "digging_perk_b1_description": "&7Speeds up your digging by another &a{miningdigging_diggingspeedbonus_add}.",
     "digging_perk_b2_name": "&aPanning",
     "digging_perk_b2_description": "&7You start finding valuable resources from the ground.",
     "digging_perk_4_name": "&aHidden Treasure",
@@ -1828,57 +1828,57 @@
     "power_perk_2g_description": "&7Ability Cooldown Reduction &b{power_cooldownreduction_add}",
     "power_perk_3g_name": "&bAmbition III",
     "power_perk_3g_description": "&7Ability Cooldown Reduction &b{power_cooldownreduction_add}",
-    "heavyarmor_perk_ng1_name": "&c&lNew Game I",
+    "heavyarmor_perk_ng1_name": "&c&lMaster",
     "heavyarmor_perk_ng1_description": "&7Resets your heavy armor level back to 0, and reduces experience gained by &4{heavyarmor_heavyarmorexpmultiplier_add}&7. In exchange, you gain a permanent &c{heavyarmor_damageresistanceperpiece_add} &7damage resistance, and &c{heavyarmor_critchanceresistanceperpiece_add} &7crit resistance per piece of heavy armor",
-    "heavyarmor_perk_ng2_name": "&c&lNew Game II",
+    "heavyarmor_perk_ng2_name": "&c&lLegend",
     "heavyarmor_perk_ng2_description": "&7Resets your heavy armor level back to 0, and reduces experience gained by &4{heavyarmor_heavyarmorexpmultiplier_add}&7. In exchange, you again gain a permanent &c{heavyarmor_damageresistanceperpiece_add} &7damage resistance, and &c{heavyarmor_critchanceresistanceperpiece_add} &7crit resistance per piece of heavy armor",
-    "lightarmor_perk_ng1_name": "&e&lNew Game I",
+    "lightarmor_perk_ng1_name": "&e&lMaster",
     "lightarmor_perk_ng1_description": "&7Resets your light armor level back to 0, and reduces experience gained by &c{lightarmor_lightarmorexpmultiplier_add}&7. In exchange, you gain a permanent &e{lightarmor_damageresistanceperpiece_add} &7damage resistance, and &e{lightarmor_movementspeedperpiece_add} &7movement speed per piece of light armor",
-    "lightarmor_perk_ng2_name": "&e&lNew Game II",
+    "lightarmor_perk_ng2_name": "&e&lLegend",
     "lightarmor_perk_ng2_description": "&7Resets your light armor level back to 0, and reduces experience gained by &c{lightarmor_lightarmorexpmultiplier_add}&7. In exchange, you again gain a permanent &e{lightarmor_damageresistanceperpiece_add} &7damage resistance, and &e{lightarmor_movementspeedperpiece_add} &7movement speed per piece of light armor",
-    "archery_perk_ng1_name": "&e&lNew Game I",
+    "archery_perk_ng1_name": "&e&lMaster",
     "archery_perk_ng1_description": "&7Resets your archery level back to 0, and reduces experience gained by &c{archery_archeryexpmultiplier_add}&7. In exchange, you gain a permanent &e{archery_bowdamagemultiplier_add} &7ranged damage, &e{archery_inaccuracy_add} &7inaccuracy, and &e{archery_bowcritchance_add}&7 crit chance",
-    "archery_perk_ng2_name": "&e&lNew Game II",
+    "archery_perk_ng2_name": "&e&lLegend",
     "archery_perk_ng2_description": "&7Resets your archery level back to 0, and reduces experience gained by &c{archery_archeryexpmultiplier_add}&7. In exchange, you again gain a permanent &e{archery_bowdamagemultiplier_add} &7ranged damage, &e{archery_inaccuracy_add} &7inaccuracy, and &e{archery_bowcritchance_add}&7 crit chance",
-    "fishing_perk_ng1_name": "&b&lNew Game I",
+    "fishing_perk_ng1_name": "&b&lMaster",
     "fishing_perk_ng1_description": "&7Resets your fishing level back to 0, and reduces experience gained by &c{fishing_fishingexpmultiplier_add}&7. In exchange, you gain a permanent &b{fishing_fishingdrops_add} &7fishing drops, &b{fishing_fishingluck_add} &7fishing luck, and &b{fishing_fishingspeedbonus_add}&7 fishing speed",
-    "fishing_perk_ng2_name": "&b&lNew Game II",
+    "fishing_perk_ng2_name": "&b&lLegend",
     "fishing_perk_ng2_description": "&7Resets your fishing level back to 0, and reduces experience gained by &c{fishing_fishingexpmultiplier_add}&7. In exchange, you again gain a permanent &b{fishing_fishingdrops_add} &7fishing drops, &b{fishing_fishingluck_add} &7fishing luck, and &b{fishing_fishingspeedbonus_add}&7 fishing speed",
-    "heavyweapons_perk_ng1_name": "&c&lNew Game I",
+    "heavyweapons_perk_ng1_name": "&c&lMaster",
     "heavyweapons_perk_ng1_description": "&7Resets your heavy weapons level back to 0, and reduces experience gained by &4{heavyweapons_heavyweaponsexpmultiplier_add}&7. In exchange, you gain a permanent &c{heavyweapons_damagemultiplier_add} &7attack damage, &c{heavyweapons_powerattackfraction_add} &7power attack damage, and &c{heavyweapons_critchance_add}&7 crit chance",
-    "heavyweapons_perk_ng2_name": "&c&lNew Game II",
+    "heavyweapons_perk_ng2_name": "&c&lLegend",
     "heavyweapons_perk_ng2_description": "&7Resets your heavy weapons level back to 0, and reduces experience gained by &4{heavyweapons_heavyweaponsexpmultiplier_add}&7. In exchange, you again gain a permanent &c{heavyweapons_damagemultiplier_add} &7attack damage, &c{heavyweapons_powerattackfraction_add} &7power attack damage, and &c{heavyweapons_critchance_add}&7 crit chance",
-    "lightweapons_perk_ng1_name": "&e&lNew Game I",
+    "lightweapons_perk_ng1_name": "&e&lMaster",
     "lightweapons_perk_ng1_description": "&7Resets your light weapons level back to 0, and reduces experience gained by &c{lightweapons_lightweaponsexpmultiplier_add}&7. In exchange, you gain a permanent &e{lightweapons_damagemultiplier_add} &7attack damage, &e{lightweapons_attackspeedmultiplier_add} &7attack speed, and &e{lightweapons_critchance_add}&7 crit chance",
-    "lightweapons_perk_ng2_name": "&e&lNew Game II",
+    "lightweapons_perk_ng2_name": "&e&lLegend",
     "lightweapons_perk_ng2_description": "&7Resets your light weapons level back to 0, and reduces experience gained by &c{lightweapons_lightweaponsexpmultiplier_add}&7. In exchange, you again gain a permanent &e{lightweapons_damagemultiplier_add} &7attack damage, &e{lightweapons_attackspeedmultiplier_add} &7attack speed, and &e{lightweapons_critchance_add}&7 crit chance",
-    "farming_perk_ng1_name": "&a&lNew Game I",
+    "farming_perk_ng1_name": "&a&lMaster",
     "farming_perk_ng1_description": "&7Resets your farming level back to 0, and reduces experience gained by &c{farming_farmingexpmultiplier_add}&7. In exchange, you gain a permanent &a{farming_farmingdrops_add} &7farming and butchery drops",
-    "farming_perk_ng2_name": "&a&lNew Game II",
+    "farming_perk_ng2_name": "&a&lLegend",
     "farming_perk_ng2_description": "&7Resets your farming level back to 0, and reduces experience gained by &c{farming_farmingexpmultiplier_add}&7. In exchange, you again gain a permanent &a{farming_farmingdrops_add} &7farming and butchery drops",
-    "digging_perk_ng1_name": "&a&lNew Game I",
-    "digging_perk_ng1_description": "&7Resets your digging level back to 0, and reduces experience gained by &c{digging_diggingexpmultiplier_add}&7. In exchange, you gain a permanent &a{digging_diggingdrops_add} &7digging drops, &a{digging_diggingluck_add}&7 digging Luck, and &a{digging_diggingspeedbonus_add} &7digging speed",
-    "digging_perk_ng2_name": "&a&lNew Game II",
-    "digging_perk_ng2_description": "&7Resets your digging level back to 0, and reduces experience gained by &c{digging_diggingexpmultiplier_add}&7. In exchange, you again gain a permanent &a{digging_diggingdrops_add} &7digging drops, &a{digging_diggingluck_add}&7 digging luck, and &a{digging_diggingspeedbonus_add} &7digging speed",
-    "woodcutting_perk_ng1_name": "&a&lNew Game I",
+    "digging_perk_ng1_name": "&a&lMaster",
+    "digging_perk_ng1_description": "&7gain a permanent &a{miningdigging_diggingdrops_add} &7mining/digging drops, &a{miningdigging_diggingluck_add}&7 digging Luck, and &a{miningdigging_diggingspeedbonus_add} &7digging speed",
+    "digging_perk_ng2_name": "&a&lLegend",
+    "digging_perk_ng2_description": "&7gain a permanent &a{miningdigging_diggingdrops_add} &7mining/digging drops, &a{miningdigging_diggingluck_add}&7 digging luck, and &a{miningdigging_diggingspeedbonus_add} &7digging speed",
+    "woodcutting_perk_ng1_name": "&a&lMaster",
     "woodcutting_perk_ng1_description": "&7Resets your woodcutting level back to 0, and reduces experience gained by &c{woodcutting_woodcuttingexpmultiplier_add}&7. In exchange, you gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
-    "woodcutting_perk_ng2_name": "&a&lNew Game II",
+    "woodcutting_perk_ng2_name": "&a&lLegend",
     "woodcutting_perk_ng2_description": "&7Resets your woodcutting level back to 0, and reduces experience gained by &c{woodcutting_woodcuttingexpmultiplier_add}&7. In exchange, you again gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
-    "mining_perk_ng1_name": "&c&lNew Game I",
-    "mining_perk_ng1_description": "&7Resets your mining level back to 0, and reduces experience gained by &4{mining_miningexpmultiplier_add}&7. In exchange, you gain a permanent &c{mining_miningdrops_add} &7mining and blasting drops and &c{mining_miningspeedbonus_add} &7mining speed",
-    "mining_perk_ng2_name": "&c&lNew Game II",
-    "mining_perk_ng2_description": "&7Resets your mining level back to 0, and reduces experience gained by &4{mining_miningexpmultiplier_add}&7. In exchange, you again gain a permanent &c{mining_miningdrops_add} &7mining and blasting drops and &c{mining_miningspeedbonus_add} &7mining speed",
-    "alchemy_perk_ng1_name": "&d&lNew Game I",
+    "mining_perk_ng1_name": "&c&lMaster",
+    "mining_perk_ng1_description": "&7Gain a permanent &c{miningdigging_miningdrops_add} &7mining and blasting drops and &c{miningdigging_miningspeedbonus_add} &7mining speed",
+    "mining_perk_ng2_name": "&c&lLegend",
+    "mining_perk_ng2_description": "&7Gain a permanent &c{miningdigging_miningdrops_add} &7mining and blasting drops and &c{miningdigging_miningspeedbonus_add} &7mining speed",
+    "alchemy_perk_ng1_name": "&d&lMaster",
     "alchemy_perk_ng1_description": "&7Resets your alchemy level back to 0, and reduces experience gained by &c{alchemy_alchemyexpmultiplier_add}&7. In exchange, you gain a permanent &d{alchemy_genericbrewingskill_add} &7brewing skill and &d{alchemy_brewingtimereduction_add} &7brewing speed",
-    "alchemy_perk_ng2_name": "&d&lNew Game II",
+    "alchemy_perk_ng2_name": "&d&lLegend",
     "alchemy_perk_ng2_description": "&7Resets your alchemy level back to 0, and reduces experience gained by &c{alchemy_alchemyexpmultiplier_add}&7. In exchange, you again gain a permanent &d{alchemy_genericbrewingskill_add} &7brewing skill and &d{alchemy_brewingtimereduction_add} &7brewing speed",
-    "enchanting_perk_ng1_name": "&b&lNew Game I",
+    "enchanting_perk_ng1_name": "&b&lMaster",
     "enchanting_perk_ng1_description": "&7Resets your enchanting level back to 0, and reduces experience gained by &c{enchanting_enchantingexpmultiplier_add}&7. In exchange, you gain a permanent &b{enchanting_enchantingskill_add} &7enchanting skill, and &b{enchanting_essencemultiplier_add} &7experience orbs",
-    "enchanting_perk_ng2_name": "&b&lNew Game II",
+    "enchanting_perk_ng2_name": "&b&lLegend",
     "enchanting_perk_ng2_description": "&7Resets your enchanting level back to 0, and reduces experience gained by &c{enchanting_enchantingexpmultiplier_add}&7. In exchange, you again gain a permanent &b{enchanting_enchantingskill_add} &7enchanting skill, and &b{enchanting_essencemultiplier_add} &7experience orbs",
-    "smithing_perk_ng1_name": "&e&lNew Game I",
+    "smithing_perk_ng1_name": "&e&lMaster",
     "smithing_perk_ng1_description": "&7Resets your smithing level back to 0, and reduces experience gained by &c{smithing_genericexpmultiplier_add}&7. In exchange, you gain a permanent &e{smithing_genericcraftingskill_add} &7bonus to all your creations",
-    "smithing_perk_ng2_name": "&e&lNew Game II",
+    "smithing_perk_ng2_name": "&e&lLegend",
     "smithing_perk_ng2_description": "&7Resets your smithing level back to 0, and reduces experience gained by &c{smithing_genericexpmultiplier_add}&7. In exchange, you again gain a permanent &e{smithing_genericcraftingskill_add} &7bonus to all your creations"
   },
   "stringListTranslations": {
@@ -1890,166 +1890,168 @@
       "&7Wiki: &ehttps://github.com/Athlaeos/ValhallaMMO/wiki"
     ],
     "heavyarmor_perk_ng1_messages": [
-      "&c✰ &4New Game I &c✰",
+      "&c✰ &4Master &c✰",
       "&c{heavyarmor_heavyarmorexpmultiplier_add} &7Heavy Armor EXP",
       "&c{heavyarmor_damageresistanceperpiece_add} &7&lPermanent &7Damage Resistance/piece",
       "&c{heavyarmor_critchanceresistanceperpiece_add} &7&lPermanent &7Crit Resistance/piece"
     ],
     "heavyarmor_perk_ng2_messages": [
-      "&c✰ &4New Game II &c✰",
+      "&c✰ &4Legend &c✰",
       "&c{heavyarmor_heavyarmorexpmultiplier_add} &7Light Armor EXP",
       "&c{heavyarmor_damageresistanceperpiece_add} &7&lPermanent &7Damage Resistance/piece",
       "&c{heavyarmor_movementspeedperpiece_add} &7&lPermanent &7Movement Speed/piece"
     ],
     "lightarmor_perk_ng1_messages": [
-      "&e✰ &6New Game I &e✰",
+      "&e✰ &6Master &e✰",
       "&e{lightarmor_lightarmorexpmultiplier_add} &7Light Armor EXP",
       "&e{lightarmor_damageresistanceperpiece_add} &7&lPermanent &7Damage Resistance/piece",
       "&e{lightarmor_movementspeedperpiece_add} &7&lPermanent &7Movement Speed/piece"
     ],
     "lightarmor_perk_ng2_messages": [
-      "&e✰ &6New Game II &e✰",
+      "&e✰ &6Legend &e✰",
       "&e{lightarmor_lightarmorexpmultiplier_add} &7Light Armor EXP",
       "&e{lightarmor_damageresistanceperpiece_add} &7&lPermanent &7Damage Resistance/piece",
       "&e{lightarmor_movementspeedperpiece_add} &7&lPermanent &7Movement Speed/piece"
     ],
     "archery_perk_ng1_messages": [
-      "&e✰ &6New Game I &e✰",
+      "&e✰ &6Master &e✰",
       "&e{archery_archeryexpmultiplier_add} &7Archery EXP",
       "&e{archery_bowdamagemultiplier_add} &7&lPermanent &7Ranged Damage",
       "&e{archery_inaccuracy_add} &7&lPermanent &7Inaccuracy",
       "&e{archery_bowcritchance_add} &7&lPermanent &7Crit Chance"
     ],
     "archery_perk_ng2_messages": [
-      "&e✰ &6New Game II &e✰",
+      "&e✰ &6Legend &e✰",
       "&e{archery_archeryexpmultiplier_add} &7Archery EXP",
       "&e{archery_bowdamagemultiplier_add} &7&lPermanent &7Ranged Damage",
       "&e{archery_inaccuracy_add} &7&lPermanent &7Inaccuracy",
       "&e{archery_bowcritchance_add} &7&lPermanent &7Crit Chance"
     ],
     "fishing_perk_ng1_messages": [
-      "&b✰ &9New Game I &b✰",
+      "&b✰ &9Master &b✰",
       "&b{fishing_fishingexpmultiplier_add} &7Fishing EXP",
       "&b{fishing_fishingdrops_add} &7&lPermanent &7Fishing Drops",
       "&b{fishing_fishingluck_add} &7&lPermanent &7Fishing Luck",
       "&b{fishing_fishingspeedbonus_add} &7&lPermanent &7Fishing Speed"
     ],
     "fishing_perk_ng2_messages": [
-      "&b✰ &9New Game II &b✰",
+      "&b✰ &9Legend &b✰",
       "&b{fishing_fishingexpmultiplier_add} &7Fishing EXP",
       "&b{fishing_fishingdrops_add} &7&lPermanent &7Fishing Drops",
       "&b{fishing_fishingluck_add} &7&lPermanent &7Fishing Luck",
       "&b{fishing_fishingspeedbonus_add} &7&lPermanent &7Fishing Speed"
     ],
     "heavyweapons_perk_ng1_messages": [
-      "&c✰ &4New Game I &c✰",
+      "&c✰ &4Master &c✰",
       "&c{heavyweapons_heavyweaponsexpmultiplier_add} &7Heavy Weapons EXP",
       "&c{heavyweapons_damagemultiplier_add} &7&lPermanent &7Attack Damage",
       "&c{heavyweapons_powerattackfraction_add} &7&lPermanent &7Power Attack Damage",
       "&c{heavyweapons_critchance_add} &7&lPermanent &7Crit Chance"
     ],
     "heavyweapons_perk_ng2_messages": [
-      "&c✰ &4New Game II &c✰",
+      "&c✰ &4Legend &c✰",
       "&c{heavyweapons_heavyweaponsexpmultiplier_add} &7Heavy Weapons EXP",
       "&c{heavyweapons_damagemultiplier_add} &7&lPermanent &7Attack Damage",
       "&c{heavyweapons_powerattackfraction_add} &7&lPermanent &7Power Attack Damage",
       "&c{heavyweapons_critchance_add} &7&lPermanent &7Crit Chance"
     ],
     "lightweapons_perk_ng1_messages": [
-      "&e✰ &6New Game I &e✰",
+      "&e✰ &6Master &e✰",
       "&c{lightweapons_lightweaponsexpmultiplier_add} &7Light Weapons EXP",
       "&e{lightweapons_damagemultiplier_add} &7&lPermanent &7Attack Damage",
       "&e{lightweapons_attackspeedmultiplier_add} &7&lPermanent &7Attack Speed",
       "&e{lightweapons_critchance_add} &7&lPermanent &7Crit Chance"
     ],
     "lightweapons_perk_ng2_messages": [
-      "&e✰ &6New Game II &e✰",
+      "&e✰ &6Legend &e✰",
       "&c{lightweapons_lightweaponsexpmultiplier_add} &7Light Weapons EXP",
       "&e{lightweapons_damagemultiplier_add} &7&lPermanent &7Attack Damage",
       "&e{lightweapons_attackspeedmultiplier_add} &7&lPermanent &7Attack Speed",
       "&e{lightweapons_critchance_add} &7&lPermanent &7Crit Chance"
     ],
     "farming_perk_ng1_messages": [
-      "&a✰ &2New Game I &a✰",
+      "&a✰ &2Master &a✰",
       "&c{farming_farmingexpmultiplier_add} &7Farming EXP",
       "&a{farming_farmingdrops_add} &7&lPermanent &7Farming & Butchery Drops",
       "&a{farming_farmingspeedbonus_add} &7&lPermanent &7Farming Speed"
     ],
     "farming_perk_ng2_messages": [
-      "&a✰ &2New Game II &a✰",
+      "&a✰ &2Legend &a✰",
       "&c{farming_farmingexpmultiplier_add} &7Farming EXP",
       "&a{farming_farmingdrops_add} &7&lPermanent &7Farming & Butchery Drops",
       "&a{farming_farmingspeedbonus_add} &7&lPermanent &7Farming Speed"
     ],
     "digging_perk_ng1_messages": [
-      "&a✰ &2New Game I &a✰",
-      "&c{digging_diggingexpmultiplier_add} &7Digging EXP",
-      "&a{digging_diggingdrops_add} &7&lPermanent &7Digging Drops",
-      "&a{digging_diggingluck_add} &7&lPermanent &7Digging Luck",
-      "&a{digging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed"
+      "&a✰ &2Master &a✰",
+      "&c{miningdigging_diggingexpmultiplier_add} &7Digging EXP",
+      "&a{miningdigging_diggingdrops_add} &7&lPermanent &7Digging Drops",
+      "&a{miningdigging_diggingluck_add} &7&lPermanent &7Digging Luck",
+      "&a{miningdigging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed"
     ],
     "digging_perk_ng2_messages": [
-      "&a✰ &2New Game II &a✰",
-      "&c{digging_diggingexpmultiplier_add} &7Digging EXP",
-      "&a{digging_diggingdrops_add} &7&lPermanent &7Digging Drops",
-      "&a{digging_diggingluck_add} &7&lPermanent &7Digging Luck",
-      "&a{digging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed"
+      "&a✰ &2Legend &a✰",
+      "&c{miningdigging_diggingexpmultiplier_add} &7Digging EXP",
+      "&a{miningdigging_diggingdrops_add} &7&lPermanent &7Digging Drops",
+      "&a{miningdigging_diggingluck_add} &7&lPermanent &7Digging Luck",
+      "&a{miningdigging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed"
     ],
     "woodcutting_perk_ng1_messages": [
-      "&a✰ &2New Game I &a✰",
+      "&a✰ &2Master &a✰",
       "&c{woodcutting_woodcuttingexpmultiplier_add} &7Woodcutting EXP",
       "&a{woodcutting_woodcuttingdrops_add} &7&lPermanent &7Woodcutting Drops",
       "&a{woodcutting_woodcuttingspeedbonus_add} &7&lPermanent &7Woodcutting Speed"
     ],
     "woodcutting_perk_ng2_messages": [
-      "&a✰ &2New Game II &a✰",
+      "&a✰ &2Legend &a✰",
       "&c{woodcutting_woodcuttingexpmultiplier_add} &7Woodcutting EXP",
       "&a{woodcutting_woodcuttingdrops_add} &7&lPermanent &7Woodcutting Drops",
       "&a{woodcutting_woodcuttingspeedbonus_add} &7&lPermanent &7Woodcutting Speed"
     ],
     "mining_perk_ng1_messages": [
-      "&c✰ &4New Game I &c✰",
-      "&4{mining_miningexpmultiplier_add} &7Mining EXP",
-      "&c{mining_miningdrops_add} &7&lPermanent &7Mining & Blasting Drops",
-      "&c{mining_miningspeedbonus_add} &7&lPermanent &7Mining Speed"
+      "&c✰ &4Master &c✰",
+      "&c{miningdigging_miningdrops_add} &7&lPermanent &7Mining & Digging & Blasting Drops",
+      "&c{miningdigging_miningspeedbonus_add} &7&lPermanent &7Mining Speed",
+      "&a{miningdigging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed",
+      "&a{miningdigging_diggingluck_add} &7&lPermanent &7Mining & Digging & Blasting Luck"
     ],
     "mining_perk_ng2_messages": [
-      "&c✰ &4New Game II &c✰",
-      "&4{mining_miningexpmultiplier_add} &7Mining EXP",
-      "&c{mining_miningdrops_add} &7&lPermanent &7Mining & Blasting Drops",
-      "&c{mining_miningspeedbonus_add} &7&lPermanent &7Mining Speed"
+      "&c✰ &4Legend &c✰",
+      "&c{miningdigging_miningdrops_add} &7&lPermanent &7Mining & Digging & Blasting Drops",
+      "&c{miningdigging_miningspeedbonus_add} &7&lPermanent &7Mining Speed",
+      "&a{miningdigging_diggingspeedbonus_add} &7&lPermanent &7Digging Speed",
+      "&a{miningdigging_diggingluck_add} &7&lPermanent &7Mining & Digging & Blasting Luck"
     ],
     "alchemy_perk_ng1_messages": [
-      "&d✰ &5New Game I &d✰",
+      "&d✰ &5Master &d✰",
       "&c{alchemy_alchemyexpmultiplier_add} &7Alchemy EXP",
       "&d{alchemy_genericbrewingskill_add} &7&lPermanent &7Brewing Skill",
       "&d{alchemy_brewingtimereduction_add} &7&lPermanent &7Brewing Speed"
     ],
     "alchemy_perk_ng2_messages": [
-      "&d✰ &5New Game II &d✰",
+      "&d✰ &5Legend &d✰",
       "&c{alchemy_alchemyexpmultiplier_add} &7Alchemy EXP",
       "&d{alchemy_genericbrewingskill_add} &7&lPermanent &7Brewing Skill",
       "&d{alchemy_brewingtimereduction_add} &7&lPermanent &7Brewing Speed"
     ],
     "enchanting_perk_ng1_messages": [
-      "&b✰ &9New Game I &b✰",
+      "&b✰ &9Master &b✰",
       "&c{enchanting_enchantingexpmultiplier_add} &7Enchanting EXP",
       "&b{enchanting_enchantingskill_add} &7&lPermanent &7Enchanting Skill",
       "&b{enchanting_essencemultiplier_add} &7&lPermanent &7Experience Orbs"
     ],
     "enchanting_perk_ng2_messages": [
-      "&b✰ &9New Game II &b✰",
+      "&b✰ &9Legend &b✰",
       "&c{enchanting_enchantingexpmultiplier_add} &7Enchanting EXP",
       "&b{enchanting_enchantingskill_add} &7&lPermanent &7Enchanting Skill",
       "&b{enchanting_essencemultiplier_add} &7&lPermanent &7Experience Orbs"
     ],
     "smithing_perk_ng1_messages": [
-      "&e✰ &6New Game I &e✰",
+      "&e✰ &6Master &e✰",
       "&c{smithing_genericexpmultiplier_add} &7Smithing EXP",
       "&e{smithing_genericcraftingskill_add} &7&lPermanent &7Smithing Skill"
     ],
     "smithing_perk_ng2_messages": [
-      "&e✰ &6New Game II &e✰",
+      "&e✰ &6Legend &e✰",
       "&c{smithing_genericexpmultiplier_add} &7Smithing EXP",
       "&e{smithing_genericcraftingskill_add} &7&lPermanent &7Smithing Skill"
     ],
@@ -2564,7 +2566,7 @@
     ],
     "digging_perk_1_messages": [
       "&a✰ &2Digger &a✰",
-      "&a{digging_diggingspeedbonus_add} &7Digging Speed"
+      "&a{miningdigging_diggingspeedbonus_add} &7Digging Speed"
     ],
     "digging_perk_2_messages": [
       "&a✰ &2Filterer &a✰",
@@ -2585,19 +2587,19 @@
     ],
     "digging_perk_a1_messages": [
       "&a✰ &2Archaeologist &a✰",
-      "&a{digging_archaeologyrepeatchance_add} &7Repeat Brushing Chance",
-      "&a{digging_archaeologyluck_add} &7Archaeology Luck"
+      "&a{miningdigging_archaeologyrepeatchance_add} &7Repeat Brushing Chance",
+      "&a{miningdigging_archaeologyluck_add} &7Archaeology Luck"
     ],
     "digging_perk_a2_messages": [
       "&a✰ &2Ancient History &a✰",
-      "&a{digging_archaeologyrepeatchance_add} &7Repeat Brushing Chance",
+      "&a{miningdigging_archaeologyrepeatchance_add} &7Repeat Brushing Chance",
       "&aRare chance to find new suspicious blocks",
       "&awhile digging.",
       "&7Chance increases greatly around structures."
     ],
     "digging_perk_b1_messages": [
       "&a✰ &2Excavator &a✰",
-      "&a{digging_diggingspeedbonus_add} &7Digging Speed"
+      "&a{miningdigging_diggingspeedbonus_add} &7Digging Speed"
     ],
     "digging_perk_b2_messages": [
       "&a✰ &2Panning &a✰",
@@ -2712,25 +2714,25 @@
     ],
     "mining_perk_1_messages": [
       "&e✰ &6Brittle Rock &e✰",
-      "&e{mining_miningspeedbonus_add} &7Mining Speed"
+      "&e{miningdigging_miningspeedbonus_add} &7Mining Speed"
     ],
     "mining_perk_2_messages": [
       "&e✰ &6Spelunking &e✰",
-      "&e{mining_miningdrops_add} &7Mining Drops",
-      "&e{mining_miningluck_add} &7Mining Luck",
+      "&e{miningdigging_miningdrops_add} &7Mining/Digging Drops",
+      "&e{miningdigging_miningluck_add} &7Mining Luck",
       "&e{power_cookingspeedbonus_add} &7Cooking Speed"
     ],
     "mining_perk_a1_messages": [
       "&e✰ &6Demolist &e✰",
-      "&e{mining_blastingdrops_add} &7Blast Mining Drops",
-      "&e{mining_tntblastradius_add} &7TNT Power",
-      "&e{mining_tntdamagereduction_add} &7TNT Resistance"
+      "&e{miningdigging_blastingdrops_add} &7Blast Mining/Digging Drops",
+      "&e{miningdigging_tntblastradius_add} &7TNT Power",
+      "&e{miningdigging_tntdamagereduction_add} &7TNT Resistance"
     ],
     "mining_perk_a2_messages": [
       "&e✰ &6Earthshaker &e✰",
-      "&e{mining_blastingdrops_add} &7Blast Mining Drops",
-      "&e{mining_tntblastradius_add} &7TNT Power",
-      "&e{mining_tntdamagereduction_add} &7TNT Resistance",
+      "&e{miningdigging_blastingdrops_add} &7Blast Mining/Digging Drops",
+      "&e{miningdigging_tntblastradius_add} &7TNT Power",
+      "&e{miningdigging_tntdamagereduction_add} &7TNT Resistance",
       "&eRecipe Unlocked",
       "&7- &eTriple TNT"
     ],
@@ -2752,8 +2754,8 @@
     ],
     "mining_perk_b1_messages": [
       "&e✰ &6Dwarven Aptitude &e✰",
-      "&e{mining_miningspeedbonus_add} &7Mining Speed",
-      "&e{mining_blockexperiencerate_add} &7Experience Orbs/block",
+      "&e{miningdigging_miningspeedbonus_add} &7Mining Speed",
+      "&e{miningdigging_blockexperiencerate_add} &7Experience Orbs/block",
       "&e+Drilling",
       "&7- 60s Cooldown",
       "&7- 10s Duration",
@@ -2763,8 +2765,8 @@
     ],
     "mining_perk_b2_messages": [
       "&e✰ &6Vein Extraction &e✰",
-      "&e{mining_miningdrops_add} &7Mining Drops",
-      "&e{mining_miningluck_add} &7Mining Luck",
+      "&e{miningdigging_miningdrops_add} &7Mining/Digging Drops",
+      "&e{miningdigging_miningluck_add} &7Mining Luck",
       "&e{power_cookingspeedbonus_add} &7Cooking Speed",
       "&e+Vein Miner",
       "&7- Ores only",
@@ -2773,11 +2775,11 @@
     ],
     "mining_perk_3_messages": [
       "&e✰ &6Earthsplitter &e✰",
-      "&e{mining_blockexperiencemultiplier_add} &7Block Experience Orbs",
+      "&e{miningdigging_blockexperiencemultiplier_add} &7Block Experience Orbs",
       "&e{power_cookingspeedbonus_add} &7Cooking Speed",
       "&eDrilling",
       "&7- 30s Cooldown",
-      "&7- &e{mining_drillingspeedbonus_add} Mining Speed"
+      "&7- &e{miningdigging_drillingspeedbonus_add} Mining Speed"
     ],
     "mining_perk_4_messages": [
       "&e✰ &6Aspect of Kali &e✰",

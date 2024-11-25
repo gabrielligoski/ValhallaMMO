@@ -8,7 +8,7 @@ import me.athlaeos.valhallammo.playerstats.profiles.Profile;
 import me.athlaeos.valhallammo.playerstats.profiles.properties.BooleanProperties;
 import me.athlaeos.valhallammo.playerstats.profiles.properties.PropertyBuilder;
 import me.athlaeos.valhallammo.skills.skills.Skill;
-import me.athlaeos.valhallammo.skills.skills.implementations.MiningSkill;
+import me.athlaeos.valhallammo.skills.skills.implementations.MiningDiggingSkill;
 import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallammo.version.EnchantmentMappings;
 import org.bukkit.Material;
@@ -19,7 +19,7 @@ import org.bukkit.entity.Player;
 import java.util.Collection;
 
 @SuppressWarnings("unused")
-public class MiningProfile extends Profile {
+public class MiningDiggingProfile extends Profile {
     {
         floatStat("miningDrops", new PropertyBuilder().format(StatFormat.DIFFERENCE_PERCENTILE_BASE_1_P1).perkReward().create());
         floatStat("miningLuck", new PropertyBuilder().format(StatFormat.FLOAT_P2).perkReward().create());
@@ -49,6 +49,16 @@ public class MiningProfile extends Profile {
         stringSetStat("emptyHandToolMaterial");
         intStat("emptyHandToolFortune", new PropertyBuilder().format(StatFormat.INT).perkReward().create());
         floatStat("emptyHandToolMiningStrength", new PropertyBuilder().format(StatFormat.FLOAT_P1).perkReward().create());
+
+        floatStat("diggingSpeedBonus", new PropertyBuilder().format(StatFormat.DIFFERENCE_PERCENTILE_BASE_1_P1).perkReward().create());
+
+        floatStat("archaeologyRepeatChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P1).perkReward().create()); // chance for suspicious block to regenerate after brushing
+        floatStat("archaeologyLuck", new PropertyBuilder().format(StatFormat.FLOAT_P1).perkReward().create()); // extra luck for archaeology loot tables
+        floatStat("archaeologySandGenerationChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P6).perkReward().create()); // chance for adjacent blocks to a mined block to turn into suspicious sand
+        floatStat("archaeologyGravelGenerationChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P6).perkReward().create()); // same with gravel
+        floatStat("archaeologySandNearStructureGenerationChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P6).perkReward().create()); // same as generation chance, but only if block is near a structure
+        floatStat("archaeologyGravelNearStructureGenerationChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P6).perkReward().create()); // same with gravel
+        floatStat("archaeologyDefaultRareLootChance", new PropertyBuilder().format(StatFormat.PERCENTILE_BASE_1_P1).perkReward().create()); // chance for generated brushable block to contain a rare loot table if no other is specified
     }
 
     public boolean isVeinMiningUnlocked() { return getBoolean("veinMiningUnlocked"); }
@@ -104,6 +114,25 @@ public class MiningProfile extends Profile {
     public double getMiningEXPMultiplier(){ return getDouble("miningEXPMultiplier");}
     public void setMiningEXPMultiplier(double value){ setDouble("miningEXPMultiplier", value);}
 
+
+    public float getDiggingSpeedBonus() { return getFloat("diggingSpeedBonus"); }
+    public void setDiggingSpeedBonus(float value) { setFloat("diggingSpeedBonus", value); }
+
+    public float getArchaeologyRepeatChance() { return getFloat("archaeologyRepeatChance"); }
+    public void setArchaeologyRepeatChance(float value) { setFloat("archaeologyRepeatChance", value); }
+    public float getArchaeologyLuck() { return getFloat("archaeologyLuck"); }
+    public void setArchaeologyLuck(float value) { setFloat("archaeologyLuck", value); }
+    public float getArchaeologySandGenerationChance() { return getFloat("archaeologySandGenerationChance"); }
+    public void setArchaeologySandGenerationChance(float value) { setFloat("archaeologySandGenerationChance", value); }
+    public float getArchaeologyGravelGenerationChance() { return getFloat("archaeologyGravelGenerationChance"); }
+    public void setArchaeologyGravelGenerationChance(float value) { setFloat("archaeologyGravelGenerationChance", value); }
+    public float getArchaeologySandNearStructureGenerationChance() { return getFloat("archaeologySandNearStructureGenerationChance"); }
+    public void setArchaeologySandNearStructureGenerationChance(float value) { setFloat("archaeologySandNearStructureGenerationChance", value); }
+    public float getArchaeologyGravelNearStructureGenerationChance() { return getFloat("archaeologyGravelNearStructureGenerationChance"); }
+    public void setArchaeologyGravelNearStructureGenerationChance(float value) { setFloat("archaeologyGravelNearStructureGenerationChance", value); }
+    public float getArchaeologyDefaultRareLootChance() { return getFloat("archaeologyDefaultRareLootChance"); }
+    public void setArchaeologyDefaultRareLootChance(float value) { setFloat("archaeologyDefaultRareLootChance", value); }
+
     private ItemBuilder emptyHandTool = null;
 
     public ItemBuilder getEmptyHandTool() {
@@ -129,24 +158,24 @@ public class MiningProfile extends Profile {
         emptyHandTool = new ItemBuilder(item.get());
     }
 
-    public MiningProfile(Player owner) {
+    public MiningDiggingProfile(Player owner) {
         super(owner);
     }
 
     @Override
     public String getTableName() {
-        return "profiles_mining";
+        return "profiles_mining_digging";
     }
 
-    private static final NamespacedKey key = new NamespacedKey(ValhallaMMO.getInstance(), "profile_mining");
+    private static final NamespacedKey key = new NamespacedKey(ValhallaMMO.getInstance(), "profiles_mining_digging");
 
     @Override
-    public MiningProfile getBlankProfile(Player owner) {
-        return new MiningProfile(owner);
+    public MiningDiggingProfile getBlankProfile(Player owner) {
+        return new MiningDiggingProfile(owner);
     }
 
     @Override
     public Class<? extends Skill> getSkillType() {
-        return MiningSkill.class;
+        return MiningDiggingSkill.class;
     }
 }

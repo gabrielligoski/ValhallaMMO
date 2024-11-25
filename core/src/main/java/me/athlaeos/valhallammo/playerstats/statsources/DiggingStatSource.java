@@ -4,9 +4,9 @@ import me.athlaeos.valhallammo.playerstats.AccumulativeStatSource;
 import me.athlaeos.valhallammo.playerstats.profiles.Profile;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileRegistry;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.DiggingProfile;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
 import me.athlaeos.valhallammo.skills.skills.SkillRegistry;
-import me.athlaeos.valhallammo.skills.skills.implementations.DiggingSkill;
+import me.athlaeos.valhallammo.skills.skills.implementations.MiningDiggingSkill;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -22,7 +22,7 @@ public class DiggingStatSource implements AccumulativeStatSource {
     public DiggingStatSource(String stat){
         this.stat = stat;
 
-        Profile baseProfile = ProfileRegistry.getBlankProfile(null, DiggingProfile.class);
+        Profile baseProfile = ProfileRegistry.getBlankProfile(null, MiningDiggingProfile.class);
         if (baseProfile.intStatNames().contains(stat)) {
             def = baseProfile.getDefaultInt(stat);
             numberType = Integer.class;
@@ -38,18 +38,18 @@ public class DiggingStatSource implements AccumulativeStatSource {
         }
 
         if (numberType == null) {
-            throw new IllegalArgumentException("DiggingStatSource:" + DiggingProfile.class.getSimpleName() + " with stat " + stat +
+            throw new IllegalArgumentException("DiggingStatSource:" + MiningDiggingProfile.class.getSimpleName() + " with stat " + stat +
                     " was initialized, but this profile type does not have such a stat");
         }
     }
 
     @Override
     public double fetch(Entity statPossessor, boolean use) {
-        DiggingSkill diggingSkill = SkillRegistry.isRegistered(DiggingSkill.class) ? (DiggingSkill) SkillRegistry.getSkill(DiggingSkill.class) : null;
-        if (statPossessor instanceof Player p && diggingSkill != null){
+        MiningDiggingSkill MiningDiggingSkill = SkillRegistry.isRegistered(MiningDiggingSkill.class) ? (MiningDiggingSkill) SkillRegistry.getSkill(MiningDiggingSkill.class) : null;
+        if (statPossessor instanceof Player p && MiningDiggingSkill != null){
             Block b = p.getTargetBlockExact(8);
-            if (b == null || !diggingSkill.getDropsExpValues().containsKey(b.getType())) return def;
-            DiggingProfile profile = ProfileCache.getOrCache(p, DiggingProfile.class);
+            if (b == null || !MiningDiggingSkill.getDropsExpValues().containsKey(b.getType())) return def;
+            MiningDiggingProfile profile = ProfileCache.getOrCache(p, MiningDiggingProfile.class);
             if (numberType.equals(Integer.class)) return profile.getInt(stat);
             if (numberType.equals(Float.class)) return profile.getFloat(stat);
             return profile.getDouble(stat);

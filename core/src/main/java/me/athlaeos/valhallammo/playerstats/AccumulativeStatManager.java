@@ -170,7 +170,7 @@ public class AccumulativeStatManager {
         register("BLOCK_SPECIFIC_DIG_SPEED", new DiggingStatSource("diggingSpeedBonus"), new WoodcuttingStatSource("woodcuttingSpeedBonus"), new MiningDrillingActiveSource(), new MiningStatSource("miningSpeedBonus"), new MiningUnbreakableBlocksSource()); // should never be cached as this stat is dependent on the block currently being looked at
         register("FISHING_LUCK", new FishingLuckRainSource(), new AttributeSource("FISHING_LUCK"), new PotionEffectSource("FISHING_LUCK"), new FishingLuckLotSSource(), new FishingLuckFullMoonSource(), new FishingLuckNewMoonSource());
         register("FISHING_SPEED_MULTIPLIER", new AttributeSource("FISHING_LUCK"), new PotionEffectSource("FISHING_LUCK"), new FishingLuckLotSSource(), new FishingLuckFullMoonSource(), new FishingLuckNewMoonSource());
-        register("EXPLOSION_RADIUS_MULTIPLIER", new ProfileStatSource(MiningProfile.class, "tntBlastRadius"), new AttributeSource("EXPLOSION_POWER"), new PotionEffectSource("EXPLOSION_POWER"), new GlobalBuffSource("blast_mining_radius_multiplier"));
+        register("EXPLOSION_RADIUS_MULTIPLIER", new ProfileStatSource(MiningDiggingProfile.class, "tntBlastRadius"), new AttributeSource("EXPLOSION_POWER"), new PotionEffectSource("EXPLOSION_POWER"), new GlobalBuffSource("blast_mining_radius_multiplier"));
 
         // food related
         register("FOOD_BONUS_VEGETABLE", new ProfileStatSource(PowerProfile.class, "foodBonusVegetable"));
@@ -260,16 +260,13 @@ public class AccumulativeStatManager {
         register("FARMING_LUCK", new ProfileStatSource(FarmingProfile.class, "farmingLuck"), new AttributeSource("FARMING_RARE_DROPS"), new PotionEffectSource("FARMING_RARE_DROPS"), new GlobalBuffSource("farming_luck"));
         register("FARMING_EXP_GAIN", new ProfileStatSource(FarmingProfile.class, "farmingEXPMultiplier"), new GlobalBuffSource("farming_experience"));
 
-        register("MINING_DROP_MULTIPLIER", new ProfileStatSource(MiningProfile.class, "miningDrops"), new AttributeSource("MINING_DROPS"), new PotionEffectSource("MINING_DROPS"), new GlobalBuffSource("mining_drop_multiplier"));
-        register("MINING_LUCK", new ProfileStatSource(MiningProfile.class, "miningLuck"), new AttributeSource("MINING_RARE_DROPS"), new PotionEffectSource("MINING_RARE_DROPS"), new GlobalBuffSource("mining_luck"));
-        register("BLASTING_DROP_MULTIPLIER", new ProfileStatSource(MiningProfile.class, "blastingDrops"), new AttributeSource("MINING_DROPS"), new PotionEffectSource("MINING_DROPS"), new GlobalBuffSource("blasting_drop_multiplier"));
-        register("BLASTING_LUCK", new ProfileStatSource(MiningProfile.class, "blastingLuck"), new AttributeSource("MINING_RARE_DROPS"), new PotionEffectSource("MINING_RARE_DROPS"), new GlobalBuffSource("blasting_luck"));
-        register("MINING_EXP_GAIN", new ProfileStatSource(MiningProfile.class, "miningEXPMultiplier"), new GlobalBuffSource("mining_experience"));
+        register("MINING_DIGGING_DROP_MULTIPLIER", new ProfileStatSource(MiningDiggingProfile.class, "miningDrops"), new AttributeSource("MINING_DROPS"), new PotionEffectSource("MINING_DROPS"), new GlobalBuffSource("MINING_DIGGING_DROP_MULTIPLIER"));
+        register("MINING_DIGGING_LUCK", new ProfileStatSource(MiningDiggingProfile.class, "miningLuck"), new AttributeSource("MINING_RARE_DROPS"), new PotionEffectSource("MINING_RARE_DROPS"), new GlobalBuffSource("MINING_DIGGING_LUCK"));
+        register("BLASTING_DROP_MULTIPLIER", new ProfileStatSource(MiningDiggingProfile.class, "blastingDrops"), new AttributeSource("MINING_DROPS"), new PotionEffectSource("MINING_DROPS"), new GlobalBuffSource("blasting_drop_multiplier"));
+        register("BLASTING_LUCK", new ProfileStatSource(MiningDiggingProfile.class, "blastingLuck"), new AttributeSource("MINING_RARE_DROPS"), new PotionEffectSource("MINING_RARE_DROPS"), new GlobalBuffSource("blasting_luck"));
+        register("MINING_DIGGING_EXP_GAIN", new ProfileStatSource(MiningDiggingProfile.class, "miningEXPMultiplier"), new GlobalBuffSource("mining_experience"));
 
-        register("DIGGING_DROP_MULTIPLIER", new ProfileStatSource(DiggingProfile.class, "diggingDrops"), new AttributeSource("DIGGING_DROPS"), new PotionEffectSource("DIGGING_DROPS"), new GlobalBuffSource("digging_drop_multiplier"));
-        register("DIGGING_LUCK", new ProfileStatSource(DiggingProfile.class, "diggingLuck"), new AttributeSource("DIGGING_RARE_DROPS"), new PotionEffectSource("DIGGING_RARE_DROPS"), new GlobalBuffSource("digging_luck"));
-        register("DIGGING_ARCHAEOLOGY_LUCK", new ProfileStatSource(DiggingProfile.class, "archaeologyLuck"), new AttributeSource("DIGGING_RARE_DROPS"), new PotionEffectSource("DIGGING_RARE_DROPS"), new GlobalBuffSource("archaeology_luck"));
-        register("DIGGING_EXP_GAIN", new ProfileStatSource(DiggingProfile.class, "diggingEXPMultiplier"), new GlobalBuffSource("digging_experience"));
+        register("DIGGING_ARCHAEOLOGY_LUCK", new ProfileStatSource(MiningDiggingProfile.class, "archaeologyLuck"), new AttributeSource("DIGGING_RARE_DROPS"), new PotionEffectSource("DIGGING_RARE_DROPS"), new GlobalBuffSource("archaeology_luck"));
 
         register("WOODCUTTING_DROP_MULTIPLIER", new ProfileStatSource(WoodcuttingProfile.class, "woodcuttingDrops"), new AttributeSource("WOODCUTTING_DROPS"), new PotionEffectSource("WOODCUTTING_DROPS"), new GlobalBuffSource("woodcutting_drop_multiplier"));
         register("WOODCUTTING_LUCK", new ProfileStatSource(WoodcuttingProfile.class, "woodcuttingLuck"), new AttributeSource("WOODCUTTING_RARE_DROPS"), new PotionEffectSource("WOODCUTTING_RARE_DROPS"), new GlobalBuffSource("woodcutting_luck"));

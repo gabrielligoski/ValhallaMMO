@@ -7,7 +7,7 @@ import me.athlaeos.valhallammo.listeners.CustomBreakSpeedListener;
 import me.athlaeos.valhallammo.listeners.LootListener;
 import me.athlaeos.valhallammo.playerstats.EntityCache;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningProfile;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
 import me.athlaeos.valhallammo.utility.BlockUtils;
 import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallammo.utility.Timer;
@@ -61,7 +61,7 @@ public class BlockDigProcess {
                 ItemBuilder tool = null;
                 ItemBuilder originalTool = null;
                 if (ItemUtils.isEmpty(p.getInventory().getItemInMainHand())) {
-                    MiningProfile profile = ProfileCache.getOrCache(p, MiningProfile.class);
+                    MiningDiggingProfile profile = ProfileCache.getOrCache(p, MiningDiggingProfile.class);
                     if (profile.getEmptyHandTool() != null) tool = profile.getEmptyHandTool();
                 } else {
                     tool = EntityCache.getAndCacheProperties(p).getMainHand();

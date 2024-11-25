@@ -29,7 +29,6 @@ public class LandscapingProfile extends Profile implements Serializable {
     private float diggingexperiencerate = 0F;
 
     private double woodcuttingexpmultiplier = 100D;
-    private double diggingexpmultiplier = 100D;
     private double woodstrippingexpmultiplier = 100D;
     private double generalexpmultiplier = 100D;
 

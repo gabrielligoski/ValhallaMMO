@@ -29,7 +29,7 @@ public class DrillingActive extends Animation {
     private static final String drillingOff;
     private static final Sound drillingActiveSound;
     static {
-        YamlConfiguration config = ConfigManager.getConfig("skills/mining.yml").get();
+        YamlConfiguration config = ConfigManager.getConfig("skills/mining_digging.yml").get();
 
         particle = Catch.catchOrElse(() -> Particle.valueOf(config.getString("drilling_effect_particle")), null);
         options = new Particle.DustOptions(Utils.hexToRgb(config.getString("drilling_effect_color", "#ffffff")), 0.5f);

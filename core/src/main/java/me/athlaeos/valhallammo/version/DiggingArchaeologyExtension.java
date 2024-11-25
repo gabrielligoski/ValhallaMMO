@@ -8,8 +8,8 @@ import me.athlaeos.valhallammo.dom.Structures;
 import me.athlaeos.valhallammo.event.PlayerSkillExperienceGainEvent;
 import me.athlaeos.valhallammo.listeners.LootListener;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
-import me.athlaeos.valhallammo.playerstats.profiles.implementations.DiggingProfile;
-import me.athlaeos.valhallammo.skills.skills.implementations.DiggingSkill;
+import me.athlaeos.valhallammo.playerstats.profiles.implementations.MiningDiggingProfile;
+import me.athlaeos.valhallammo.skills.skills.implementations.MiningDiggingSkill;
 import me.athlaeos.valhallammo.utility.BlockStore;
 import me.athlaeos.valhallammo.utility.ItemUtils;
 import me.athlaeos.valhallammo.utility.StringUtils;
@@ -34,7 +34,7 @@ import org.bukkit.loot.LootTables;
 import java.util.*;
 
 public class DiggingArchaeologyExtension implements Listener {
-    private final DiggingSkill skill;
+    private final MiningDiggingSkill skill;
     private final Map<Structures, Integer> structureRadiusMap = new HashMap<>();
     private final Map<Structures, LootTables> structureLootTableMap = new HashMap<>();
     private final Map<Material, Double> gravelConversionBlocks = new HashMap<>();
@@ -43,13 +43,13 @@ public class DiggingArchaeologyExtension implements Listener {
     private final List<LootTables> rareLootTables = new ArrayList<>();
     private final List<LootTables> commonLootTables = new ArrayList<>();
 
-    public DiggingArchaeologyExtension(DiggingSkill skill){
+    public DiggingArchaeologyExtension(MiningDiggingSkill skill){
         this.skill = skill;
-        ValhallaMMO.getInstance().save("skills/digging_progression.yml");
-        ValhallaMMO.getInstance().save("skills/digging.yml");
+        ValhallaMMO.getInstance().save("skills/mining_digging_progression.yml");
+        ValhallaMMO.getInstance().save("skills/mining_digging.yml");
 
-        YamlConfiguration skillConfig = ConfigManager.getConfig("skills/digging.yml").get();
-        YamlConfiguration progressionConfig = ConfigManager.getConfig("skills/digging_progression.yml").get();
+        YamlConfiguration skillConfig = ConfigManager.getConfig("skills/mining_digging.yml").get();
+        YamlConfiguration progressionConfig = ConfigManager.getConfig("skills/mining_digging_progression.yml").get();
 
         ConfigurationSection expSection = progressionConfig.getConfigurationSection("experience.archaeology_brush");
         if (expSection != null){
@@ -131,7 +131,7 @@ public class DiggingArchaeologyExtension implements Listener {
     @EventHandler(priority = EventPriority.MONITOR)
     public void onBlockBreak(BlockBreakEvent e){
         if (ValhallaMMO.isWorldBlacklisted(e.getBlock().getWorld().getName()) || e.isCancelled() || !(sandConversionBlocks.containsKey(e.getBlock().getType()) || gravelConversionBlocks.containsKey(e.getBlock().getType()))) return;
-        DiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), DiggingProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningDiggingProfile.class);
 
         Structures nearbyStructure = null;
         if (ValhallaMMO.getNms() != null){
@@ -182,7 +182,7 @@ public class DiggingArchaeologyExtension implements Listener {
     public void onBrush(BlockDropItemEvent e){
         if (ValhallaMMO.isWorldBlacklisted(e.getBlock().getWorld().getName()) || e.isCancelled() || !(e.getBlock().getState() instanceof BrushableBlock b) ||
                 !(e.getBlock().getBlockData() instanceof Brushable brushable)) return;
-        DiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), DiggingProfile.class);
+        MiningDiggingProfile profile = ProfileCache.getOrCache(e.getPlayer(), MiningDiggingProfile.class);
 
         double expQuantity = 0;
         for (Item i : e.getItems()){
