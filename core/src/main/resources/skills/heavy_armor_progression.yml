@@ -3,7 +3,7 @@ starting_perks:
   heavyarmor_movementspeedperpiece_add: -0.0375
 
 experience:
-  max_level: 100
+  max_level: 10
   exp_level_curve: '(15000 * 2^(%level%))'
   exp_damage_piece: 10 # Exp per damage dealt
   exp_second_piece: 5 # Exp per second spent in combat, per piece of heavy armor. Players enter combat when hit, or when hitting entities, for a specified duration in config.yml
@@ -45,7 +45,7 @@ perks:
     description: "<lang.heavyarmor_perk_1a_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       heavyarmor_movementspeedperpiece_add: 0.0175
     messages:
@@ -70,7 +70,7 @@ perks:
     description: "<lang.heavyarmor_perk_2a_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 5
     perk_rewards:
       heavyarmor_setamount_add: -1
       heavyarmor_movementspeedperpiece_add: 0.02
@@ -106,7 +106,7 @@ perks:
     description: "<lang.heavyarmor_perk_1b_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       heavyarmor_sethealingbonus_add: 0.2
       heavyarmor_heavyarmormultiplier_add: 0.1
@@ -132,7 +132,7 @@ perks:
     description: "<lang.heavyarmor_perk_2b_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       heavyarmor_setreflectchance_add: 0.2
       heavyarmor_setreflectfraction_add: 0.4
@@ -169,7 +169,7 @@ perks:
     description: "<lang.heavyarmor_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       heavyarmor_add_immune_effect:
         - SLOW
@@ -229,7 +229,7 @@ perks:
     description: "<lang.heavyarmor_perk_1c_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       heavyarmor_rageunlocked_toggle: 0
       heavyarmor_ragelevel_add: 1
@@ -246,7 +246,7 @@ perks:
     description: "<lang.heavyarmor_perk_2c_description>"
     cost: 1
     hidden: false
-    required_lv: 90
+    required_lv: 7
     perk_rewards:
       heavyarmor_ragelevel_add: 4
       heavyarmor_ragethreshold_add: 0.2
@@ -262,7 +262,7 @@ perks:
     description: "<lang.heavyarmor_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       heavyarmor_setcritchanceresistance_add: 0.5
       heavyarmor_setimmunityfractionbonus_add: 0.25
@@ -279,9 +279,8 @@ perks:
     description: "<lang.heavyarmor_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_heavy_armor: 0
       p:heavyarmor_newgameplus_add: 1
       p:heavyarmor_damageresistanceperpiece_add: 0.01875
       p:heavyarmor_critchanceresistanceperpiece_add: 0.1
@@ -292,16 +291,15 @@ perks:
       - "<lang.heavyarmor_perk_ng1_messages>"
   heavyarmor_perk_ng2:
     icon: TOTEM_OF_UNDYING
-    coords: "3,7"
+    coords: "3,6"
     name: "<lang.heavyarmor_perk_ng2_name>"
     description: "<lang.heavyarmor_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - heavyarmor_perk_ng1
     perk_rewards:
-      reset_skill_heavy_armor: 0
       p:heavyarmor_newgameplus_add: 1
       p:heavyarmor_damageresistanceperpiece_add: 0.01875
       p:heavyarmor_critchanceresistanceperpiece_add: 0.1

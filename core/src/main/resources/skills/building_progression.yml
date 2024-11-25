@@ -2,7 +2,7 @@ starting_perks:
   mining_miningdrops_add: -0.3
 
 experience: 
-  max_level: 100 
+  max_level: 10 
   exp_level_curve: '(15000 * 2^(%level%))'
   exp_multiplier_mine: 1 
   exp_multiplier_blast: 1.5 

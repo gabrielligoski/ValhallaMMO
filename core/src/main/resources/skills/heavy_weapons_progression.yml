@@ -4,7 +4,7 @@ starting_perks:
   heavyweapons_knockbackmultiplier_add: -0.3
 
 experience: 
-  max_level: 100 
+  max_level: 10 
   exp_level_curve: '(15000 * 2^(%level%))'
   exp_per_damage: 10
   mace_exp_multiplier: 0.1 # When using "The Mace" to attack, exp rewarded is multiplied by this amount
@@ -50,7 +50,7 @@ perks:
     description: "<lang.heavyweapons_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       heavyweapons_powerattackdamagemultiplier_add: 0.1
       heavyweapons_critchance_add: 0.1
@@ -81,7 +81,7 @@ perks:
     description: "<lang.heavyweapons_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       heavyweapons_damagemultiplier_add: 0.1
       heavyweapons_powerattackfraction_add: 0.5
@@ -113,7 +113,7 @@ perks:
     description: "<lang.heavyweapons_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 6
     perk_rewards:
       heavyweapons_powerattackdamagemultiplier_add: 0.15
       heavyweapons_penetrationflat_add: 5
@@ -144,7 +144,7 @@ perks:
     description: "<lang.heavyweapons_perk_5_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       heavyweapons_damagemultiplier_add: 0.1
       heavyweapons_powerattackfraction_add: 0.25
@@ -172,7 +172,7 @@ perks:
     description: "<lang.heavyweapons_perk_6_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       heavyweapons_critchance_add: 0.1
       heavyweapons_critdamage_add: 0.3
@@ -200,7 +200,7 @@ perks:
     description: "<lang.heavyweapons_perk_a1_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       heavyweapons_coatingunlocked_toggle: 0
       heavyweapons_coatingcharges_add: 2
@@ -228,7 +228,7 @@ perks:
     description: "<lang.heavyweapons_perk_a2_description>"
     cost: 1
     hidden: false
-    required_lv: 70
+    required_lv: 6
     perk_rewards:
       heavyweapons_coatingcharges_add: 2
       heavyweapons_coatingdurationmultiplier_add: 0.1
@@ -250,9 +250,9 @@ perks:
     description: "<lang.heavyweapons_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 70
+    required_lv: 7
     other_levels_required:
-      - WOODCUTTING:70
+      - WOODCUTTING:6
     perk_rewards:
       heavyweapons_stunchance_add: 0.2
       heavyweapons_penetrationfraction_add: 0.2
@@ -266,9 +266,8 @@ perks:
     description: "<lang.heavyweapons_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_heavy_weapons: 0
       p:heavyweapons_newgameplus_add: 1
       p:heavyweapons_damagemultiplier_add: 0.15
       p:heavyweapons_powerattackfraction_add: 0.2
@@ -280,16 +279,15 @@ perks:
       - "<lang.heavyweapons_perk_ng1_messages>"
   heavyweapons_perk_ng2:
     icon: TOTEM_OF_UNDYING
-    coords: "3,11"
+    coords: "3,10"
     name: "<lang.heavyweapons_perk_ng2_name>"
     description: "<lang.heavyweapons_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - heavyweapons_perk_ng1
     perk_rewards:
-      reset_skill_heavy_weapons: 0
       p:heavyweapons_newgameplus_add: 1
       p:heavyweapons_damagemultiplier_add: 0.15
       p:heavyweapons_powerattackfraction_add: 0.2

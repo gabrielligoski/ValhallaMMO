@@ -1,7 +1,7 @@
 starting_perks: []
 
 experience: # Everything about leveling and experience progression for Landscaping
-  max_level: 100 # Max level for landscaping, players can still gain exp after reaching 200
+  max_level: 10 # Max level for landscaping, players can still gain exp after reaching 200
   exp_level_curve: '(7500 * 2^(%level%))' # Here the x-axis represents level and the y-axis is the exp required to
   # progress to that level.
   # The area under this graph from point a to point b represents the total amount of experience needed to get from level

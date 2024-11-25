@@ -3,7 +3,7 @@ starting_perks:
   lightarmor_movementspeedperpiece_add: -0.025
 
 experience: 
-  max_level: 100 
+  max_level: 10 
   exp_level_curve: '(15000 * 2^(%level%))'
   exp_damage_piece: 10 # Exp per damage dealt
   exp_second_piece: 5 # Exp per second spent in combat, per piece of light armor. Players enter combat when hit, or when hitting entities, for a specified duration in config.yml
@@ -45,7 +45,7 @@ perks:
     description: "<lang.lightarmor_perk_1a_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       lightarmor_movementspeedperpiece_add: 0.01
     messages:
@@ -70,7 +70,7 @@ perks:
     description: "<lang.lightarmor_perk_2a_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 5
     perk_rewards:
       lightarmor_setamount_add: -1
       lightarmor_movementspeedperpiece_add: 0.015
@@ -106,7 +106,7 @@ perks:
     description: "<lang.lightarmor_perk_1b_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       lightarmor_sethungersavechance_add: 0.3
       lightarmor_lightarmormultiplier_add: 0.1
@@ -132,7 +132,7 @@ perks:
     description: "<lang.lightarmor_perk_2b_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 6
     perk_rewards:
       lightarmor_setdodgechance_add: 0.2
       lightarmor_lightarmormultiplier_add: 0.1
@@ -168,7 +168,7 @@ perks:
     description: "<lang.lightarmor_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       lightarmor_add_immune_effect:
         - POISON
@@ -228,7 +228,7 @@ perks:
     description: "<lang.lightarmor_perk_1c_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       lightarmor_adrenalineunlocked_toggle: 0
       lightarmor_adrenalinethreshold_add: 0.3
@@ -245,7 +245,7 @@ perks:
     description: "<lang.lightarmor_perk_2c_description>"
     cost: 1
     hidden: false
-    required_lv: 90
+    required_lv: 7
     perk_rewards:
       lightarmor_adrenalinelevel_add: 4
       lightarmor_adrenalinethreshold_add: 0.2
@@ -261,7 +261,7 @@ perks:
     description: "<lang.lightarmor_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       lightarmor_setcritchanceresistance_add: 0.5
       lightarmor_setstunresistance_add: 1
@@ -270,7 +270,7 @@ perks:
     requireperk_all:
       - lightarmor_perk_1
     other_levels_required:
-      - HEAVY_WEAPONS:50
+      - HEAVY_WEAPONS:5
   lightarmor_perk_ng1:
     icon: TOTEM_OF_UNDYING
     coords: "3,7"
@@ -278,9 +278,8 @@ perks:
     description: "<lang.lightarmor_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_light_armor: 0
       p:lightarmor_newgameplus_add: 1
       p:lightarmor_damageresistanceperpiece_add: 0.0125
       p:lightarmor_movementspeedperpiece_add: 0.02
@@ -291,16 +290,15 @@ perks:
       - "<lang.lightarmor_perk_ng1_messages>"
   lightarmor_perk_ng2:
     icon: TOTEM_OF_UNDYING
-    coords: "3,7"
+    coords: "3,6"
     name: "<lang.lightarmor_perk_ng2_name>"
     description: "<lang.lightarmor_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - lightarmor_perk_ng1
     perk_rewards:
-      reset_skill_light_armor: 0
       p:lightarmor_newgameplus_add: 1
       p:lightarmor_damageresistanceperpiece_add: 0.0125
       p:lightarmor_movementspeedperpiece_add: 0.02

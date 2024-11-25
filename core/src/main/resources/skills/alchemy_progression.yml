@@ -2,7 +2,7 @@ starting_perks:
   alchemy_brewingtimereduction_add: -0.3
 
 experience:
-  max_level: 100
+  max_level: 10
   exp_level_curve: '(15000 * 2^(%level%))'
 
 special_perks: []
@@ -41,7 +41,7 @@ perks:
     description: "<lang.alchemy_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       alchemy_brewingingredientsavechance_add: 0.2
     messages:
@@ -61,7 +61,7 @@ perks:
     description: "<lang.alchemy_perk_a1_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 2
     perk_rewards:
       alchemy_splashintensityminimum_add: 0.3
       alchemy_debuffbrewingskill_add: 20
@@ -92,7 +92,7 @@ perks:
     description: "<lang.alchemy_perk_a2_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 5
     perk_rewards:
       alchemy_debuffbrewingskill_add: 30
       alchemy_splashintensityminimum_add: 0.3
@@ -116,7 +116,7 @@ perks:
     description: "<lang.alchemy_perk_b1_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       alchemy_buffbrewingskill_add: 20
       alchemy_brewingtimereduction_add: 0.4
@@ -147,7 +147,7 @@ perks:
     description: "<lang.alchemy_perk_b2_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 5
     perk_rewards:
       alchemy_buffbrewingskill_add: 30
       alchemy_brewingingredientsavechance_add: 0.3
@@ -171,7 +171,7 @@ perks:
     description: "<lang.alchemy_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       alchemy_brewingtimereduction_add: 0.6
       alchemy_potioncombiningunlocked_toggle: 0
@@ -201,7 +201,7 @@ perks:
     description: "<lang.alchemy_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       alchemy_genericbrewingskill_add: 50
       alchemy_transmutationradius_add: 2
@@ -225,7 +225,7 @@ perks:
     description: "<lang.alchemy_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     perk_rewards:
       lightweapons_coatingcharges_add: 10
       heavyweapons_coatingcharges_add: 10
@@ -254,9 +254,8 @@ perks:
     description: "<lang.alchemy_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_alchemy: 0
       p:alchemy_newgameplus_add: 1
       p:alchemy_genericbrewingskill_add: 50
       p:alchemy_brewingtimereduction_add: 0.5
@@ -272,11 +271,10 @@ perks:
     description: "<lang.alchemy_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - alchemy_perk_ng1
     perk_rewards:
-      reset_skill_alchemy: 0
       p:alchemy_newgameplus_add: 1
       p:alchemy_genericbrewingskill_add: 50
       p:alchemy_brewingtimereduction_add: 0.5

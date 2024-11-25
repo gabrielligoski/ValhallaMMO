@@ -5,7 +5,7 @@ starting_perks:
 
 experience:
   exp_level_curve: '(15000 * 2^(%level%))'
-  max_level: 100
+  max_level: 10
   exp_gain:
     experience_spent_conversion: 0.5 # The fraction of spent experience during enchanting that's converted into additional enchanting skill experience
     enchantment_base:
@@ -142,7 +142,7 @@ perks:
     description: "<lang.enchanting_perk_a1_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       enchanting_essencerefundfraction_add: 0.1
       enchanting_lapissavechance_add: 0.2
@@ -183,7 +183,7 @@ perks:
     description: "<lang.enchanting_perk_a2_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       enchanting_essencerefundfraction_add: 0.1
       enchanting_lapissavechance_add: 0.3
@@ -216,7 +216,7 @@ perks:
     description: "<lang.enchanting_perk_b1_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 2
     perk_rewards:
       enchanting_essencemultiplier_add: 0.3
       power_allskillexpmultiplier_add: 0.05
@@ -257,7 +257,7 @@ perks:
     description: "<lang.enchanting_perk_b2_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 6
     perk_rewards:
       enchanting_essencemultiplier_add: 0.5
       power_allskillexpmultiplier_add: 0.15
@@ -319,7 +319,7 @@ perks:
     description: "<lang.enchanting_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 4
     perk_rewards:
       enchanting_enchantingskill_add: 30
       enchanting_anvilskill_add: 30
@@ -387,7 +387,7 @@ perks:
     description: "<lang.enchanting_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       enchanting_enchantingskill_add: 30
       enchanting_anvilskill_add: 30
@@ -473,7 +473,7 @@ perks:
     description: "<lang.enchanting_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       enchanting_enchantingskill_add: 50
       enchanting_anvilskill_add: 50
@@ -549,7 +549,7 @@ perks:
     description: "<lang.enchanting_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 70
+    required_lv: 6
     perk_rewards:
       power_luckbonus_add: 1
     messages:
@@ -565,9 +565,8 @@ perks:
     description: "<lang.enchanting_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_enchanting: 0
       p:enchanting_newgameplus_add: 1
       p:enchanting_enchantingskill_add: 50
       p:enchanting_anvilskill_add: 50
@@ -584,11 +583,10 @@ perks:
     description: "<lang.enchanting_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - enchanting_perk_ng1
     perk_rewards:
-      reset_skill_enchanting: 0
       p:enchanting_newgameplus_add: 1
       p:enchanting_enchantingskill_add: 50
       p:enchanting_anvilskill_add: 50

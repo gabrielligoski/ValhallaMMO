@@ -1,14 +1,16 @@
 starting_perks:
+  smithing_woodexpmultiplier_add: -0.5 # wood and leather have their exp reduced by 50%
+  smithing_leatherexpmultiplier_add: -0.5
   smithing_stoneexpmultiplier_add: -0.5 # stone and chain grant 50% reduced exp at first
   smithing_chainexpmultiplier_add: -0.5
   smithing_goldexpmultiplier_add: -0.75 # gold and iron 75% less
   smithing_ironexpmultiplier_add: -0.75
-  smithing_diamondexpmultiplier_add: -0.90 # diamond 90% less
+  smithing_diamondexpmultiplier_add: -1 # diamond 90% less
   smithing_netheriteexpmultiplier_add: -1 # netherite grants nothing
 
 experience:
   exp_level_curve: '(15000 * 2^(%level%))'
-  max_level: 100
+  max_level: 10
   # Damaging an item (regardless of amount) will increase a tally counter for the item's material type.
   # The next time Smithing exp is gained with said material type, it is multiplied by the number below TIMES the tally counter.
   # The tally counter is then reduced by the max amount of times this effect may be stacked (100 stacks reduced to 0,
@@ -25,43 +27,52 @@ experience:
 starting_coordinates: '3,5'
 
 special_perks:
-  20:
+  1:
     perk_rewards:
-      smithing_woodexpmultiplier_add: -0.5 # wood and leather have their exp reduced by 50%
-      smithing_leatherexpmultiplier_add: -0.5
+      smithing_woodexpmultiplier_add: 0.5 # wood and leather have their exp restored back to 100%
+      smithing_leatherexpmultiplier_add: 0.5
       smithing_stoneexpmultiplier_add: 0.5 # stone and chain have their exp restored back to 100%
       smithing_chainexpmultiplier_add: 0.5
       smithing_goldexpmultiplier_add: 0.25 # gold and iron have their exp buffed to 50%
       smithing_ironexpmultiplier_add: 0.25
-      smithing_diamondexpmultiplier_add: 0.15 # diamond has its exp buffed to 25%
-      smithing_netheriteexpmultiplier_add: 0.1 # netherite starts giving 10% exp
-  40:
+#      smithing_diamondexpmultiplier_add: 0 # diamond has its exp buffed to 25%
+#      smithing_netheriteexpmultiplier_add: 0 # netherite starts giving 10% exp
+  3:
     perk_rewards:
-      smithing_woodexpmultiplier_add: -0.25 # wood and leather have their exp reduced to 25%
+      smithing_woodexpmultiplier_add: -0.25 # stone and chain and wood and leather have their exp reduced to 75%
       smithing_leatherexpmultiplier_add: -0.25
-      smithing_stoneexpmultiplier_add: -0.5 # stone and chain have their exp reduced to 50%
-      smithing_chainexpmultiplier_add: -0.5
-      smithing_goldexpmultiplier_add: 0.50 # gold and iron have their exp restored back to 100%
-      smithing_ironexpmultiplier_add: 0.50
-      smithing_diamondexpmultiplier_add: 0.25 # diamond has its exp buffed to 50%
-      smithing_netheriteexpmultiplier_add: 0.15 # netherite has its exp buffed to 25%
-  60:
-    perk_rewards:
-      smithing_woodexpmultiplier_add: -0.15 # wood and leather have their exp reduced to 10%
-      smithing_leatherexpmultiplier_add: -0.15
-      smithing_stoneexpmultiplier_add: -0.25 # stone and chain have their exp reduced to 25%
+      smithing_stoneexpmultiplier_add: -0.25
       smithing_chainexpmultiplier_add: -0.25
-      smithing_goldexpmultiplier_add: -0.5 # gold and iron have their exp reduced to 50%
-      smithing_ironexpmultiplier_add: -0.5
-      smithing_diamondexpmultiplier_add: 0.5 # diamond has its exp restored back to 100%
-      smithing_netheriteexpmultiplier_add: 0.25 # netherite has its exp buffed to 50%
-  80:
+      smithing_goldexpmultiplier_add: 0.25 # gold and iron have their exp buffed to 75%
+      smithing_ironexpmultiplier_add: 0.25
+      smithing_diamondexpmultiplier_add: 0.25 # diamond has its exp buffed to 25%
+      smithing_netheriteexpmultiplier_add: 0.1 # netherite starts giving 10% exp
+  4:
     perk_rewards:
-      smithing_stoneexpmultiplier_add: -0.15 # stone and chain have their exp reduced to 10%
-      smithing_chainexpmultiplier_add: -0.15
-      smithing_goldexpmultiplier_add: -0.25 # gold and iron have their exp reduced to 25%
+      smithing_woodexpmultiplier_add: -0.25 # stone and chain and wood and leather have their exp reduced to 25%
+      smithing_leatherexpmultiplier_add: -0.25
+      smithing_stoneexpmultiplier_add: -0.25
+      smithing_chainexpmultiplier_add: -0.25
+      smithing_goldexpmultiplier_add: -0.25 # gold and iron have their exp nerfed to 75%
       smithing_ironexpmultiplier_add: -0.25
-      smithing_netheriteexpmultiplier_add: 0.5 # netherite has its exp restored back to 100%, diamond stays at 100% as well
+      smithing_diamondexpmultiplier_add: 0.25 # diamond has its exp buffed to 50%
+      smithing_netheriteexpmultiplier_add: 0.2 # netherite starts giving 30% exp
+  5:
+    perk_rewards:
+      smithing_woodexpmultiplier_add: -0.15 # stone and chain and wood and leather have their exp reduced to 15%
+      smithing_leatherexpmultiplier_add: -0.15
+      smithing_stoneexpmultiplier_add: -0.15
+      smithing_chainexpmultiplier_add: -0.15
+      smithing_goldexpmultiplier_add: -0.25 # gold and iron have their exp nerfed to 50%
+      smithing_ironexpmultiplier_add: -0.25
+      smithing_diamondexpmultiplier_add: 0.5 # diamond has its exp buffed to 100%
+      smithing_netheriteexpmultiplier_add: 0.2 # netherite starts giving 50% exp
+  6:
+    perk_rewards:
+      smithing_goldexpmultiplier_add: -0.25 # gold and iron have their exp nerfed to 25%
+      smithing_ironexpmultiplier_add: -0.25
+      smithing_diamondexpmultiplier_add: 0.2 # diamond has its exp buffed to 120%
+      smithing_netheriteexpmultiplier_add: 0.5 # netherite has its exp buffed to 100%
 
 
 commands: []
@@ -90,6 +101,65 @@ perks:
     custom_model_data_unlockable: -1
     custom_model_data_unlocked: -1
     custom_model_data_visible: -1
+  smithing_scrap:
+    icon: ANVIL
+    coords: "2,4"
+    name: "<lang.smithing_scrap_name>"
+    description: "<lang.smithing_scrap_description>"
+    cost: 1
+    hidden: false
+    required_lv: 3
+    perk_rewards:
+      recipes_unlock:
+        - salvage_leather_helmet
+        - salvage_leather_chestplate
+        - salvage_leather_leggings
+        - salvage_leather_boots
+        - salvage_chainmail_helmet
+        - salvage_chainmail_chestplate
+        - salvage_chainmail_leggings
+        - salvage_chainmail_boots
+        - salvage_golden_helmet
+        - salvage_golden_chestplate
+        - salvage_golden_leggings
+        - salvage_golden_boots
+        - salvage_iron_helmet
+        - salvage_iron_chestplate
+        - salvage_iron_leggings
+        - salvage_iron_boots
+        - salvage_diamond_helmet
+        - salvage_diamond_chestplate
+        - salvage_diamond_leggings
+        - salvage_diamond_boots
+        - salvage_wooden_sword
+        - salvage_wooden_pickaxe
+        - salvage_wooden_axe
+        - salvage_wooden_shovel
+        - salvage_wooden_hoe
+        - salvage_stone_sword
+        - salvage_stone_pickaxe
+        - salvage_stone_axe
+        - salvage_stone_shovel
+        - salvage_stone_hoe
+        - salvage_golden_sword
+        - salvage_golden_pickaxe
+        - salvage_golden_axe
+        - salvage_golden_shovel
+        - salvage_golden_hoe
+        - salvage_iron_sword
+        - salvage_iron_pickaxe
+        - salvage_iron_axe
+        - salvage_iron_shovel
+        - salvage_iron_hoe
+        - salvage_diamond_sword
+        - salvage_diamond_pickaxe
+        - salvage_diamond_axe
+        - salvage_diamond_shovel
+        - salvage_diamond_hoe
+    messages:
+      - "<lang.smithing_scrap_messages>"
+    other_levels_required:
+      - FISHING:2
   smithing_perk_2:
     icon: COBBLESTONE
     coords: "2,7"
@@ -97,7 +167,7 @@ perks:
     description: "<lang.smithing_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       smithing_stonecraftingskill_add: 50
       smithing_chaincraftingskill_add: 50
@@ -123,7 +193,7 @@ perks:
     description: "<lang.smithing_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       smithing_ironcraftingskill_add: 50
       smithing_goldcraftingskill_add: 50
@@ -170,7 +240,7 @@ perks:
     description: "<lang.smithing_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 5
     perk_rewards:
       smithing_diamondcraftingskill_add: 50
     messages:
@@ -195,7 +265,7 @@ perks:
     description: "<lang.smithing_perk_5_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       smithing_netheritecraftingskill_add: 50
     messages:
@@ -235,7 +305,7 @@ perks:
     description: "<lang.smithing_perk_6_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       smithing_genericcraftingskill_add: 50
     messages:
@@ -285,7 +355,7 @@ perks:
     description: "<lang.smithing_perk_prismarine_description>"
     cost: 1
     hidden: false
-    required_lv: 70
+    required_lv: 6
     perk_rewards:
       smithing_prismarinecraftingskill_add: 50
       recipes_unlock:
@@ -301,7 +371,7 @@ perks:
     description: "<lang.smithing_perk_enderic_description>"
     cost: 1
     hidden: false
-    required_lv: 90
+    required_lv: 8
     perk_rewards:
       smithing_endericcraftingskill_add: 50
       recipes_unlock:
@@ -318,9 +388,9 @@ perks:
     description: "<lang.smithing_perk_bows_description>"
     cost: 1
     other_levels_required:
-      - ARCHERY:50
+      - ARCHERY:2
     hidden: false
-    required_lv: 50
+    required_lv: 2
     perk_rewards:
       smithing_bowcraftingskill_add: 50
       smithing_crossbowcraftingskill_add: 50
@@ -333,9 +403,8 @@ perks:
     description: "<lang.smithing_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_smithing: 0
       p:smithing_genericcraftingskill_add: 50
       p:smithing_newgameplus_add: 1
       p:smithing_genericexpmultiplier_add: -0.25
@@ -345,16 +414,15 @@ perks:
       - "<lang.smithing_perk_ng1_messages>"
   smithing_perk_ng2:
     icon: TOTEM_OF_UNDYING
-    coords: "4,6"
+    coords: "4,5"
     name: "<lang.smithing_perk_ng2_name>"
     description: "<lang.smithing_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - smithing_perk_ng1
     perk_rewards:
-      reset_skill_smithing: 0
       p:smithing_genericcraftingskill_add: 50
       p:smithing_newgameplus_add: 1
       p:smithing_genericexpmultiplier_add: -0.25

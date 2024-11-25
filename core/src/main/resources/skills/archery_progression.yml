@@ -6,7 +6,7 @@ starting_perks:
   archery_infinitydamagemultiplier_add: -0.3
 
 experience:
-  max_level: 100
+  max_level: 10
   exp_level_curve: '(15000 * 2^(%level%))'
   bow_exp_base: 30 # base exp for hitting an arrow with a bow
   crossbow_exp_base: 40 # base exp for hitting an arrow with a crossbow
@@ -58,7 +58,7 @@ perks:
     description: "<lang.archery_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       archery_ammosavechance_add: 0.1
       recipes_unlock:
@@ -93,7 +93,7 @@ perks:
     description: "<lang.archery_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 3
     perk_rewards:
       archery_inaccuracy_add: -1.5
       archery_bowcritchance_add: 0.1
@@ -126,7 +126,7 @@ perks:
     description: "<lang.archery_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 6
     perk_rewards:
       archery_bowdamagemultiplier_add: 0.1
       archery_crossbowdamagemultiplier_add: 0.1
@@ -149,7 +149,7 @@ perks:
     description: "<lang.archery_perk_5_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       archery_bowcritchance_add: 0.2
       archery_crossbowcritchance_add: 0.2
@@ -182,7 +182,7 @@ perks:
     description: "<lang.archery_perk_6_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       archery_distancedamagebonus_add: 0.1
       archery_infinitydamagemultiplier_add: 0.3
@@ -216,7 +216,7 @@ perks:
     description: "<lang.archery_perk_c1_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 4
     perk_rewards:
       archery_chargedshotunlocked_toggle: 0
       archery_chargedshotcooldown_add: 600
@@ -236,7 +236,7 @@ perks:
     description: "<lang.archery_perk_c2_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 7
     perk_rewards:
       archery_chargedshotfullvelocity_toggle: 0
       archery_chargedshotcrossbowinstantreload_toggle: 0
@@ -298,7 +298,7 @@ perks:
     description: "<lang.archery_perk_stealth_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 5
     other_levels_required:
       - LIGHT_ARMOR:50
     perk_rewards:
@@ -316,9 +316,8 @@ perks:
     description: "<lang.archery_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_archery: 0
       p:archery_newgameplus_add: 1
       p:archery_bowdamagemultiplier_add: 0.15
       p:archery_crossbowdamagemultiplier_add: 0.15
@@ -337,11 +336,10 @@ perks:
     description: "<lang.archery_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - archery_perk_ng1
     perk_rewards:
-      reset_skill_archery: 0
       p:archery_newgameplus_add: 1
       p:archery_bowdamagemultiplier_add: 0.15
       p:archery_crossbowdamagemultiplier_add: 0.15

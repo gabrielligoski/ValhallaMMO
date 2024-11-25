@@ -102,7 +102,7 @@ perks:
     description: "<lang.power_perk_1a_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_healthbonus_add: 2
     messages:
@@ -117,7 +117,7 @@ perks:
     description: "<lang.power_perk_2a_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_healthbonus_add: 3
     messages:
@@ -131,7 +131,7 @@ perks:
     description: "<lang.power_perk_3a_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_healthbonus_add: 5
     messages:
@@ -145,7 +145,7 @@ perks:
     description: "<lang.power_perk_1b_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_armorbonus_add: 2
     messages:
@@ -157,7 +157,7 @@ perks:
     description: "<lang.power_perk_2b_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_armorbonus_add: 3
     messages:
@@ -171,7 +171,7 @@ perks:
     description: "<lang.power_perk_3b_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_armorbonus_add: 5
     messages:
@@ -185,7 +185,7 @@ perks:
     description: "<lang.power_perk_1c_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_luckbonus_add: 0.2
     messages:
@@ -197,7 +197,7 @@ perks:
     description: "<lang.power_perk_2c_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_luckbonus_add: 0.3
     messages:
@@ -211,7 +211,7 @@ perks:
     description: "<lang.power_perk_3c_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_luckbonus_add: 0.5
     messages:
@@ -225,7 +225,7 @@ perks:
     description: "<lang.power_perk_1d_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_healthregenerationbonus_add: 0.2
     messages:
@@ -237,7 +237,7 @@ perks:
     description: "<lang.power_perk_2d_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_healthregenerationbonus_add: 0.3
     messages:
@@ -251,7 +251,7 @@ perks:
     description: "<lang.power_perk_3d_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_healthregenerationbonus_add: 0.5
     messages:
@@ -265,7 +265,7 @@ perks:
     description: "<lang.power_perk_1e_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_attackdamagemultiplier_add: 0.05
     messages:
@@ -277,7 +277,7 @@ perks:
     description: "<lang.power_perk_2e_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_attackdamagemultiplier_add: 0.075
     messages:
@@ -291,7 +291,7 @@ perks:
     description: "<lang.power_perk_3e_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_attackdamagemultiplier_add: 0.125
     messages:
@@ -305,7 +305,7 @@ perks:
     description: "<lang.power_perk_1f_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_entitydropmultiplier_add: 0.2
     messages:
@@ -317,7 +317,7 @@ perks:
     description: "<lang.power_perk_2f_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_entitydropmultiplier_add: 0.3
     messages:
@@ -331,7 +331,7 @@ perks:
     description: "<lang.power_perk_3f_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_entitydropmultiplier_add: 0.5
     messages:
@@ -345,7 +345,7 @@ perks:
     description: "<lang.power_perk_1g_description>"
     cost: 1
     hidden: false
-    required_lv: 0
+    required_lv: 2
     perk_rewards:
       power_cooldownreduction_add: 0.1
     messages:
@@ -357,7 +357,7 @@ perks:
     description: "<lang.power_perk_2g_description>"
     cost: 1
     hidden: true
-    required_lv: 30
+    required_lv: 4
     perk_rewards:
       power_cooldownreduction_add: 0.15
     messages:
@@ -371,7 +371,7 @@ perks:
     description: "<lang.power_perk_3g_description>"
     cost: 1
     hidden: true
-    required_lv: 60
+    required_lv: 7
     perk_rewards:
       power_cooldownreduction_add: 0.25
     messages:
