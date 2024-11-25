@@ -59,6 +59,7 @@ messages:
   - '<lang.skill-level-up-woodcutting>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   woodcutting_woodcuttingspeedbonus_add: 0.005
   woodcutting_woodcuttingdrops_add: 0.01
 

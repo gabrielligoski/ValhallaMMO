@@ -122,6 +122,7 @@ messages:
   - '<lang.skill-level-up-farming>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   farming_farmingdrops_add: 0.01
 
 starting_coordinates: '3,7'

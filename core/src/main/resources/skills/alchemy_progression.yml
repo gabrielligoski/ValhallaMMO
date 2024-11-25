@@ -13,6 +13,7 @@ messages:
   - '<lang.skill-level-up-alchemy>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   alchemy_genericbrewingskill_add: 1.5
 
 starting_coordinates: '2,0'

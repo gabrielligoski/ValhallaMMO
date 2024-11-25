@@ -17,6 +17,7 @@ messages:
   - '<lang.skill-level-up-light-armor>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   lightarmor_lightarmormultiplier_add: 0.005
 
 starting_coordinates: '3,6' 

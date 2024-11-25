@@ -21,6 +21,7 @@ messages:
   - '<lang.skill-level-up-light-weapons>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   lightweapons_attackspeedmultiplier_add: 0.005
   lightweapons_damagemultiplier_add: 0.005
 

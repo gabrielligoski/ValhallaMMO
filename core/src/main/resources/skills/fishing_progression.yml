@@ -36,6 +36,7 @@ messages:
   - '<lang.skill-level-up-fishing>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   fishing_fishingspeedbonus_add: 0.02
   fishing_fishingdrops_add: 0.02
 

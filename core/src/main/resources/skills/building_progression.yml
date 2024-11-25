@@ -118,6 +118,7 @@ messages:
   - '<lang.skill-level-up-mining>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   mining_miningdrops_add: 0.01
   mining_blastingdrops_add: 0.01
   mining_miningspeedbonus_add: 0.005

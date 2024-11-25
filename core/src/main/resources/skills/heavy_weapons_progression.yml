@@ -21,6 +21,7 @@ messages:
   - '<lang.skill-level-up-heavy-weapons>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   heavyweapons_attackspeedmultiplier_add: 0.005
   heavyweapons_damagemultiplier_add: 0.005
 

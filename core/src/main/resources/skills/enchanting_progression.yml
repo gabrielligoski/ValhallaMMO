@@ -112,6 +112,7 @@ messages:
   - '<lang.skill-level-up-enchanting>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   enchanting_enchantingskill_add: 1
   enchanting_anvilskill_add: 1
 

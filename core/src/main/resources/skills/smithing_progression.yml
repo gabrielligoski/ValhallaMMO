@@ -70,6 +70,7 @@ messages:
   - '<lang.skill-level-up-smithing>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   smithing_genericcraftingskill_add: 1.5
 
 perks:

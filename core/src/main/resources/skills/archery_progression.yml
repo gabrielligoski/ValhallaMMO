@@ -25,6 +25,7 @@ messages:
   - '<lang.skill-level-up-archery>'
 
 leveling_perks:
+  power_spendableskillpoints_add: 1
   archery_bowdamagemultiplier_add: 0.004
 
 starting_coordinates: '0,5' # The coordinates in the skill tree the player sees first when switching to the skill tree
