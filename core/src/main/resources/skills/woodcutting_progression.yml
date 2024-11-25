@@ -2,7 +2,7 @@ starting_perks: []
 
 experience: # Everything about leveling and experience progression for Landscaping
   max_level: 100 # Max level for landscaping, players can still gain exp after reaching 200
-  exp_level_curve: '(%level% + 75 * 2^(%level%/7.6)) + 300' # Here the x-axis represents level and the y-axis is the exp required to
+  exp_level_curve: '(7500 * 2^(%level%))' # Here the x-axis represents level and the y-axis is the exp required to
   # progress to that level.
   # The area under this graph from point a to point b represents the total amount of experience needed to get from level
   # a to b. You don't have to work with this, it's only for those who really want to make this progression their own.
@@ -88,7 +88,7 @@ perks:
     description: "<lang.woodcutting_perk_2_description>"
     cost: 1
     hidden: false
-    required_lv: 20
+    required_lv: 1
     perk_rewards:
       woodcutting_blockexperiencerate_add: 0.1
       woodcutting_woodcuttingluck_add: 10
@@ -114,7 +114,7 @@ perks:
     description: "<lang.woodcutting_perk_3_description>"
     cost: 1
     hidden: false
-    required_lv: 40
+    required_lv: 2
     perk_rewards:
       woodcutting_treecapitatorunlocked_set: true
       woodcutting_treecapitatorcooldown_add: 200
@@ -142,7 +142,7 @@ perks:
     description: "<lang.woodcutting_perk_4_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 3
     perk_rewards:
       woodcutting_blockexperiencerate_add: 0.3
       woodcutting_woodcuttingspeedbonus_add: 0.1
@@ -177,13 +177,15 @@ perks:
     description: "<lang.woodcutting_perk_5_description>"
     cost: 1
     hidden: false
-    required_lv: 100
+    required_lv: 8
     perk_rewards:
       woodcutting_woodcuttingluck_add: 10
     messages:
       - "<lang.woodcutting_perk_5_messages>"
     requireperk_all:
       - woodcutting_perk_4
+    other_levels_required:
+      - FARMING:6
     connection_line:
       '1':
         position: '2,1'
@@ -207,7 +209,7 @@ perks:
     description: "<lang.woodcutting_perk_carpentry_a_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 4
     perk_rewards:
       recipes_unlock:
         - planks_oak_6
@@ -387,7 +389,7 @@ perks:
     description: "<lang.woodcutting_perk_capitator_a_description>"
     cost: 1
     hidden: false
-    required_lv: 60
+    required_lv: 3
     perk_rewards:
       woodcutting_treecapitatorcooldown_add: -60
       woodcutting_treecapitatorlimit_add: 24
@@ -423,10 +425,13 @@ perks:
     description: "<lang.woodcutting_perk_capitator_b_description>"
     cost: 1
     hidden: false
-    required_lv: 80
+    required_lv: 5
     perk_rewards:
       woodcutting_treecapitatorcooldown_add: -80
       woodcutting_treecapitatorlimit_add: 96
+      woodcutting_treecapitatorblocks_add:
+        - CRIMSON_STEM
+        - WARPED_STEM
     messages:
       - "<lang.woodcutting_perk_capitator_b_messages>"
     connection_line:
@@ -442,6 +447,27 @@ perks:
         unlocked: LIME_DYE:1172910
     requireperk_all:
       - woodcutting_perk_capitator_a
+  woodcutting_perk_capitator_c:
+    icon: NETHERITE_AXE
+    coords: "7,2"
+    name: "<lang.woodcutting_perk_capitator_c_name>"
+    description: "<lang.woodcutting_perk_capitator_c_description>"
+    cost: 1
+    hidden: false
+    required_lv: 7
+    perk_rewards:
+      woodcutting_treecapitatorcooldown_add: -40
+      woodcutting_treecapitatorlimit_add: 128
+    messages:
+      - "<lang.woodcutting_perk_capitator_c_messages>"
+    connection_line:
+      '1':
+        position: '7,3'
+        locked: GRAY_DYE:1172710
+        unlockable: ORANGE_DYE:1172810
+        unlocked: LIME_DYE:1172910
+    requireperk_all:
+      - woodcutting_perk_capitator_b
   woodcutting_perk_combo:
     icon: APPLE
     coords: "0,6"
@@ -449,7 +475,7 @@ perks:
     description: "<lang.woodcutting_perk_combo_description>"
     cost: 1
     hidden: false
-    required_lv: 50
+    required_lv: 6
     perk_rewards:
       power_foodbonusvegetable_add: 0.3
       power_foodbonusseafood_add: 0.3
@@ -495,9 +521,8 @@ perks:
     description: "<lang.woodcutting_perk_ng1_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 9
     perk_rewards:
-      reset_skill_woodcutting: 0
       p:woodcutting_newgameplus_add: 1
       p:woodcutting_woodcuttingdrops_add: 0.3
       p:woodcutting_woodcuttingspeedbonus_add: 0.25
@@ -508,16 +533,15 @@ perks:
       - "<lang.woodcutting_perk_ng1_messages>"
   woodcutting_perk_ng2:
     icon: TOTEM_OF_UNDYING
-    coords: "3,12"
+    coords: "3,13"
     name: "<lang.woodcutting_perk_ng2_name>"
     description: "<lang.woodcutting_perk_ng2_description>"
     cost: 0
     hidden: true
-    required_lv: 100
+    required_lv: 10
     requireperk_all:
       - woodcutting_perk_ng1
     perk_rewards:
-      reset_skill_woodcutting: 0
       p:woodcutting_newgameplus_add: 1
       p:woodcutting_woodcuttingdrops_add: 0.3
       p:woodcutting_woodcuttingspeedbonus_add: 0.25

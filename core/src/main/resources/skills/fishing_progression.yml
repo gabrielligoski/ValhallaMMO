@@ -2,7 +2,7 @@ starting_perks: []
 
 experience:
   max_level: 100
-  exp_level_curve: '(%level% + 75 * 2^(%level%/7.6)) + 300'
+  exp_level_curve: '(15000 * 2^(%level%))'
   fishing_catch:
     COD: 200
     SALMON: 250

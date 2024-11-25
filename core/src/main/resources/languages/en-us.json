@@ -1545,7 +1545,9 @@
     "woodcutting_perk_capitator_a_name": "&aDeforestation II",
     "woodcutting_perk_capitator_a_description": "&7Empowers Tree Capitator to a 32-block limit, and lowers cooldown to 7 seconds.",
     "woodcutting_perk_capitator_b_name": "&aDeforestation III",
-    "woodcutting_perk_capitator_b_description": "&7Empowers Tree Capitator to a 128-block limit, and lowers cooldown to 3 seconds.",
+    "woodcutting_perk_capitator_b_description": "&7Empowers Tree Capitator to a 128-block limit, enable tree capitator to break nether trees, and lowers cooldown to 3 seconds.",
+    "woodcutting_perk_capitator_c_name": "&aDeforestation IV",
+    "woodcutting_perk_capitator_c_description": "&7Empowers Tree Capitator to a 256-block limit, and lowers cooldown to 1 seconds.",
     "woodcutting_perk_combo_name": "&aActive Lifestyle",
     "woodcutting_perk_combo_description": "&7Increases the nutritional value of many foods, reduces hunger consumption, and increases health regeneration",
     "smithing_perk_1_name": "&eCraftsman",
@@ -1861,9 +1863,9 @@
     "digging_perk_ng2_name": "&a&lLegend",
     "digging_perk_ng2_description": "&7gain a permanent &a{miningdigging_diggingdrops_add} &7mining/digging drops, &a{miningdigging_diggingluck_add}&7 digging luck, and &a{miningdigging_diggingspeedbonus_add} &7digging speed",
     "woodcutting_perk_ng1_name": "&a&lMaster",
-    "woodcutting_perk_ng1_description": "&7Resets your woodcutting level back to 0, and reduces experience gained by &c{woodcutting_woodcuttingexpmultiplier_add}&7. In exchange, you gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
+    "woodcutting_perk_ng1_description": "&7Gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
     "woodcutting_perk_ng2_name": "&a&lLegend",
-    "woodcutting_perk_ng2_description": "&7Resets your woodcutting level back to 0, and reduces experience gained by &c{woodcutting_woodcuttingexpmultiplier_add}&7. In exchange, you again gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
+    "woodcutting_perk_ng2_description": "&7Gain a permanent &a{woodcutting_woodcuttingdrops_add} &7woodcutting drops and &a{woodcutting_woodcuttingspeedbonus_add} &7woodcutting speed",
     "mining_perk_ng1_name": "&c&lMaster",
     "mining_perk_ng1_description": "&7Gain a permanent &c{miningdigging_miningdrops_add} &7mining and blasting drops and &c{miningdigging_miningspeedbonus_add} &7mining speed",
     "mining_perk_ng2_name": "&c&lLegend",
@@ -1997,13 +1999,11 @@
     ],
     "woodcutting_perk_ng1_messages": [
       "&a✰ &2Master &a✰",
-      "&c{woodcutting_woodcuttingexpmultiplier_add} &7Woodcutting EXP",
       "&a{woodcutting_woodcuttingdrops_add} &7&lPermanent &7Woodcutting Drops",
       "&a{woodcutting_woodcuttingspeedbonus_add} &7&lPermanent &7Woodcutting Speed"
     ],
     "woodcutting_perk_ng2_messages": [
       "&a✰ &2Legend &a✰",
-      "&c{woodcutting_woodcuttingexpmultiplier_add} &7Woodcutting EXP",
       "&a{woodcutting_woodcuttingdrops_add} &7&lPermanent &7Woodcutting Drops",
       "&a{woodcutting_woodcuttingspeedbonus_add} &7&lPermanent &7Woodcutting Speed"
     ],
@@ -2939,7 +2939,14 @@
       "&a✰ &2Deforestation III &a✰",
       "&aTree Capitator",
       "&7- Large trees (128 blocks)",
+      "&7- Nether trees",
       "&7- 3s Cooldown"
+    ],
+    "woodcutting_perk_capitator_c_messages": [
+      "&a✰ &2Deforestation IV &a✰",
+      "&aTree Capitator",
+      "&7- Large trees (256 blocks)",
+      "&7- 1s Cooldown"
     ],
     "woodcutting_perk_combo_messages": [
       "&a✰ &2Active Lifestyle &a✰",

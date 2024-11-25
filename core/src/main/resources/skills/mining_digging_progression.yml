@@ -3,7 +3,7 @@ starting_perks:
 
 experience: 
   max_level: 10
-# old  exp_level_curve: '(%level% + 75 * 2^(%level%/7.6)) + 300'
+# old  exp_level_curve: '(15000 * 2^(%level%))'
   exp_level_curve: '(15000 * 2^(%level%))'
   exp_multiplier_mine: 1
   exp_multiplier_blast: 1.5 
@@ -288,7 +288,7 @@ perks:
     hidden: false
     required_lv: 6
     other_levels_required:
-      - ENCHANTING:10
+      - ENCHANTING:2
     messages:
       - "<lang.mining_perk_a3_messages>"
     requireperk_all:
