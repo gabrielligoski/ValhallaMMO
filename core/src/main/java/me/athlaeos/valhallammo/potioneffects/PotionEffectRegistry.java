@@ -300,6 +300,7 @@ public class PotionEffectRegistry {
         registerNewEffect(new Bleed("BLEED", "\uEE8B").addModifier(Material.REDSTONE, 0.05, 1));
         registerNewEffect(new CleanseBleed("ANTIBLEED", "\uEE8C").addModifier(Material.PAPER, 0, 0));
         registerNewEffect(new Recall("RECALL", "\uEE8D").addModifier(Material.PAPER, 0.05, 1));
+        registerNewEffect(new Wormhole("Wormhole", "\uEE8D").addModifier(Material.ENDER_EYE, 0.05, 1));
         registerNewEffect(new InstantCustomHeal("CUSTOM_HEAL", "\uEE8E").addModifier(Material.GLISTERING_MELON_SLICE, 0.1, 1));
         registerNewEffect(new GenericWrapper("LAPIS_SAVE_CHANCE", (i) -> i <= 0, "\uEE8F", StatFormat.DIFFERENCE_PERCENTILE_BASE_1_P1).addModifier(Material.LAPIS_LAZULI));
         registerNewEffect(new GenericWrapper("ENCHANTING_REFUND_CHANCE", (i) -> i >= 0, "\uEE90", StatFormat.DIFFERENCE_PERCENTILE_BASE_1_P1).addModifier(Material.ENCHANTING_TABLE));
