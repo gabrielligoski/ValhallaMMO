@@ -7,8 +7,10 @@ import me.athlaeos.valhallammo.dom.Questionnaire;
 import me.athlaeos.valhallammo.item.CustomFlag;
 import me.athlaeos.valhallammo.localization.TranslationManager;
 import me.athlaeos.valhallammo.loot.LootTableRegistry;
+import me.athlaeos.valhallammo.playerstats.AccumulativeStatManager;
 import me.athlaeos.valhallammo.playerstats.format.StatFormat;
 import me.athlaeos.valhallammo.playerstats.profiles.ProfileCache;
+import me.athlaeos.valhallammo.playerstats.profiles.ProfileRegistry;
 import me.athlaeos.valhallammo.playerstats.profiles.implementations.PowerProfile;
 import me.athlaeos.valhallammo.potioneffects.EffectClass;
 import me.athlaeos.valhallammo.potioneffects.PotionEffectWrapper;
@@ -71,7 +73,9 @@ public class GainSkillPoint extends PotionEffectWrapper {
     public void onInflict(LivingEntity p, LivingEntity causedBy, double amplifier, int duration, double intensity) {
         if (p instanceof Player pl) {
             PowerProfile profile = ProfileCache.getOrCache(pl, PowerProfile.class);
-            profile.setSpendableSkillPoints(profile.getSpendableSkillPoints() + 1);
+            profile.setSpendableSkillPoints(profile.getSpendableSkillPoints() + (int)intensity);
+            ProfileRegistry.setSkillProfile(pl, profile, PowerProfile.class);
+            AccumulativeStatManager.updateStats(pl);
         }
     }
 
