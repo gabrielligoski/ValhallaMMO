@@ -51,39 +51,6 @@ public class BuilderSkill extends Skill implements Listener {
     }
 
     @EventHandler(priority = EventPriority.HIGH)
-    public void lootTableDrops(BlockBreakEvent e){
-        double dropMultiplier = AccumulativeStatManager.getCachedStats("BUILDING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
-        // multiply any applicable prepared drops and grant exp for them. After the extra drops from a BlockBreakEvent the drops are cleared
-        ItemUtils.multiplyItems(LootListener.getPreparedExtraDrops(e.getBlock()), 1 + dropMultiplier, forgivingDropMultipliers, (i) -> dropsExpValues.containsKey(i.getType()));
-
-        double expQuantity = 0;
-        for (ItemStack i : LootListener.getPreparedExtraDrops(e.getBlock())){
-            if (ItemUtils.isEmpty(i)) continue;
-            expQuantity += dropsExpValues.getOrDefault(i.getType(), 0D) * i.getAmount();
-        }
-        addEXP(e.getPlayer(), expQuantity, false, PlayerSkillExperienceGainEvent.ExperienceGainReason.SKILL_ACTION);
-    }
-
-    @EventHandler(priority = EventPriority.HIGH)
-    public void onItemsDropped(BlockDropItemEvent e){
-        double dropMultiplier = AccumulativeStatManager.getCachedStats("BUILDING_DROP_MULTIPLIER", e.getPlayer(), 10000, true);
-        // multiply the item drops from the event itself and grant exp for the initial items and extra drops
-        List<ItemStack> extraDrops = ItemUtils.multiplyDrops(e.getItems(), 1 + dropMultiplier, forgivingDropMultipliers, (i) -> dropsExpValues.containsKey(i.getItemStack().getType()));
-        if (!extraDrops.isEmpty()) LootListener.prepareBlockDrops(e.getBlock(), extraDrops);
-
-        double expQuantity = 0;
-        for (Item i : e.getItems()){
-            if (ItemUtils.isEmpty(i.getItemStack())) continue;
-            expQuantity += dropsExpValues.getOrDefault(i.getItemStack().getType(), 0D) * i.getItemStack().getAmount();
-        }
-        for (ItemStack i : extraDrops){
-            if (ItemUtils.isEmpty(i)) continue;
-            expQuantity += dropsExpValues.getOrDefault(i.getType(), 0D) * i.getAmount();
-        }
-        addEXP(e.getPlayer(), expQuantity, false, PlayerSkillExperienceGainEvent.ExperienceGainReason.SKILL_ACTION);
-    }
-
-    @EventHandler(priority = EventPriority.HIGH)
     public void onBlockPlaced(BlockPlaceEvent e) {
         addEXP(e.getPlayer(), 8, false, PlayerSkillExperienceGainEvent.ExperienceGainReason.SKILL_ACTION);
 

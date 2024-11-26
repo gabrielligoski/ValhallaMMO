@@ -7,7 +7,7 @@ starting_perks:
 
 experience:
   max_level: 10
-  exp_level_curve: '(15000 * 2^(%level%))'
+  exp_level_curve: '(7500 * 2^(%level%))'
   bow_exp_base: 30 # base exp for hitting an arrow with a bow
   crossbow_exp_base: 40 # base exp for hitting an arrow with a crossbow
   damage_exp_bonus: 0.1 # bonus multiplier per 1 point of damage (5 damage = +50% exp)
