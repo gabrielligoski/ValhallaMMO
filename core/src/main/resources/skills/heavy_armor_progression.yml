@@ -281,11 +281,11 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:heavyarmor_newgameplus_add: 1
-      p:heavyarmor_damageresistanceperpiece_add: 0.01875
-      p:heavyarmor_critchanceresistanceperpiece_add: 0.1
-      p:heavyarmor_heavyarmorexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      heavyarmor_newgameplus_add: 1
+      heavyarmor_damageresistanceperpiece_add: 0.01875
+      heavyarmor_critchanceresistanceperpiece_add: 0.1
+      heavyarmor_heavyarmorexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - heavyarmor_perk_ng1
     messages:
       - "<lang.heavyarmor_perk_ng1_messages>"
@@ -300,11 +300,11 @@ perks:
     requireperk_all:
       - heavyarmor_perk_ng1
     perk_rewards:
-      p:heavyarmor_newgameplus_add: 1
-      p:heavyarmor_damageresistanceperpiece_add: 0.01875
-      p:heavyarmor_critchanceresistanceperpiece_add: 0.1
-      p:heavyarmor_heavyarmorexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      heavyarmor_newgameplus_add: 1
+      heavyarmor_damageresistanceperpiece_add: 0.01875
+      heavyarmor_critchanceresistanceperpiece_add: 0.1
+      heavyarmor_heavyarmorexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - heavyarmor_perk_ng1
         - heavyarmor_perk_ng2
     messages:

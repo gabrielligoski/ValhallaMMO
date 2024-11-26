@@ -243,12 +243,12 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:lightweapons_newgameplus_add: 1
-      p:lightweapons_damagemultiplier_add: 0.15
-      p:lightweapons_attackspeedmultiplier_add: 0.2
-      p:lightweapons_critchance_add: 0.1
-      p:lightweapons_lightweaponsexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      lightweapons_newgameplus_add: 1
+      lightweapons_damagemultiplier_add: 0.15
+      lightweapons_attackspeedmultiplier_add: 0.2
+      lightweapons_critchance_add: 0.1
+      lightweapons_lightweaponsexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - lightweapons_perk_ng1
     messages:
       - "<lang.lightweapons_perk_ng1_messages>"
@@ -263,12 +263,12 @@ perks:
     requireperk_all:
       - lightweapons_perk_ng1
     perk_rewards:
-      p:lightweapons_newgameplus_add: 1
-      p:lightweapons_damagemultiplier_add: 0.15
-      p:lightweapons_attackspeedmultiplier_add: 0.2
-      p:lightweapons_critchance_add: 0.1
-      p:lightweapons_lightweaponsexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      lightweapons_newgameplus_add: 1
+      lightweapons_damagemultiplier_add: 0.15
+      lightweapons_attackspeedmultiplier_add: 0.2
+      lightweapons_critchance_add: 0.1
+      lightweapons_lightweaponsexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - lightweapons_perk_ng1
         - lightweapons_perk_ng2
     messages:

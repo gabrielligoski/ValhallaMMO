@@ -405,10 +405,10 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:smithing_genericcraftingskill_add: 50
-      p:smithing_newgameplus_add: 1
-      p:smithing_genericexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      smithing_genericcraftingskill_add: 50
+      smithing_newgameplus_add: 1
+      smithing_genericexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - smithing_perk_ng1
     messages:
       - "<lang.smithing_perk_ng1_messages>"
@@ -423,10 +423,10 @@ perks:
     requireperk_all:
       - smithing_perk_ng1
     perk_rewards:
-      p:smithing_genericcraftingskill_add: 50
-      p:smithing_newgameplus_add: 1
-      p:smithing_genericexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      smithing_genericcraftingskill_add: 50
+      smithing_newgameplus_add: 1
+      smithing_genericexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - smithing_perk_ng1
         - smithing_perk_ng2
     messages:

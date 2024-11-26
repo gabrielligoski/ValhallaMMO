@@ -362,11 +362,11 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:farming_newgameplus_add: 1
-      p:farming_farmingdrops_add: 0.3
-      p:farming_butcherydrops_add: 0.3
-      p:farming_farmingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      farming_newgameplus_add: 1
+      farming_farmingdrops_add: 0.3
+      farming_butcherydrops_add: 0.3
+      farming_farmingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - farming_perk_ng1
     messages:
       - "<lang.farming_perk_ng1_messages>"
@@ -381,11 +381,11 @@ perks:
     requireperk_all:
       - farming_perk_ng1
     perk_rewards:
-      p:farming_newgameplus_add: 1
-      p:farming_farmingdrops_add: 0.3
-      p:farming_butcherydrops_add: 0.3
-      p:farming_farmingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      farming_newgameplus_add: 1
+      farming_farmingdrops_add: 0.3
+      farming_butcherydrops_add: 0.3
+      farming_farmingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - farming_perk_ng1
         - farming_perk_ng2
     messages:

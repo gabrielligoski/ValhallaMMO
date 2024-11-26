@@ -524,11 +524,11 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:woodcutting_newgameplus_add: 1
-      p:woodcutting_woodcuttingdrops_add: 0.3
-      p:woodcutting_woodcuttingspeedbonus_add: 0.25
-      p:woodcutting_woodcuttingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      woodcutting_newgameplus_add: 1
+      woodcutting_woodcuttingdrops_add: 0.3
+      woodcutting_woodcuttingspeedbonus_add: 0.25
+      woodcutting_woodcuttingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - woodcutting_perk_ng1
     messages:
       - "<lang.woodcutting_perk_ng1_messages>"
@@ -543,11 +543,11 @@ perks:
     requireperk_all:
       - woodcutting_perk_ng1
     perk_rewards:
-      p:woodcutting_newgameplus_add: 1
-      p:woodcutting_woodcuttingdrops_add: 0.3
-      p:woodcutting_woodcuttingspeedbonus_add: 0.25
-      p:woodcutting_woodcuttingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      woodcutting_newgameplus_add: 1
+      woodcutting_woodcuttingdrops_add: 0.3
+      woodcutting_woodcuttingspeedbonus_add: 0.25
+      woodcutting_woodcuttingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - woodcutting_perk_ng1
         - woodcutting_perk_ng2
     messages:

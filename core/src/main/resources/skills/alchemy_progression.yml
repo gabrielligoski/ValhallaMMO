@@ -256,11 +256,11 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:alchemy_newgameplus_add: 1
-      p:alchemy_genericbrewingskill_add: 50
-      p:alchemy_brewingtimereduction_add: 0.5
-      p:alchemy_alchemyexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      alchemy_newgameplus_add: 1
+      alchemy_genericbrewingskill_add: 50
+      alchemy_brewingtimereduction_add: 0.5
+      alchemy_alchemyexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - alchemy_perk_ng1
     messages:
       - "<lang.alchemy_perk_ng1_messages>"
@@ -275,11 +275,11 @@ perks:
     requireperk_all:
       - alchemy_perk_ng1
     perk_rewards:
-      p:alchemy_newgameplus_add: 1
-      p:alchemy_genericbrewingskill_add: 50
-      p:alchemy_brewingtimereduction_add: 0.5
-      p:alchemy_alchemyexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      alchemy_newgameplus_add: 1
+      alchemy_genericbrewingskill_add: 50
+      alchemy_brewingtimereduction_add: 0.5
+      alchemy_alchemyexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - alchemy_perk_ng1
         - alchemy_perk_ng2
     messages:

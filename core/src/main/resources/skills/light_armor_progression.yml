@@ -280,11 +280,11 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:lightarmor_newgameplus_add: 1
-      p:lightarmor_damageresistanceperpiece_add: 0.0125
-      p:lightarmor_movementspeedperpiece_add: 0.02
-      p:lightarmor_lightarmorexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      lightarmor_newgameplus_add: 1
+      lightarmor_damageresistanceperpiece_add: 0.0125
+      lightarmor_movementspeedperpiece_add: 0.02
+      lightarmor_lightarmorexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - lightarmor_perk_ng1
     messages:
       - "<lang.lightarmor_perk_ng1_messages>"
@@ -299,11 +299,11 @@ perks:
     requireperk_all:
       - lightarmor_perk_ng1
     perk_rewards:
-      p:lightarmor_newgameplus_add: 1
-      p:lightarmor_damageresistanceperpiece_add: 0.0125
-      p:lightarmor_movementspeedperpiece_add: 0.02
-      p:lightarmor_lightarmorexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      lightarmor_newgameplus_add: 1
+      lightarmor_damageresistanceperpiece_add: 0.0125
+      lightarmor_movementspeedperpiece_add: 0.02
+      lightarmor_lightarmorexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - lightarmor_perk_ng1
         - lightarmor_perk_ng2
     messages:

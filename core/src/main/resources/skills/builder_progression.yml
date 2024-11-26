@@ -520,11 +520,11 @@ perks:
 #    hidden: true
 #    required_lv: 9
 #    perk_rewards:
-#      p:building_newgameplus_add: 1
-#      p:building_buildingdrops_add: 0.3
-#      p:building_buildingspeedbonus_add: 0.25
-#      p:building_buildingexpmultiplier_add: -0.25
-#      p:perks_unlocked_add:
+#      building_newgameplus_add: 1
+#      building_buildingdrops_add: 0.3
+#      building_buildingspeedbonus_add: 0.25
+#      building_buildingexpmultiplier_add: -0.25
+#      perks_unlocked_add:
 #        - building_perk_ng1
 #    messages:
 #      - "<lang.building_perk_ng1_messages>"
@@ -539,11 +539,11 @@ perks:
 #    requireperk_all:
 #      - building_perk_ng1
 #    perk_rewards:
-#      p:building_newgameplus_add: 1
-#      p:building_buildingdrops_add: 0.3
-#      p:building_buildingspeedbonus_add: 0.25
-#      p:building_buildingexpmultiplier_add: -0.25
-#      p:perks_unlocked_add:
+#      building_newgameplus_add: 1
+#      building_buildingdrops_add: 0.3
+#      building_buildingspeedbonus_add: 0.25
+#      building_buildingexpmultiplier_add: -0.25
+#      perks_unlocked_add:
 #        - building_perk_ng1
 #        - building_perk_ng2
 #    messages:

@@ -318,14 +318,14 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:archery_newgameplus_add: 1
-      p:archery_bowdamagemultiplier_add: 0.15
-      p:archery_crossbowdamagemultiplier_add: 0.15
-      p:archery_inaccuracy_add: -3
-      p:archery_bowcritchance_add: 0.1
-      p:archery_crossbowcritchance_add: 0.1
-      p:archery_archeryexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      archery_newgameplus_add: 1
+      archery_bowdamagemultiplier_add: 0.15
+      archery_crossbowdamagemultiplier_add: 0.15
+      archery_inaccuracy_add: -3
+      archery_bowcritchance_add: 0.1
+      archery_crossbowcritchance_add: 0.1
+      archery_archeryexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - archery_perk_ng1
     messages:
       - "<lang.archery_perk_ng1_messages>"
@@ -340,14 +340,14 @@ perks:
     requireperk_all:
       - archery_perk_ng1
     perk_rewards:
-      p:archery_newgameplus_add: 1
-      p:archery_bowdamagemultiplier_add: 0.15
-      p:archery_crossbowdamagemultiplier_add: 0.15
-      p:archery_inaccuracy_add: -3
-      p:archery_bowcritchance_add: 0.1
-      p:archery_crossbowcritchance_add: 0.1
-      p:archery_archeryexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      archery_newgameplus_add: 1
+      archery_bowdamagemultiplier_add: 0.15
+      archery_crossbowdamagemultiplier_add: 0.15
+      archery_inaccuracy_add: -3
+      archery_bowcritchance_add: 0.1
+      archery_crossbowcritchance_add: 0.1
+      archery_archeryexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - archery_perk_ng1
         - archery_perk_ng2
     messages:

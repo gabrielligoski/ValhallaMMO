@@ -271,12 +271,12 @@ perks:
     hidden: true
     required_lv: 100
     perk_rewards:
-      p:fishing_newgameplus_add: 1
-      p:fishing_fishingdrops_add: 0.5
-      p:fishing_fishingluck_add: 2.5
-      p:fishing_fishingspeedbonus_add: 0.25
-      p:fishing_fishingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      fishing_newgameplus_add: 1
+      fishing_fishingdrops_add: 0.5
+      fishing_fishingluck_add: 2.5
+      fishing_fishingspeedbonus_add: 0.25
+      fishing_fishingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - fishing_perk_ng1
     messages:
       - "<lang.fishing_perk_ng1_messages>"
@@ -291,12 +291,12 @@ perks:
     requireperk_all:
       - fishing_perk_ng1
     perk_rewards:
-      p:fishing_newgameplus_add: 1
-      p:fishing_fishingdrops_add: 0.5
-      p:fishing_fishingluck_add: 2.5
-      p:fishing_fishingspeedbonus_add: 0.25
-      p:fishing_fishingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      fishing_newgameplus_add: 1
+      fishing_fishingdrops_add: 0.5
+      fishing_fishingluck_add: 2.5
+      fishing_fishingspeedbonus_add: 0.25
+      fishing_fishingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - fishing_perk_ng1
         - fishing_perk_ng2
     messages:

@@ -292,7 +292,7 @@ perks:
     hidden: true
     perk_rewards:
       enchanting_set_elemental_type: "RADIANT"
-      p:perks_unlocked_remove:
+      perks_unlocked_remove:
         - enchanting_perk_necrotic
     messages:
       - "<lang.enchanting_perk_radiant_messages>"
@@ -306,7 +306,7 @@ perks:
     hidden: true
     perk_rewards:
       enchanting_set_elemental_type: "NECROTIC"
-      p:perks_unlocked_remove:
+      perks_unlocked_remove:
         - enchanting_perk_radiant
     messages:
       - "<lang.enchanting_perk_necrotic_messages>"
@@ -567,12 +567,12 @@ perks:
     hidden: true
     required_lv: 9
     perk_rewards:
-      p:enchanting_newgameplus_add: 1
-      p:enchanting_enchantingskill_add: 50
-      p:enchanting_anvilskill_add: 50
-      p:enchanting_essencemultiplier_add: 0.5
-      p:enchanting_enchantingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      enchanting_newgameplus_add: 1
+      enchanting_enchantingskill_add: 50
+      enchanting_anvilskill_add: 50
+      enchanting_essencemultiplier_add: 0.5
+      enchanting_enchantingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - enchanting_perk_ng1
     messages:
       - "<lang.enchanting_perk_ng1_messages>"
@@ -587,12 +587,12 @@ perks:
     requireperk_all:
       - enchanting_perk_ng1
     perk_rewards:
-      p:enchanting_newgameplus_add: 1
-      p:enchanting_enchantingskill_add: 50
-      p:enchanting_anvilskill_add: 50
-      p:enchanting_essencemultiplier_add: 0.5
-      p:enchanting_enchantingexpmultiplier_add: -0.25
-      p:perks_unlocked_add:
+      enchanting_newgameplus_add: 1
+      enchanting_enchantingskill_add: 50
+      enchanting_anvilskill_add: 50
+      enchanting_essencemultiplier_add: 0.5
+      enchanting_enchantingexpmultiplier_add: -0.25
+      perks_unlocked_add:
         - enchanting_perk_ng1
         - enchanting_perk_ng2
     messages:
