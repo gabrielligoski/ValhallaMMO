@@ -99,7 +99,6 @@ public class ValhallaMMO extends JavaPlugin {
         save("loot_tables/digging.json");
         save("loot_tables/fishing.json");
         save("loot_tables/woodcutting.json");
-        save("loot_tables/building.json");
         save("replacement_table_config.json");
         save("replacement_tables/loot_valhallafication.json");
         saveConfig("recipes/disabled_recipes.yml");

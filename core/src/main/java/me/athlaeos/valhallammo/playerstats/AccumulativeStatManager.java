@@ -271,6 +271,7 @@ public class AccumulativeStatManager {
         register("WOODCUTTING_DROP_MULTIPLIER", new ProfileStatSource(WoodcuttingProfile.class, "woodcuttingDrops"), new AttributeSource("WOODCUTTING_DROPS"), new PotionEffectSource("WOODCUTTING_DROPS"), new GlobalBuffSource("woodcutting_drop_multiplier"));
         register("WOODCUTTING_LUCK", new ProfileStatSource(WoodcuttingProfile.class, "woodcuttingLuck"), new AttributeSource("WOODCUTTING_RARE_DROPS"), new PotionEffectSource("WOODCUTTING_RARE_DROPS"), new GlobalBuffSource("woodcutting_luck"));
         register("WOODCUTTING_EXP_GAIN", new ProfileStatSource(WoodcuttingProfile.class, "woodcuttingEXPMultiplier"), new GlobalBuffSource("woodcutting_experience"));
+        register("BUILDING_EXP_GAIN", new ProfileStatSource(BuildingProfile.class, "buildingEXPMultiplier"), new GlobalBuffSource("building_experience"));
 
         register("FISHING_EXP_GAIN", new ProfileStatSource(FishingProfile.class, "fishingEXPMultiplier"), new GlobalBuffSource("fishing_experience"));
 

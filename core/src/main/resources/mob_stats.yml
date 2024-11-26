@@ -21,14 +21,14 @@ global: # Stats for all entities. Entities specified in the `entity` section can
 default: # Stats for all monsters
   # If wolf_leveling is also true, then wolves are included among these stats
   # By default mobs get 50% crit damage, this is added to the zombie's stats unless the zombie has crit damage specified also.
-  level: "%level% + rand(-5,5)" # %level% here refers to the average player power level at the location. Elsewhere it refers to the entity's level
-  exp_orb_bonus: "0.02 * %level%" # Exp orb buffs
-  loot_bonus: "0.02 * %level%"
-  HEALTH_MULTIPLIER_BONUS: "-0.3 + (0.033 * %level%)" # Lowers mob hp by 30% initially, increases up to quadruple hp at level 100
-  WEIGHTLESS_ARMOR: "0.2 * %level%" # Gives mobs up to 20 base armor at level 100
-  DAMAGE_DEALT: "-0.3 + (0.023 * %level%)" # Lowers mob damage by 30% initially, increases up to triple damage at level 100
-  ARMOR_FRACTION_IGNORED: "0.005 * %level%" # Gives mobs up to 50% armor penetration at level 100
-  CRIT_CHANCE: "0.005 * %level%" # Gives mobs up to 50% crit chance at level 100
+  level: "%level% + rand(-3,3)" # %level% here refers to the average player power level at the location. Elsewhere it refers to the entity's level
+  exp_orb_bonus: "0.2 * %level%" # Exp orb buffs
+  loot_bonus: "0.2 * %level%"
+  HEALTH_MULTIPLIER_BONUS: "-0.3 + (0.33 * %level%)" # Lowers mob hp by 30% initially, increases up to quadruple hp at level 100
+  WEIGHTLESS_ARMOR: "2 * %level%" # Gives mobs up to 20 base armor at level 100
+  DAMAGE_DEALT: "-0.3 + (0.23 * %level%)" # Lowers mob damage by 30% initially, increases up to triple damage at level 100
+  ARMOR_FRACTION_IGNORED: "0.05 * %level%" # Gives mobs up to 50% armor penetration at level 100
+  CRIT_CHANCE: "0.05 * %level%" # Gives mobs up to 50% crit chance at level 100
   CRIT_DAMAGE: "0.5" # Gives mobs +50% crit damage
 
 entity:
@@ -138,21 +138,21 @@ entity:
   # (mini)Bosses do not suffer from reduced hp at level 0 and get increased player level scaling
   ENDER_DRAGON:
     level: "2 * %level%"
-    HEALTH_MULTIPLIER_BONUS: "(0.015 * %level%)" # Ender dragons gain quadruple hp at lv200
+    HEALTH_MULTIPLIER_BONUS: "(0.4 * %level%)" # Ender dragons gain quadruple hp at lv200
     PROJECTILE_RESISTANCE: 0.5
     FIRE_RESISTANCE: 1
     MAGIC_RESISTANCE: 0.7
     POISON_RESISTANCE: 0.7
     ARMOR_FRACTION_IGNORED: 0.5
   WARDEN:
-    level: "1.25 * %level%"
-    HEALTH_MULTIPLIER_BONUS: "(0.008 * %level%)" # Wardens gain +50% hp at lv125
+    level: "2 * %level%"
+    HEALTH_MULTIPLIER_BONUS: "(0.8 * %level%)" # Wardens gain +50% hp at lv125
     PROJECTILE_RESISTANCE: 0.5
     NECROTIC_RESISTANCE: 0.5
     ARMOR_FRACTION_IGNORED: 0.75
   WITHER:
-    level: "1.25 * %level%"
-    HEALTH_MULTIPLIER_BONUS: "(0.016 * %level%)" # Withers gain triple hp at lv125
+    level: "2 * %level%"
+    HEALTH_MULTIPLIER_BONUS: "(0.5 * %level%)" # Withers gain triple hp at lv125
     PROJECTILE_RESISTANCE: 0.5
     RADIANT_RESISTANCE: -1
     FIRE_RESISTANCE: 1
@@ -162,6 +162,6 @@ entity:
     EXPLOSION_RESISTANCE: 1
     ARMOR_FRACTION_IGNORED: 0.5
   ELDER_GUARDIAN:
-    level: "1.25 * %level%"
-    HEALTH_MULTIPLIER_BONUS: "(0.008 * %level%)" # Elder Guardians gain double hp at lv125
+    level: "2 * %level%"
+    HEALTH_MULTIPLIER_BONUS: "(0.3 * %level%)" # Elder Guardians gain double hp at lv125
     ARMOR_FRACTION_IGNORED: 0.5
