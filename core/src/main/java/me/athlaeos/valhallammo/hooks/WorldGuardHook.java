@@ -26,8 +26,8 @@ public class WorldGuardHook extends PluginHook{
     public static String VMMO_SKILL_MINING = "vmmo-skill-mining-digging";
     public static String VMMO_SKILL_FARMING = "vmmo-skill-farming";
     public static String VMMO_SKILL_WOODCUTTING = "vmmo-skill-woodcutting";
+    public static String VMMO_SKILL_BUILDING = "vmmo-skill-building";
     public static String VMMO_SKILL_FISHING = "vmmo-skill-fishing";
-//    public static String VMMO_SKILL_DIGGING = "vmmo-skill-digging";
     public static String VMMO_COMBAT_CRIT = "vmmo-combat-crit";
     public static String VMMO_COMBAT_BLEED = "vmmo-combat-bleed";
     public static String VMMO_COMBAT_PARRY = "vmmo-combat-parry";
@@ -68,6 +68,7 @@ public class WorldGuardHook extends PluginHook{
         WorldGuardWrapper.registerFlag(VMMO_SKILL_MINING);
         WorldGuardWrapper.registerFlag(VMMO_SKILL_FARMING);
         WorldGuardWrapper.registerFlag(VMMO_SKILL_WOODCUTTING);
+        WorldGuardWrapper.registerFlag(VMMO_SKILL_BUILDING);
 //        WorldGuardWrapper.registerFlag(VMMO_SKILL_DIGGING);
         WorldGuardWrapper.registerFlag(VMMO_SKILL_FISHING);
         WorldGuardWrapper.registerFlag(VMMO_COMBAT_CRIT);

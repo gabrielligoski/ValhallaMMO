@@ -88,7 +88,7 @@ enabled_skills:
   fishing: true
   mining_digging: true
   woodcutting: true
-#  digging: true
+  building: true
   weapons_light: true
   weapons_heavy: true
   armor_light: true

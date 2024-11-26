@@ -36,6 +36,8 @@ commands:
     description: "Shorter command for /val profile fishing, allowing players to view their fishing stats"
   woodcutting:
     description: "Shorter command for /val profile woodcutting, allowing players to view their woodcutting stats"
+  building:
+    description: "Shorter command for /val profile building, allowing players to view their building stats"
   lightweapons:
     description: "Shorter command for /val profile light_weapons, allowing players to view their light weapon stats"
   heavyweapons:
@@ -191,6 +193,9 @@ permissions:
   valhalla.exp.woodcutting.#:
     default: false
     description: "Adds (or subtracts) from the player's woodcutting experience multiplier. valhalla.exp.woodcutting.100 gives the player +100% more experience in woodcutting."
+  valhalla.exp.building.#:
+    default: false
+    description: "Adds (or subtracts) from the player's building experience multiplier. valhalla.exp.building.100 gives the player +100% more experience in building."
   valhalla.exp.archery.#:
     default: false
     description: "Adds (or subtracts) from the player's archery experience multiplier. valhalla.exp.archery.100 gives the player +100% more experience in archery."

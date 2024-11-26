@@ -29,6 +29,7 @@ public class SkillRegistry {
          registerIfConfigEnabled("mining_digging", new MiningDiggingSkill("MINING_DIGGING"));
          registerIfConfigEnabled("fishing", new FishingSkill("FISHING"));
          registerIfConfigEnabled("woodcutting", new WoodcuttingSkill("WOODCUTTING"));
+         registerIfConfigEnabled("building", new BuilderSkill("BUILDING"));
          registerIfConfigEnabled("archery", new ArcherySkill("ARCHERY"));
          registerIfConfigEnabled("armor_light", new LightArmorSkill("LIGHT_ARMOR"));
          registerIfConfigEnabled("armor_heavy", new HeavyArmorSkill("HEAVY_ARMOR"));

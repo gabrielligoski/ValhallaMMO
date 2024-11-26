@@ -142,7 +142,7 @@
     "leaderboard_farming_level": "&aFarming Level &7(p.%page%)",
     "leaderboard_fishing_level": "&9Fishing Level &7(p.%page%)",
     "leaderboard_woodcutting_level": "&2Woodcutting Level &7(p.%page%)",
-    "leaderboard_digging_level": "&#753713Digging Level &7(p.%page%)",
+    "leaderboard_building_level": "&#753713Building Level &7(p.%page%)",
     "leaderboard_archery_level": "&#00ffaaArchery Level &7(p.%page%)",
     "leaderboard_light_weapons_level": "&#ffac40Light Weapons Level &7(p.%page%)",
     "leaderboard_heavy_weapons_level": "&#ff7640Heavy Weapons Level &7(p.%page%)",
@@ -1306,8 +1306,11 @@
     "skill-light-armor-level-bar": "&7Light Armor &eLV %lv_current% &6%exp_current%&7/&6%exp_next% &7(&e%exp%&7)",
     "skill-woodcutting-description": "&8Practice Woodcutting to increase your wood harvesting, to augment your building skills, and to gain more building material from less resources",
     "skill-woodcutting-displayname": "&7Woodcutting",
+    "skill-building-displayname": "&7Building",
     "skill-woodcutting-level-bar": "&7Woodcutting &aLV %lv_current% &2%exp_current%&7/&2%exp_next% &7(&a%exp%&7)",
+    "skill-building-level-bar": "&7Building &aLV %lv_current% &2%exp_current%&7/&2%exp_next% &7(&a%exp%&7)",
     "skill-digging-description": "&8Practice Digging to increase your bounty from the earth, to find more treasure in archaeology, and to gain the ability to sift small items from sand and gravel",
+    "skill-building-description": "&8Practice Building to unlock new unique crafts!",
     "skill-digging-displayname": "&7Digging",
     "skill-digging-level-bar": "&7Digging &aLV %lv_current% &2%exp_current%&7/&2%exp_next% &7(&a%exp%&7)",
     "skill-heavy-weapons-description": "&8Heavy Weapons aren't very effective at blocking incoming attacks, but hit much harder and are more effective against armor",
@@ -1626,12 +1629,14 @@
     "archery_perk_c2_description": "&7Charged shots gain &e{archery_chargedshotcharges_add}&7 and reduced cooldown. More charges, piercing, knockback, and damage. Charged shots now also ignore gravity and always fly at max speed.",
     "archery_perk_stealth_name": "&eAssassin",
     "archery_perk_stealth_description": "&7Hit shots are now guaranteed to critically hit if the enemy is looking away and out of combat. Critical hits deal &e{archery_critdamage_add}&7 more damage and cause bleeding.",
-    "digging_perk_1_name": "&aDigger",
-    "digging_perk_1_description": "&7Speeds up your digging by &a{miningdigging_diggingspeedbonus_add}&7, and you gain a few experience orbs per block.",
+    "building_perk_1_name": "&aBuilder",
+    "building_perk_1_description": "&7Speeds up your block placement by &a{building_buildingspeedbonus_add}&7, and you gain a few experience orbs per block.",
     "digging_perk_2_name": "&aFilterer",
     "digging_perk_2_description": "&7You start finding simple resources from the ground, and you gain more experience orbs per block.",
-    "digging_perk_3_name": "&aGround Replication",
-    "digging_perk_3_description": "&7You learn the composition of the earth, and can now reproduce it (unlocks recipes for various ground-type blocks).",
+    "building_perk_2_name": "&aGround Replication",
+    "building_perk_2_description": "&7You learn the composition of the earth, and can now reproduce it (unlocks recipes for various ground-type blocks).",
+    "building_perk_3_name": "&aGround Replication",
+    "building_perk_3_description": "&7You learn the composition of the earth, and can now reproduce it (unlocks recipes for various ground-type blocks).",
     "digging_perk_a1_name": "&aArchaeologist",
     "digging_perk_a1_description": "&7Suspicious blocks have a &a{miningdigging_archaeologyrepeatchance_add} &7chance to return.",
     "digging_perk_a2_name": "&aAncient History",
@@ -2592,7 +2597,7 @@
       "&a+Tier 1 Digging Treasure",
       "&7- Bones, String, Sticks, Coal, Gunpowder, etc."
     ],
-    "digging_perk_3_messages": [
+    "building_perk_2_messages": [
       "&a✰ &2Ground Replication &a✰",
       "&aRecipes Unlocked",
       "&7- Mycelium",
@@ -2630,7 +2635,7 @@
       "&a+Tier 3 Digging Treasure",
       "&7- Diamonds, Emeralds, Echo Shards, Enchanted Books, Ancient Debris, etc."
     ],
-    "digging_perk_combo_messages": [
+    "building_perk_combo_messages": [
       "&a✰ &2Flexible Builder &a✰",
       "&aInteractions Unlocked",
       "&a- Pickaxes (Shift-Right-Click)",
@@ -3153,9 +3158,9 @@
       "TITLE(&r;&aWoodcutting&7 leveled up to &a%level%)",
       "&aWoodcutting&7 leveled up to &a%level%"
     ],
-    "skill-level-up-digging": [
-      "TITLE(&r;&aDigging&7 leveled up to &a%level%)",
-      "&aDigging&7 leveled up to &a%level%"
+    "skill-level-up-building": [
+      "TITLE(&r;&aBuilding&7 leveled up to &a%level%)",
+      "&aBuilding&7 leveled up to &a%level%"
     ],
     "skill-level-up-heavy-weapons": [
       "TITLE(&r;&cHeavy Weapons&7 leveled up to &c%level%)",

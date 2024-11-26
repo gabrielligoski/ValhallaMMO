@@ -53,6 +53,7 @@ public class AlphaToBetaConversionHandler implements Listener {
         alphaToBetaSkillMappings.put("HEAVYARMOR", HeavyArmorSkill.class);
         alphaToBetaSkillMappings.put("HEAVYWEAPONS", HeavyWeaponsSkill.class);
         alphaToBetaSkillMappings.put("LANDSCAPING", WoodcuttingSkill.class);
+        alphaToBetaSkillMappings.put("BUILDING", BuilderSkill.class);
         alphaToBetaSkillMappings.put("LIGHTARMOR", LightArmorSkill.class);
         alphaToBetaSkillMappings.put("LIGHTWEAPONS", LightWeaponsSkill.class);
         alphaToBetaSkillMappings.put("MINING_DIGGING", MiningDiggingSkill.class);

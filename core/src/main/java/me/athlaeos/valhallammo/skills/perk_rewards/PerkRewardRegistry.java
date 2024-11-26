@@ -118,10 +118,8 @@ public class PerkRewardRegistry {
         try {
             boolean persist = name.startsWith("p:");
             if (persist) name = name.replaceFirst("p:", "");
-            if (registry.get(name) == null) {
-                registry.forEach((k,v) -> System.out.println(k.toString()+" / "+ v.toString()));
+            if (registry.get(name) == null)
                 throw new IllegalArgumentException("Perk with name " + name + " is used but does not exist");
-            }
             PerkReward modifier = registry.get(name).clone();
             modifier.parseArgument(argument);
             modifier.setPersistent(persist);

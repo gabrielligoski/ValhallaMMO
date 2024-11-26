@@ -1,0 +1,550 @@
+starting_perks: []
+
+experience: # Everything about leveling and experience progression for Landscaping
+  max_level: 10 # Max level for landscaping, players can still gain exp after reaching 200
+  exp_level_curve: '(7500 * 2^(%level%))' # Here the x-axis represents level and the y-axis is the exp required to
+
+special_perks: []
+
+commands: []
+
+messages:
+  - '<lang.skill-level-up-building>'
+
+leveling_perks:
+  power_spendableskillpoints_add: 1
+
+starting_coordinates: '3,11' # The coordinates in the skill tree the player sees first when switching to the skill tree
+
+perks:
+  building_perk_1:
+    icon: WHITE_BED
+    coords: "3,11"
+    name: "<lang.building_perk_1_name>"
+    description: "<lang.building_perk_1_description>"
+    cost: 1
+    hidden: false
+    required_lv: 0
+    perk_rewards:
+#      builder_blockexperiencerate_add: 0.1
+    messages:
+      - "<lang.building_perk_1_messages>"
+    custom_model_data_unlockable: -1
+    custom_model_data_unlocked: -1
+    custom_model_data_visible: -1
+  building_perk_2:
+    icon: MUD
+    coords: "3,8"
+    name: "<lang.building_perk_2_name>"
+    description: "<lang.building_perk_2_description>"
+    cost: 1
+    hidden: false
+    required_lv: 1
+    perk_rewards:
+      recipes_unlock:
+        - craft_podzol
+        - craft_mycelium
+        - craft_flint
+        - craft_clay
+        - craft_mud
+        - craft_grass
+        - craft_soul_sand
+        - craft_soul_soil
+        - craft_concrete_white
+        - craft_concrete_orange
+        - craft_concrete_magenta
+        - craft_concrete_light_blue
+        - craft_concrete_yellow
+        - craft_concrete_lime
+        - craft_concrete_pink
+        - craft_concrete_grey
+        - craft_concrete_light_grey
+        - craft_concrete_cyan
+        - craft_concrete_purple
+        - craft_concrete_blue
+        - craft_concrete_brown
+        - craft_concrete_green
+        - craft_concrete_red
+        - craft_concrete_black
+    messages:
+      - "<lang.building_perk_2_messages>"
+    requireperk_all:
+      - building_perk_1
+    connection_line:
+      '1':
+        position: '3,10'
+        locked: GRAY_DYE:1172711
+        unlockable: ORANGE_DYE:1172811
+        unlocked: LIME_DYE:1172911
+      '2':
+        position: '3,9'
+        locked: GRAY_DYE:1172710
+        unlockable: ORANGE_DYE:1172810
+        unlocked: LIME_DYE:1172910
+  building_perk_3:
+    icon: MOSSY_COBBLESTONE
+    coords: "3,5"
+    name: "<lang.building_perk_3_name>"
+    description: "<lang.building_perk_3_description>"
+    cost: 1
+    hidden: false
+    required_lv: 2
+    perk_rewards:
+      block_conversions_unlock:
+        - mossify_cobble
+        - mossify_stone
+        - grow_grass
+        - mossify_bricks
+        - damage_bricks
+        - damage_cracked_bricks
+        - damage_stone
+        - damage_cobble
+        - damage_polished_andesite
+        - damage_polished_granite
+        - damage_polished_diorite
+        - damage_polished_blackstone
+        - damage_polished_basalt
+        - damage_end_stone_bricks
+        - damage_blackstone_bricks
+        - melt_netherrack
+        - melt_sand
+        - melt_raw_iron_from
+        - melt_raw_gold_from
+        - melt_raw_copper_from
+        - melt_quartz_from
+        - melt_clay
+    messages:
+      - "<lang.building_perk_combo_messages>"
+    requireperk_one:
+      - digging_perk_2
+    other_levels_required:
+      - MINING:3
+    connection_line:
+      '1':
+        position: '3,7'
+        locked: GRAY_DYE:1172711
+        unlockable: ORANGE_DYE:1172811
+        unlocked: LIME_DYE:1172911
+      '2':
+        position: '3,6'
+        locked: GRAY_DYE:1172710
+        unlockable: ORANGE_DYE:1172810
+        unlocked: LIME_DYE:1172910
+    requireperk_all:
+      - building_perk_2
+#  building_perk_4:
+#    icon: OAK_SAPLING
+#    coords: "1,3"
+#    name: "<lang.building_perk_4_name>"
+#    description: "<lang.building_perk_4_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 3
+#    perk_rewards:
+#      building_blockexperiencerate_add: 0.3
+#      building_buildingspeedbonus_add: 0.1
+#      building_instantgrowthrate_add: 2
+#    messages:
+#      - "<lang.building_perk_4_messages>"
+#    connection_line:
+#      '1':
+#        position: '2,5'
+#        locked: GRAY_DYE:1172708
+#        unlockable: ORANGE_DYE:1172808
+#        unlocked: LIME_DYE:1172908
+#      '2':
+#        position: '1,5'
+#        locked: GRAY_DYE:1172720
+#        unlockable: ORANGE_DYE:1172820
+#        unlocked: LIME_DYE:1172920
+#      '3':
+#        position: '1,4'
+#        locked: GRAY_DYE:1172710
+#        unlockable: ORANGE_DYE:1172810
+#        unlocked: LIME_DYE:1172910
+#    requireperk_all:
+#      - building_perk_3
+##  building_perk_5:
+##    icon: GOLDEN_APPLE
+##    custom_model_data_unlockable: 1998270
+##    custom_model_data_unlocked: 1998270
+##    custom_model_data_visible: 1998270
+##    coords: "2,0"
+##    name: "<lang.building_perk_5_name>"
+##    description: "<lang.building_perk_5_description>"
+##    cost: 1
+##    hidden: false
+##    required_lv: 8
+##    perk_rewards:
+##
+##    messages:
+##      - "<lang.building_perk_5_messages>"
+##    requireperk_all:
+##      - building_perk_4
+##    other_levels_required:
+##      - FARMING:6
+##    connection_line:
+##      '1':
+##        position: '2,1'
+##        locked: GRAY_DYE:1172710
+##        unlockable: ORANGE_DYE:1172810
+##        unlocked: LIME_DYE:1172910
+##      '2':
+##        position: '2,2'
+##        locked: GRAY_DYE:1172706
+##        unlockable: ORANGE_DYE:1172806
+##        unlocked: LIME_DYE:1172906
+##      '3':
+##        position: '2,3'
+##        locked: GRAY_DYE:1172714
+##        unlockable: ORANGE_DYE:1172814
+##        unlocked: LIME_DYE:1172914
+#  building_perk_carpentry_a:
+#    icon: OAK_LOG
+#    coords: "5,2"
+#    name: "<lang.building_perk_carpentry_a_name>"
+#    description: "<lang.building_perk_carpentry_a_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 4
+#    perk_rewards:
+#      recipes_unlock:
+#        - planks_oak_6
+#        - planks_birch_6
+#        - planks_spruce_6
+#        - planks_acacia_6
+#        - planks_jungle_6
+#        - planks_dark_oak_6
+#        - planks_cherry_6
+#        - planks_mangrove_6
+#        - planks_crimson_6
+#        - planks_warped_6
+#        - sticks_planks_8
+#        - sticks_logs_32
+#        - stairs_oak_8
+#        - stairs_birch_8
+#        - stairs_spruce_8
+#        - stairs_acacia_8
+#        - stairs_jungle_8
+#        - stairs_dark_oak_8
+#        - stairs_cherry_8
+#        - stairs_mangrove_8
+#        - stairs_crimson_8
+#        - stairs_warped_8
+#        - fences_oak_8
+#        - fences_birch_8
+#        - fences_spruce_8
+#        - fences_acacia_8
+#        - fences_jungle_8
+#        - fences_dark_oak_8
+#        - fences_cherry_8
+#        - fences_mangrove_8
+#        - fences_crimson_8
+#        - fences_warped_8
+#        - fence_gates_oak_4
+#        - fence_gates_birch_4
+#        - fence_gates_spruce_4
+#        - fence_gates_acacia_4
+#        - fence_gates_jungle_4
+#        - fence_gates_dark_oak_4
+#        - fence_gates_cherry_4
+#        - fence_gates_mangrove_4
+#        - fence_gates_crimson_4
+#        - fence_gates_warped_4
+#        - doors_oak_6
+#        - doors_birch_6
+#        - doors_spruce_6
+#        - doors_acacia_6
+#        - doors_jungle_6
+#        - doors_dark_oak_6
+#        - doors_cherry_6
+#        - doors_mangrove_6
+#        - doors_crimson_6
+#        - doors_warped_6
+#        - trap_doors_oak_8
+#        - trap_doors_birch_8
+#        - trap_doors_spruce_8
+#        - trap_doors_acacia_8
+#        - trap_doors_jungle_8
+#        - trap_doors_dark_oak_8
+#        - trap_doors_cherry_8
+#        - trap_doors_mangrove_8
+#        - trap_doors_crimson_8
+#        - trap_doors_warped_8
+#        - signs_oak_8
+#        - signs_birch_8
+#        - signs_spruce_8
+#        - signs_acacia_8
+#        - signs_jungle_8
+#        - signs_dark_oak_8
+#        - signs_cherry_8
+#        - signs_mangrove_8
+#        - signs_crimson_8
+#        - signs_warped_8
+#      recipes_lock:
+#        - planks_oak_4
+#        - planks_birch_4
+#        - planks_spruce_4
+#        - planks_acacia_4
+#        - planks_jungle_4
+#        - planks_dark_oak_4
+#        - planks_cherry_4
+#        - planks_mangrove_4
+#        - planks_crimson_4
+#        - planks_warped_4
+#        - sticks_planks_4
+#        - sticks_logs_16
+#        - stairs_oak_4
+#        - stairs_birch_4
+#        - stairs_spruce_4
+#        - stairs_acacia_4
+#        - stairs_jungle_4
+#        - stairs_dark_oak_4
+#        - stairs_cherry_4
+#        - stairs_mangrove_4
+#        - stairs_crimson_4
+#        - stairs_warped_4
+#        - fences_oak_3
+#        - fences_birch_3
+#        - fences_spruce_3
+#        - fences_acacia_3
+#        - fences_jungle_3
+#        - fences_dark_oak_3
+#        - fences_cherry_3
+#        - fences_mangrove_3
+#        - fences_crimson_3
+#        - fences_warped_3
+#        - fence_gates_oak_1
+#        - fence_gates_birch_1
+#        - fence_gates_spruce_1
+#        - fence_gates_acacia_1
+#        - fence_gates_jungle_1
+#        - fence_gates_dark_oak_1
+#        - fence_gates_cherry_1
+#        - fence_gates_mangrove_1
+#        - fence_gates_crimson_1
+#        - fence_gates_warped_1
+#        - doors_oak_3
+#        - doors_birch_3
+#        - doors_spruce_3
+#        - doors_acacia_3
+#        - doors_jungle_3
+#        - doors_dark_oak_3
+#        - doors_cherry_3
+#        - doors_mangrove_3
+#        - doors_crimson_3
+#        - doors_warped_3
+#        - trap_doors_oak_2
+#        - trap_doors_birch_2
+#        - trap_doors_spruce_2
+#        - trap_doors_acacia_2
+#        - trap_doors_jungle_2
+#        - trap_doors_dark_oak_2
+#        - trap_doors_cherry_2
+#        - trap_doors_mangrove_2
+#        - trap_doors_crimson_2
+#        - trap_doors_warped_2
+#        - signs_oak_3
+#        - signs_birch_3
+#        - signs_spruce_3
+#        - signs_acacia_3
+#        - signs_jungle_3
+#        - signs_dark_oak_3
+#        - signs_cherry_3
+#        - signs_mangrove_3
+#        - signs_crimson_3
+#        - signs_warped_3
+#    messages:
+#      - "<lang.building_perk_carpentry_a_messages>"
+#    requireperk_all:
+#      - building_perk_3
+#    connection_line:
+#      '1':
+#        position: '4,5'
+#        locked: GRAY_DYE:1172714
+#        unlockable: ORANGE_DYE:1172814
+#        unlocked: LIME_DYE:1172914
+#      '2':
+#        position: '4,4'
+#        locked: GRAY_DYE:1172721
+#        unlockable: ORANGE_DYE:1172821
+#        unlocked: LIME_DYE:1172921
+#      '3':
+#        position: '5,4'
+#        locked: GRAY_DYE:1172722
+#        unlockable: ORANGE_DYE:1172822
+#        unlocked: LIME_DYE:1172922
+#      '4':
+#        position: '5,3'
+#        locked: GRAY_DYE:1172710
+#        unlockable: ORANGE_DYE:1172810
+#        unlocked: LIME_DYE:1172910
+#  building_perk_capitator_a:
+#    icon: IRON_AXE
+#    coords: "6,6"
+#    name: "<lang.building_perk_capitator_a_name>"
+#    description: "<lang.building_perk_capitator_a_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 3
+#    perk_rewards:
+#      building_treecapitatorcooldown_add: -60
+#      building_treecapitatorlimit_add: 24
+#    messages:
+#      - "<lang.building_perk_capitator_a_messages>"
+#    connection_line:
+#      '1':
+#        position: '4,8'
+#        locked: GRAY_DYE:1172709
+#        unlockable: ORANGE_DYE:1172809
+#        unlocked: LIME_DYE:1172909
+#      '2':
+#        position: '5,8'
+#        locked: GRAY_DYE:1172722
+#        unlockable: ORANGE_DYE:1172822
+#        unlocked: LIME_DYE:1172922
+#      '3':
+#        position: '5,7'
+#        locked: GRAY_DYE:1172721
+#        unlockable: ORANGE_DYE:1172821
+#        unlocked: LIME_DYE:1172921
+#      '4':
+#        position: '6,7'
+#        locked: GRAY_DYE:1172718
+#        unlockable: ORANGE_DYE:1172818
+#        unlocked: LIME_DYE:1172918
+#    requireperk_all:
+#      - building_perk_3
+#  building_perk_capitator_b:
+#    icon: DIAMOND_AXE
+#    coords: "7,4"
+#    name: "<lang.building_perk_capitator_b_name>"
+#    description: "<lang.building_perk_capitator_b_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 5
+#    perk_rewards:
+#      building_treecapitatorcooldown_add: -80
+#      building_treecapitatorlimit_add: 96
+#      building_treecapitatorblocks_add:
+#        - CRIMSON_STEM
+#        - WARPED_STEM
+#    messages:
+#      - "<lang.building_perk_capitator_b_messages>"
+#    connection_line:
+#      '1':
+#        position: '7,6'
+#        locked: GRAY_DYE:1172714
+#        unlockable: ORANGE_DYE:1172814
+#        unlocked: LIME_DYE:1172914
+#      '2':
+#        position: '7,5'
+#        locked: GRAY_DYE:1172710
+#        unlockable: ORANGE_DYE:1172810
+#        unlocked: LIME_DYE:1172910
+#    requireperk_all:
+#      - building_perk_capitator_a
+#  building_perk_capitator_c:
+#    icon: NETHERITE_AXE
+#    coords: "7,2"
+#    name: "<lang.building_perk_capitator_c_name>"
+#    description: "<lang.building_perk_capitator_c_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 7
+#    perk_rewards:
+#      building_treecapitatorcooldown_add: -40
+#      building_treecapitatorlimit_add: 128
+#    messages:
+#      - "<lang.building_perk_capitator_c_messages>"
+#    connection_line:
+#      '1':
+#        position: '7,3'
+#        locked: GRAY_DYE:1172710
+#        unlockable: ORANGE_DYE:1172810
+#        unlocked: LIME_DYE:1172910
+#    requireperk_all:
+#      - building_perk_capitator_b
+#  building_perk_combo:
+#    icon: APPLE
+#    coords: "0,6"
+#    name: "<lang.building_perk_combo_name>"
+#    description: "<lang.building_perk_combo_description>"
+#    cost: 1
+#    hidden: false
+#    required_lv: 6
+#    perk_rewards:
+#      power_foodbonusvegetable_add: 0.3
+#      power_foodbonusseafood_add: 0.3
+#      power_foodbonusmagical_add: 0.3
+#      power_foodbonusgrain_add: 0.3
+#      power_foodbonusfruit_add: 0.3
+#      power_foodbonusnuts_add: 0.3
+#      power_foodbonusdairy_add: 0.3
+#      power_foodbonusmeat_add: 0.3
+#      power_healthregenerationbonus_add: 0.3
+#      power_hungersavechance_add: 0.3
+#    messages:
+#      - "<lang.building_perk_combo_messages>"
+#    other_levels_required:
+#      - DIGGING:50
+#    connection_line:
+#      '1':
+#        position: '2,8'
+#        locked: GRAY_DYE:1172708
+#        unlockable: ORANGE_DYE:1172808
+#        unlocked: LIME_DYE:1172908
+#      '2':
+#        position: '1,8'
+#        locked: GRAY_DYE:1172707
+#        unlockable: ORANGE_DYE:1172807
+#        unlocked: LIME_DYE:1172907
+#      '3':
+#        position: '0,8'
+#        locked: GRAY_DYE:1172720
+#        unlockable: ORANGE_DYE:1172820
+#        unlocked: LIME_DYE:1172920
+#      '4':
+#        position: '0,7'
+#        locked: GRAY_DYE:1172710
+#        unlockable: ORANGE_DYE:1172810
+#        unlocked: LIME_DYE:1172910
+#    requireperk_all:
+#      - building_perk_2
+#  building_perk_ng1:
+#    icon: TOTEM_OF_UNDYING
+#    coords: "3,12"
+#    name: "<lang.building_perk_ng1_name>"
+#    description: "<lang.building_perk_ng1_description>"
+#    cost: 0
+#    hidden: true
+#    required_lv: 9
+#    perk_rewards:
+#      p:building_newgameplus_add: 1
+#      p:building_buildingdrops_add: 0.3
+#      p:building_buildingspeedbonus_add: 0.25
+#      p:building_buildingexpmultiplier_add: -0.25
+#      p:perks_unlocked_add:
+#        - building_perk_ng1
+#    messages:
+#      - "<lang.building_perk_ng1_messages>"
+#  building_perk_ng2:
+#    icon: TOTEM_OF_UNDYING
+#    coords: "3,13"
+#    name: "<lang.building_perk_ng2_name>"
+#    description: "<lang.building_perk_ng2_description>"
+#    cost: 0
+#    hidden: true
+#    required_lv: 10
+#    requireperk_all:
+#      - building_perk_ng1
+#    perk_rewards:
+#      p:building_newgameplus_add: 1
+#      p:building_buildingdrops_add: 0.3
+#      p:building_buildingspeedbonus_add: 0.25
+#      p:building_buildingexpmultiplier_add: -0.25
+#      p:perks_unlocked_add:
+#        - building_perk_ng1
+#        - building_perk_ng2
+#    messages:
+#      - "<lang.building_perk_ng2_messages>"

@@ -34,6 +34,7 @@ public class ProfileRegistry {
         registerProfileType(new MiningDiggingProfile(null));
         registerProfileType(new FarmingProfile(null));
         registerProfileType(new WoodcuttingProfile(null));
+        registerProfileType(new BuildingProfile(null));
         registerProfileType(new FishingProfile(null));
     }
 

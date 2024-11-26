@@ -81,6 +81,15 @@ leaderboards:
     main_stat: exp_total # The main stat player's ranks will be based off.
     extra_stats: # (optional) Additional stats you can place in the entry_display property, names should not match other placeholders
       level: level # In this case we're wanting to get another stat, the level, and we name it 'level' so we can use it as %level%
+  building:
+    display_name: "<lang.leaderboard_building_level>"
+    entry_display: "&7#&a%rank% &8: &7%prefix%%player% &7| LV %level%&7| &8(%exp_total% EXP)"
+    placeholder_display: "&a LV%level% &7%player%"
+    profile: BuildingProfile
+    lower_limit: 0 # The minimum of the main_stat to achieve before you're allowed on the leaderboard (in this example, players who haven't reached lv1 yet won't appear)
+    main_stat: exp_total # The main stat player's ranks will be based off.
+    extra_stats: # (optional) Additional stats you can place in the entry_display property, names should not match other placeholders
+      level: level # In this case we're wanting to get another stat, the level, and we name it 'level' so we can use it as %level%
   archery:
     display_name: "<lang.leaderboard_archery_level>"
     entry_display: "&7#&#00ffaa%rank% &8: &7%prefix%%player% &7| LV %level%&7| &8(%exp_total% EXP)"

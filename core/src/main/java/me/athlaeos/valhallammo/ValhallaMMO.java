@@ -99,6 +99,7 @@ public class ValhallaMMO extends JavaPlugin {
         save("loot_tables/digging.json");
         save("loot_tables/fishing.json");
         save("loot_tables/woodcutting.json");
+        save("loot_tables/building.json");
         save("replacement_table_config.json");
         save("replacement_tables/loot_valhallafication.json");
         saveConfig("recipes/disabled_recipes.yml");
@@ -140,6 +141,8 @@ public class ValhallaMMO extends JavaPlugin {
         saveConfig("skills/smithing_progression.yml");
         saveConfig("skills/woodcutting.yml");
         saveConfig("skills/woodcutting_progression.yml");
+        saveConfig("skills/builder.yml");
+        saveConfig("skills/builder_progression.yml");
         TranslationManager.load(lang);
 
         if (!setupNMS()){
@@ -257,7 +260,7 @@ public class ValhallaMMO extends JavaPlugin {
         registerCommand(new ProfileCommand(MiningDiggingProfile.class), "mining_digging");
         registerCommand(new ProfileCommand(FarmingProfile.class), "farming");
         registerCommand(new ProfileCommand(WoodcuttingProfile.class), "woodcutting");
-//        registerCommand(new ProfileCommand(DiggingProfile.class), "digging");
+        registerCommand(new ProfileCommand(BuildingProfile.class), "building");
         registerCommand(new ProfileCommand(FishingProfile.class), "fishing");
 
         LeaderboardManager.loadFile();
@@ -315,10 +318,7 @@ public class ValhallaMMO extends JavaPlugin {
     private boolean setupNMS() {
         try {
             String nmsVersion = MinecraftVersion.getServerVersion().getNmsVersion();
-            if (nmsVersion == null) {
-                System.out.println("sem versao");
-                return false;
-            }
+            if (nmsVersion == null) return false;
             Class<?> clazz = Class.forName("me.athlaeos.valhallammo.nms.NMS_" + nmsVersion);
 
             if (NMS.class.isAssignableFrom(clazz)) {
@@ -327,7 +327,6 @@ public class ValhallaMMO extends JavaPlugin {
 
             return nms != null;
         } catch (Exception | Error ignored) {
-            System.out.println(ignored.toString());
             return false;
         }
     }
